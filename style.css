@@ -1,0 +1,909 @@
+/* ---------------------------------------------------------------*/
+/*                        Body of website                         */
+/* ---------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #FFFFFF;
+}
+/* This body works for all responsive device types */
+
+/* ---------------------------------------------------------------*/
+/*                      End Body of website                       */
+/* ---------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------*/
+/*                      Start of colours                       */
+/* ---------------------------------------------------------------*/
+.red{
+    background-color: #AE1320;
+   /* background-color:#E93947 ; This was the old colour, we have
+   gone darker as we want to ensure accessibility - Josh*/
+}
+
+.white{
+    background-color:#ffffff ;
+}
+
+.black{
+    background-color:#000000 ;
+}
+
+.grey{
+    background-color:#F4F4F4 ;
+}
+/* ---------------------------------------------------------------*/
+/*                      End of colours                            */
+/* ---------------------------------------------------------------*/
+
+.fa-solid, .fa-regular{
+    color: #AE1320;
+    font-size: 40px;
+}
+
+
+
+
+/* ---------------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+/* ----------------- Start of image editing ----------------------*/
+img{
+   max-width: 500px;
+}
+
+/* ----------------- End of image editing ----------------------*/
+/* ---------------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+
+.reviewbg {
+    background-image: url('Images/Testimonioal-bg.jpg');
+    background-size: cover;
+     /* Note: opacity values are between 0 (fully transparent) and 1 (fully opaque) */
+    position: relative;  /* or absolute, fixed, or sticky, depending on your layout needs */
+}
+
+
+/* ---------------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+/* ----------------- Start of containers ----------------------*/
+.container, .container-none, .container-top, .container-bottom {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width:600px) {
+    .container, .container-none, .container-top, .container-bottom {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media (min-width: 1025px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 0 6rem;
+        padding-bottom: 3%;
+        padding-top: 3%;
+        max-width: 1440px;
+    }
+    
+
+    .container-none {
+        display: flex;
+        flex-direction: column;
+        padding: 0 6rem;
+        margin: auto;
+        max-width: 1440px;
+    }
+
+    .container-top {
+        display: flex;
+        flex-direction: column;
+        padding: 0 6rem;
+        padding-bottom: 3%;
+        margin: auto;
+        max-width: 1440px;
+    }
+
+    .container-bottom {
+        display: flex;
+        flex-direction: column;
+        padding: 0 6rem;
+        padding-top: 3%;
+        margin: auto;
+        max-width: 1440px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 6rem;
+        padding-bottom: 3%;
+        padding-top: 3%;
+        max-width: 1440px;
+    }
+    
+}
+
+/* ------------------End of containers ----------------------*/
+/* ---------------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+/* --------------------- Typography section ----------------------*/
+@font-face {
+    font-family: roboto-regular;
+    src: url(Fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: open-sans-regular;
+    src: url(Fonts/Open_Sans-2/static/OpenSans-Regular.ttf);
+}
+ol, ul {
+    line-height: 2;
+    list-style-type: decimal;
+}
+
+h1, h2, h3, h4, p, a {
+    color: #4B4B4B;
+    line-height: 1.5;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+@media (min-width:1200px) {
+h1{
+    font-size: 3.5rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+}
+
+h1, h2, h3, h4 {
+    font-family: roboto-regular;
+}
+
+p, a {
+    font-family: open-sans-regular;
+    text-decoration: none;
+}
+
+li {
+    font-family: roboto-regular;
+    text-decoration: none;
+}
+
+/* -------------------End of Typography section-------------------*/
+/* ---------------------------------------------------------------*/
+/* --------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------*/
+/*                     Button section start                      */
+/* --------------------------------------------------------------*/
+
+.button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    display: inline-block;
+    border: none;           /* Removes default border */
+    font-family: open-sans-regular;
+    cursor: pointer;        /* Keeps the hand cursor on hover */
+    outline: none;    
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.white-btn-text{
+    color: #AE1320
+}
+
+.buttons-div{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* ---------------------------------------------------------------*/
+/*                     Button section End                    */
+/* --------------------------------------------------------------*/
+
+
+/* ---------------------------------------------------------------*/
+/*                     Three benefits start                    */
+/* --------------------------------------------------------------*/
+.three-benefits {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12%;
+}
+
+.three-benefits img{
+    max-height: 90px;
+}
+
+.benefits-img {
+    max-width: auto;
+    max-height: 400px;
+}
+/* ---------------------------------------------------------------*/
+/*                     Three benefits end                    */
+/* --------------------------------------------------------------*/
+
+
+/* ---------------------------------------------------------------*/
+/*                     Start of Half page sections               */
+/* --------------------------------------------------------------*/
+
+.half-page{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    .half-page{
+        display: flex;
+        flex-direction: column; 
+        width: 50%;
+    }
+
+   .parent-of-half-page{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10%;
+    } 
+
+    .parent-of-half-page img{
+        max-width: 500px;
+    }
+
+    .reverse-parent{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+/* ---------------------------------------------------------------*/
+/*                     End of Half page sections                 */
+/* --------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------*/
+/*                     Start of Middle align                     */
+/* --------------------------------------------------------------*/
+
+.middle-align, .middle {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-align img {
+    vertical-align: middle;
+}
+
+.middle {
+    width: 75%;
+}
+
+@media (min-width: 1025px) {
+    .middle {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+/* ---------------------------------------------------------------*/
+/*                     End of Middle align                     */
+/* --------------------------------------------------------------*/
+
+
+
+
+
+/* ---------------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+/* ------------------Start of Header Section ----------------------*/
+
+
+.containerHeader{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width:600px) {
+    .containerHeader {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media (min-width: 1025px) {
+
+
+    
+
+    .containerHeader {
+        display: flex;
+        flex-direction: column;
+        padding: 0 6rem;
+        margin: auto;
+        max-width: 1440px;
+    }
+
+    
+}
+
+
+
+
+.logo {
+    padding-top: 20px;
+}
+
+.top-nav{
+   background-color: #000;
+ } 
+
+ .top-nav img{
+    
+    height: 20px;
+ }
+
+ .top-nav p, .top-nav a {
+    color: white;
+}
+
+.whitetext p, .whitetext a, .whitetext h1,.whitetext h2, .whitetext h3, .whitetext h4 {
+    color: white;
+}
+
+
+
+
+.centre-img {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar {
+    min-height: 90px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.navbar img {
+    max-width: 300px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+.nav-branding {
+    font-size: 2rem;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: #54C1AE;
+}
+
+.hamburger {
+    display: none;
+    z-index: 100;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header tablet */
+@media (max-width: 1025px) {
+    .hamburger {
+        display: block;
+        background-color: #F2F2F2;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }  
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 220px; /* Consolidated the repeated media query */
+        flex-direction: column;
+        background-color: #F2F2F2;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+}
+
+/* Most phones (For screens smaller than 600px) */
+@media (max-width: 600px) {
+    /* If you have specific styles for phones, place them here */
+}
+
+/* ------------------End of Header Section ----------------------*/
+/* ---------------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+
+.hero{
+   /* background-color: yellow; */
+}
+
+
+.black {
+    overflow: hidden; /* Hide the overflowing part of inner content */
+}
+
+.blackbg{
+    background-color: black;
+}
+
+.qualifications p, 
+.qualifications h1, 
+.qualifications h2, 
+.qualifications h3, 
+.qualifications h4, 
+.qualifications h5, 
+.qualifications h6 {
+    color: white;
+}
+
+
+
+
+.logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    padding: 2% 0;
+    justify-content: center;
+}
+
+.logo-wrapper img {
+    height: auto;
+    width: 20%;
+}
+
+@media (min-width: 650px) {
+    .logo-section img {
+        width: 100%;
+
+    }
+}
+  /* Input and textarea styles */
+  input,
+  textarea {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    background: white;
+    height: 48px;
+  }
+
+.email-form{
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+footer{
+    background-color: #616161;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-row img{
+    max-width: 150px;
+
+}
+
+footer p, footer a, footer h3 {
+    color: white;
+}
+
+
+footer p:hover,
+footer a:hover
+{
+    color: grey;
+    animation: fadeIn 2s ease-in-out ;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+.gallery-grid .image-wrapper {
+    padding: 10px; /* Adjust this value for desired padding */
+    display: flex;
+    aspect-ratio: 1 / 1; 
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 2px solid #000;
+    height: 100%; /* Ensure the wrapper fills the entire grid cell */
+}
+
+.gallery-grid img {
+    height: 80%;
+ 
+    object-fit: cover; /* This ensures the image covers the entire space without distortion */
+}
+
+  @media (min-width:1025px){
+    .namebox{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 16px;
+      }
+  
+      .name-box{
+        width: 48%;
+      }
+
+      .name-group{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+  }
+
+  @media (min-width:600px){
+    .footer-nav{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    #bottom-nav{
+        align-items: center;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+  }
+
+  /* Testimonial Box */
+
+
+.testimonialbox {
+    margin: 5%;
+    max-width: 1235px;
+    box-shadow: 5px 5px 25px 25px rgba(0, 0, 0, 0.25);
+    position: relative;
+    background-color: #F2F3F5;
+}
+
+#why-me {
+    padding: 10px 20px;
+}
+
+@media(min-width:600px){
+    #why-me {
+        padding: 40px 75px;
+    }
+}
+
+.testimonial-content {
+    padding: 1% ;
+    width: 70%;
+    margin: 0 auto;
+}
+
+@media(min-width:650px){
+    .testimonial-content {
+        padding: 5% 0;
+    }
+}
+
+img[src="Images/leftarrow.webp"],
+img[src="Images/rightarrow.webp"] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none; /* bring back when Luke gets more testemonials */
+}
+
+img[src="Images/leftarrow.png"] {
+    left: 1rem;
+}
+
+img[src="Images/rightarrow.png"] {
+    right: 1rem;
+}
+
+/* Contact*/
+
+form{
+    font-family: open-sans-regular;
+    color: #4B4B4B;
+}
+
+  /* Input and textarea styles */
+  input,
+  textarea {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    background: white;
+    height: 48px;
+  }
+
+.email-form{
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+footer{
+    background-color: #616161;
+}
+
+
+/* FAQ page */
+.accordion-content {
+    display: none;
+}
+
+
+.accordion-content p {
+    color: #646464;
+}
+
+.accordion-item{
+    display: flex;
+    align-items: center;      /* Vertically center */
+    height: 50px;
+    font-size: 18px;
+}
+
+.accordion-section{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5% 0;
+}
+
+.accordion{
+    padding: 1em;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0px 5px 16px 0px rgba(8, 15, 52, 0.06);
+    cursor: pointer;
+    transition: border 0.5s;
+}
+
+.accordion-item-active {
+    border: 2px solid #55C1AE;
+}
+
+
+/*----------------------------------*/
+/*------------Courses---------------*/
+/*----------------------------------*/
+.single-course{
+    text-align: center;
+}
+
+.main-courses{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 1000px){
+.main-courses{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+}
+
+#monthly{
+    display: flex;
+}
+
+#yearly{
+    display: none;
+}
+
+
+
+
+.holder{
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.toggle-container {
+    position: relative;
+    width: 200px;
+}
+
+.toggle-switch {
+    width: 60px;
+    height: 30px;
+    background-color: grey;
+    border-radius: 15px;
+    position: relative;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.grey-bg{
+    background-color: #F2F3F5;
+}
+
+.switch-circle {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.3s;
+}
+
+.toggle-switch.active {
+    background-color: black;
+}
+
+.toggle-switch.active .switch-circle {
+    left: 30px;
+}
+
+
+.course{ 
+    padding: 2rem;
+}
+
+
+
+.two-way-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+ 
+}
+
+@media (min-width:1000px){
+    .two-way-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+.tutor-img{
+    width: 25%;
+}
+
+.tutor-img img{
+    width: 100%;
+}
+
+.tutorinfotext{
+    width: 75%;
+}
+
+.tutor-grid{
+    display: flex;
+    border: 1px solid #ccc;
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+}
+
+.tutor-info{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.course-grid{
+    display: flex;
+    border: 1px solid #ccc;
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    align-items: center;
+}
+
+.course-grid p, .course-grid h3 { color: white; }
