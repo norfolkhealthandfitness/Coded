@@ -1,20 +1,23 @@
 /* ---------------------------------------------------------------*/
 /*                        Body of website                         */
 /* ---------------------------------------------------------------*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-}
+
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 
+li {
+    list-style-type: none;
+  }
+  
+
 body{
     background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    
 }
 /* This body works for all responsive device types */
 
@@ -25,10 +28,15 @@ body{
 /* ---------------------------------------------------------------*/
 /*                      Start of colours                       */
 /* ---------------------------------------------------------------*/
-.red{
+.red {
     background-color: #AE1320;
-   /* background-color:#E93947 ; This was the old colour, we have
-   gone darker as we want to ensure accessibility - Josh*/
+    /* background-color:#E93947 ; This was the old colour, we have
+    gone darker as we want to ensure accessibility - Josh */
+    transition: background-color 0.3s; /* Optional: for a smooth color transition */
+}
+
+.red:hover {
+    background-color: #680108; /* Darker shade of red */
 }
 
 .white{
@@ -145,15 +153,7 @@ img{
 /* ---------------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
 /* --------------------- Typography section ----------------------*/
-@font-face {
-    font-family: roboto-regular;
-    src: url(Fonts/Roboto/Roboto-Regular.ttf);
-}
 
-@font-face {
-    font-family: open-sans-regular;
-    src: url(Fonts/Open_Sans-2/static/OpenSans-Regular.ttf);
-}
 ol, ul {
     line-height: 2;
     list-style-type: decimal;
@@ -162,6 +162,7 @@ ol, ul {
 h1, h2, h3, h4, p, a {
     color: #4B4B4B;
     line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 h1{
@@ -190,16 +191,16 @@ h3{
 }
 
 h1, h2, h3, h4 {
-    font-family: roboto-regular;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 p, a {
-    font-family: open-sans-regular;
+    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
 
 li {
-    font-family: roboto-regular;
+    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
 
@@ -215,13 +216,14 @@ li {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     text-align: center;
-    display: inline-block;
     border: none;           /* Removes default border */
     font-family: open-sans-regular;
     cursor: pointer;        /* Keeps the hand cursor on hover */
     outline: none;    
     text-decoration: none;
     color: #FFFFFF;
+    width: 100%;
+    display: block;
 }
 
 .white-btn-text{
@@ -234,6 +236,53 @@ li {
     gap: 1rem;
     margin-bottom: 2rem;
 }
+
+button{
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    font: inherit;
+    border-radius: 0;
+    appearance: none;
+    color: white;
+}
+
+/* Dropdown Button */
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 100%;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 /* ---------------------------------------------------------------*/
 /*                     Button section End                    */
@@ -654,6 +703,19 @@ footer a:hover
     
   }
 
+/* ------------------Start of about Section ----------------------*/
+/* ---------------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+.larger{
+    font-size: 5.3125rem;
+    font-weight: thin;
+}
+
+
+/* ------------------End of about Section ----------------------*/
+/* ---------------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+
   /* Testimonial Box */
 
 
@@ -664,6 +726,39 @@ footer a:hover
     position: relative;
     background-color: #F2F3F5;
 }
+
+.testimonial-reviews{
+    background-color: white;
+    padding: 1rem;
+}
+
+#rightarrow{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    padding-right: 2rem;
+}
+
+
+#leftarrow{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    padding-left: 2rem;
+}
+
+#fred {
+    display: none;
+}
+
+#james {
+    display: none;
+}
+
+#ryan {
+    display: none;
+}
+
 
 #why-me {
     padding: 10px 20px;
@@ -765,7 +860,7 @@ footer{
 }
 
 .accordion-item-active {
-    border: 2px solid #55C1AE;
+    border: 2px solid #AE1320;
 }
 
 
@@ -774,12 +869,14 @@ footer{
 /*----------------------------------*/
 .single-course{
     text-align: center;
+   
 }
 
 .main-courses{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 2rem;
 }
 
 @media (min-width: 1000px){
@@ -823,6 +920,7 @@ footer{
     margin: 0 auto;
     cursor: pointer;
     transition: background-color 0.3s;
+    
 }
 
 .grey-bg{
@@ -832,7 +930,7 @@ footer{
 .switch-circle {
     width: 30px;
     height: 30px;
-    background-color: white;
+    background-color: #bdbdbd;
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -906,4 +1004,84 @@ footer{
     align-items: center;
 }
 
+.course-grid img{
+    width: 100%;
+}
+
+
 .course-grid p, .course-grid h3 { color: white; }
+
+.levels {
+    color: white;
+    padding: 1rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
+}
+
+.buttons-course{
+    display: block;
+    width: 100%;
+
+}
+
+.buttons-course-upper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+#cv{
+    border: 1px solid white;
+    width: 100%;
+}
+
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(1fr);
+    gap: 2rem;
+}
+
+.grid-container div {
+    height: 100%;  
+}
+
+.cell{
+    background-color: white;
+    border: 1px solid black;
+    padding: 1.5rem;
+}
+
+@media (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1fr);
+    }
+}
+
+.imagegrid-container {
+    display: grid;
+    grid-template-rows: repeat(1fr);
+    gap: 2rem;
+}
+
+
+@media (min-width: 1200px) {
+    .imagegrid-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1fr);
+    }
+}
+
+.imagegrid-container img{
+    border: 2px black solid
+}
