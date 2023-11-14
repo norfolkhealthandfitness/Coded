@@ -1051,6 +1051,12 @@ footer{
     width: 100%;
 }
 
+.grid-container-two {
+    display: grid;
+    grid-template-rows: repeat(1fr);
+    width: 100%;
+}
+
 .grid-container div {
     height: 100%;  
 }
@@ -1070,6 +1076,11 @@ footer{
 
 @media (min-width: 1200px) {
     .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1fr);
+    }
+
+    .grid-container-two {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(1fr);
     }
