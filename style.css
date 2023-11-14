@@ -74,7 +74,7 @@ img{
 /* ---------------------------------------------------------------*/
 
 .reviewbg {
-    background-image: url('Images/Testimonioal-bg.jpg');
+    background-image: url('Images/Testimonioal-bg.webp');
     background-size: cover;
      /* Note: opacity values are between 0 (fully transparent) and 1 (fully opaque) */
     position: relative;  /* or absolute, fixed, or sticky, depending on your layout needs */
