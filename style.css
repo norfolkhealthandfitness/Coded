@@ -431,6 +431,11 @@ button{
    background-color: #000;
  } 
 
+ .top-nav-two{
+    display: flex;
+    justify-content: space-between;
+ }
+
  .top-nav img{
     
     height: 20px;
