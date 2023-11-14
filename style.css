@@ -324,7 +324,7 @@ button{
     flex-direction: column;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
     .half-page{
         display: flex;
         flex-direction: column; 
