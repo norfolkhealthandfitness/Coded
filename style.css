@@ -246,7 +246,7 @@ button{
     font: inherit;
     border-radius: 0;
     appearance: none;
-    color: white;
+   
 }
 
 /* Dropdown Button */
@@ -282,7 +282,9 @@ button{
   .dropdown:hover .dropdown-content {display: block;}
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
 
 /* ---------------------------------------------------------------*/
 /*                     Button section End                    */
@@ -564,6 +566,8 @@ nav {
 
 .hero{
    /* background-color: yellow; */
+   background-image: url('Images/backdrop.jpg');
+   background-size: cover;
 }
 
 
@@ -1054,7 +1058,6 @@ footer{
 
 .cell{
     background-color: white;
-    border: 1px solid black;
     padding: 1.5rem;
     width: 100%;
 }
