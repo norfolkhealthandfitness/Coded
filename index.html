@@ -17,7 +17,7 @@
 <header>
 <!--    Start of beggining of header section      -->
 <nav class="top-nav">
-    <div class="navbar containerHeader">
+    <div class="navbar containerHeader ">
         <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
         <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
     
@@ -25,7 +25,7 @@
         <a href="">info@norfolkhealthandfitness.com</a>
         <a class="button" href="">LOGIN/REGISTER</a>
     
-        <img src="Images/NHFGYM.png" alt="NHF Gym logo">
+        <img src="Images/NHFGYM.webp" alt="NHF Gym logo">
     </div>
 </nav>
 
@@ -35,7 +35,7 @@
 
 
     <nav class = "navbar containerHeader"> 
-        <a href="index.html" class="nav-branding"> <img class="logo" alt="logo"  src="images/NHFLOGO.png"></a>
+        <a href="index.html" class="nav-branding"> <img class="logo" alt="logo"  src="images/NHFLOGO.webp"></a>
   
         <ul class="nav-menu">
             <li class="nav-item">
@@ -51,7 +51,14 @@
             </li>
 
             <li class="nav-item">
-                <a href="blog.html" class="nav-link">RESOURCES +</a>
+                <div class="dropdown">
+                    <button class="dropbtn">RESOURCES</button>
+                    <div class="dropdown-content">
+                        <a href="#blog">Blog</a>
+                        <a href="#store">Store</a>
+                        <a href="2023-2024-Prospectus.pdf" target="_blank">Prospectus</a>
+                    </div>
+                </div>
             </li>
 
             <li class="nav-item">
@@ -82,7 +89,7 @@
 <!--         Start of Hero section               -->
 <!-- ============================================ -->  
         <main>
-            <section class="hero" >
+            <section class="hero black-overlay" >
                 <div class="container middle-align">
                     <p>WELCOME TO NORFOLK HEALTH & FITNESS</p>
                     <h1>A Leading Provider For Online & In-Person Personal Training Courses In Norwich</h1>
@@ -103,18 +110,18 @@
                     <p>Working alongside some of the finest names in the industry​</p>
 
                    
-                        <div class="logo-section">
+                    
                             <!-- Inner container for the logos -->
                             <div class="logo-wrapper">
-                                <img src="Images/Nuffield.png" alt="Nuffield Logo">
-                                <img src="Images/DavidLloyd.png" alt="The Gym Logo">
-                                <img src="Images/theGym.php.png" alt="The Gym Logo">
-                                <img src="Images/puregym.png" alt="The Gym Logo">
-                                <img src="Images/completefitness.png" alt="The Gym Logo">
-                                <img src="Images/phoenix.php.png" alt="The Gym Logo">
-                                <img src="Images/Bannatynes.png" alt="The Gym Logo">
+                                <img loading="lazy" src="Images/Nuffield.webp" alt="Nuffield Logo">
+                                <img loading="lazy" src="Images/davidlloyd-655358167a837.webp" alt="The Gym Logo">
+                                <img loading="lazy" src="Images/thegymphp-655357adbd05b.webp" alt="The Gym Logo">
+                                <img loading="lazy" src="Images/puregym.webp" alt="The Gym Logo">
+                                <img loading="lazy" src="Images/completefitness.webp" alt="The Gym Logo">
+                                <img loading="lazy" src="Images/phoenix.php.webp" alt="The Gym Logo">
+                                <img loading="lazy" src="Images/Bannatynes.webp" alt="The Gym Logo">
                             </div>
-                        </div>
+                       
                     
              
                         <h2>Qualifications Recognised By:​</h2>
@@ -122,10 +129,10 @@
                   
                     <!-- Inner container for the logos -->
                     <div class="logo-wrapper">
-                        <img src="Images/skillsactive.png" alt="">
-                        <img src="Images/ActiveiqChopWhite-e1637070244226.png" alt="">
-                        <img src="images/cimspa.png" alt="">
-                        <img src="Images/nrpt.png" alt="">
+                        <img loading="lazy" src="Images/skillsactive.webp" alt="">
+                        <img loading="lazy" src="Images/ActiveiqChopWhite-e1637070244226.webp" alt="">
+                        <img loading="lazy" src="images/cimspa.webp" alt="">
+                        <img loading="lazy" src="Images/nrpt.webp" alt="">
                     </div>
                 </div>
             </section>
@@ -134,38 +141,36 @@
 <!-- ============================================ -->  
 
 <!-- ============================================ -->
-<!--     Start of small about         -->
+<!--     Start of small about         --->
 <!-- ============================================ -->  
 <section class="middle-align container">
     <div>
         <h2>We Are An Experienced Team With A Huge Love For The Industry. ​​</h2>
-        <p>Norfolk Health & Fitness provides an enriched learning environment. This has helped countless students get ahead. Founded in 2017, located in Norwich, we reflect the diverse backgrounds and cultures in the area. We have students and staff who are eager to learn, create, and grow together.​</p>
+        <p style="width: 75%; margin: 0 auto;">Norfolk Health & Fitness provides an enriched learning environment. This has helped countless students get ahead. Founded in 2017, located in Norwich, we reflect the diverse backgrounds and cultures in the area. We have students and staff who are eager to learn, create, and grow together.​</p>
     </div>
 </section>
   
-
-    <!--  -->
-    <section class="middle-align container">
-    <div class=" border-top padding middle">
-        <div class="grid-container">
+    <section class="middle-align container-none middle">
+    
+        <div class="grid-container-two middle-align">
     
             <div class="cell">
-                <p class="larger">500+</p>
+                <p id="numberCounter" style="margin-bottom: -1px;" class="larger"></p>
                 <p>STUDENTS TAUGHT</p>
             </div>
     
             <div class="cell">
-                <p class="larger">100%</p>
+                <p style="margin-bottom: -1px;" class="larger">100%</p>
                 <p>5 STAR REVIEWS</p>
             </div>
     
             <div class="cell">
-                <p class="larger">95%</p>
+                <p style="margin-bottom: -1px;" class="larger">95%</p>
                 <p>PASS RATE</p>
             </div>    
         </div>
-    </div>
-</section>
+  
+    </section>
 
 
 
@@ -179,7 +184,7 @@
 <!-- ============================================ -->
 <!-- start of What to inspect in person           -->
 <!-- ============================================ -->  
-<section class="middle-align container">
+<section style="height: 100%;" class="middle-align container">
     <div>
         <h2>What Can I Expect From The In Person Courses?​ ​​</h2>
     </div>
@@ -238,7 +243,7 @@
 <!-- ============================================ -->
 <!--     Start of social media section            -->
 <!-- ============================================ -->  
-<section class="grey-bg">
+<section style="height: 100%;" class="grey-bg">
     <div class="parent-of-half-page container">
         <div class="half-page">
             <p>SOCIAL MEDIA</p>
@@ -253,7 +258,7 @@
         </div>
         
         <div class="half-page">
-            <img src="images/sm2.png" alt="">
+            <img loading="lazy" src="images/sm2-65536d8d9d634.webp" alt="">
         </div>
     
     </div>
@@ -440,7 +445,7 @@
             <a href="Terms & Conditions.html">Terms and Conditions</a>
             <div class="flex-row">
                 <p>Website by</p>
-                <img src="Images/LogoforJolrust.webp" alt="Our logo">
+               
             </div>
         </div>
     </section>
@@ -455,8 +460,9 @@
 <!--        Start of Javascript section           -->
 <!-- ============================================ --> 
 <script src="slider.js"></script>  
-    <script src="hamburger.js"></script>   
-    <script src="testimonial.js"></script>  
+<script src="hamburger.js"></script>   
+<script src="testimonial.js"></script>  
+<script src="counter.js"></script>  
 <!-- ============================================ -->
 <!--        End of Javascript section             -->
 <!-- ============================================ --> 
