@@ -110,15 +110,6 @@ img{
 
 @media (min-width: 1025px) {
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        padding: 0 6rem;
-        padding-bottom: 3%;
-        padding-top: 3%;
-        max-width: 1440px;
-    }
     
 
     .container-none {
@@ -881,6 +872,12 @@ img[src="Images/rightarrow.png"] {
 form{
     font-family: open-sans-regular;
     color: #4B4B4B;
+    position: relative;
+    z-index: 2;
+}
+
+label{
+    color: white;
 }
 
   /* Input and textarea styles */
@@ -1202,3 +1199,4 @@ footer{
     position: relative;
     z-index: 2;
 }
+
