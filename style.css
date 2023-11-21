@@ -237,7 +237,7 @@ li {
     outline: none;    
     text-decoration: none;
     color: #FFFFFF;
-    width: 100%;
+    
     display: inline-block;
 }
 
@@ -431,7 +431,7 @@ button{
 
 @media(min-width: 700px){
    .hide-mob{
-    display: flex;
+    display: block;
    }
 }
 
@@ -517,6 +517,7 @@ nav {
     flex-direction:row;
     align-items: center;
     position: relative;
+    width: 100%;
 }
 
 .navbar img {
@@ -588,13 +589,14 @@ nav {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 220px; /* Consolidated the repeated media query */
+        top: 165px; /* Consolidated the repeated media query */
         flex-direction: column;
         background-color: #F2F2F2;
         width: 100%;
         text-align: center;
         transition: 0.3s;
         z-index: 1000;
+        padding: 5% 0 ;
     }
 }
 
