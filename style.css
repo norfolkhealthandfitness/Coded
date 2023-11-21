@@ -19,6 +19,8 @@ body{
     padding: 0;
     
 }
+
+
 /* This body works for all responsive device types */
 
 /* ---------------------------------------------------------------*/
@@ -785,11 +787,14 @@ footer a:hover
     box-shadow: 5px 5px 25px 25px rgba(0, 0, 0, 0.25);
     position: relative;
     background-color: #F2F3F5;
+    z-index: 2;
 }
 
 .testimonial-reviews{
     background-color: white;
     padding: 1rem;
+    position: relative;
+    z-index: 2;
 }
 
 #rightarrow{
@@ -895,10 +900,17 @@ form{
   }
 
 footer{
+    border-top: white 2px solid;
     background-image: url('Images/footer.jpg');
     background-size: cover;
     position: relative;  /* or absolute, fixed, or sticky, depending on your layout needs */
     color: white;
+}
+
+.footer-break{
+    border: white 0.5px solid;
+    position: relative;
+    z-index: 2;
 }
 
 
