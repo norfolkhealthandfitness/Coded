@@ -50,6 +50,16 @@ body{
 .grey{
     background-color:#F4F4F4 ;
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1;
+}
 /* ---------------------------------------------------------------*/
 /*                      End of colours                            */
 /* ---------------------------------------------------------------*/
@@ -162,7 +172,8 @@ ol, ul {
 h1, h2, h3, h4, p, a {
     color: #4B4B4B;
     line-height: 1.5;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1000000;
 }
 
 h1{
@@ -230,12 +241,14 @@ li {
     color: #AE1320
 }
 
-.buttons-div{
+.buttons-div { /* Correct the class name here */
     display: flex;
-    flex-direction: row;
     gap: 1rem;
     margin-bottom: 2rem;
+    flex-direction: row;
 }
+
+
 
 button{
     background-color: transparent;
@@ -246,7 +259,7 @@ button{
     font: inherit;
     border-radius: 0;
     appearance: none;
-   
+   display: inline-block;
 }
 
 /* Dropdown Button */
@@ -564,10 +577,20 @@ nav {
 /* ---------------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
 
-.hero{
-   /* background-color: yellow; */
-   background-image: url('Images/backdrop.jpg');
-   background-size: cover;
+.hero {
+    background-image: url('Images/backdrop.jpg');
+    background-size:cover;
+     /* Note: opacity values are between 0 (fully transparent) and 1 (fully opaque) */
+    position:relative;  /* or absolute, fixed, or sticky, depending on your layout needs */
+    
+}
+
+
+
+
+.hero > h1{
+    color: white;
+    
 }
 
 
@@ -806,6 +829,18 @@ img[src="Images/rightarrow.png"] {
 }
 
 /* Contact*/
+
+.contact{
+    background-image: url('Images/home-contact-bg.jpg');
+    background-size: cover;
+     /* Note: opacity values are between 0 (fully transparent) and 1 (fully opaque) */
+    position: relative;  /* or absolute, fixed, or sticky, depending on your layout needs */
+}
+
+.contact h2, .contact p {
+    color: white;
+}
+
 
 form{
     font-family: open-sans-regular;

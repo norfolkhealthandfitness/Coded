@@ -89,8 +89,9 @@
 <!--         Start of Hero section               -->
 <!-- ============================================ -->  
         <main>
-            <section class="hero black-overlay" >
-                <div class="container middle-align">
+            <section class="hero" >
+                <div class="overlay"></div> <!-- Overlay is now a separate layer inside hero -->
+                <div class="container middle-align hero">
                     <p>WELCOME TO NORFOLK HEALTH & FITNESS</p>
                     <h1>A Leading Provider For Online & In-Person Personal Training Courses In Norwich</h1>
                     <p>Our mission has always been to raise standards in the health and fitness industry. Let’s get you qualified..</p>
@@ -251,7 +252,7 @@
             <p>Follow our Instagram page and Facebook Pages, here we’ll keep you updated with the latest news, stories and activities.</p>
             <p>We are active users to keep you up to date with our latest offers, news, blogs, and practical workshop dates. </p>
             <p>We also have a Facebook course group. This group is for our learners to communicate with the course tutors and all our other members.</p>
-            <div class="button-div">
+            <div class="buttons-div"> <!-- Corrected class name -->
                 <a class="button red" href="">INSTAGRAM</a>
                 <a class="button white white-btn-text" href="">FACEBOOK</a>
             </div>
@@ -274,6 +275,7 @@
 
 
 <section  class="middle-align reviewbg">
+    <div class="overlay"></div>
     <div  class="container padding testimonialbox">
         <div class="testimonial-content">
             <h3>What Our Students Have To Say...</h3>
@@ -359,10 +361,13 @@
 <!--             Start of contact                 -->
 <!-- ============================================ -->  
 
-    <section>
+    <section class="contact">
+        <div class="overlay"></div>
         <div class="container">
-            <h2>Enquiries</h2>
-            <p>Complete the form below and we will get back to you within 2 working days</p>
+            <div class="middle-align">
+                <h2>I want to talk to someone</h2>
+                <p>If you have any queries about any of our courses or if you require any further information, please contact us by adding your details below and one of our team will get right back to you. We will process your data in accordance with our Privacy Notice. You may withdraw this consent at any time by unsubscribing.</p>
+            </div>
             
             <form class="email-form" data-netlify="true" data-netlify-recaptcha="true">
                 <div class="name-group">
