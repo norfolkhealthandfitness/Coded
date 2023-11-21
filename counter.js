@@ -9,4 +9,4 @@ const interval = setInterval(() => {
     if (currentValue >= maxValue) {
         clearInterval(interval); // stop the counter when it reaches 500
     }
-}, 10);
+}, 90);
