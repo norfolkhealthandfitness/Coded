@@ -57,7 +57,7 @@ body{
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    background: rgba(0, 0, 0, 0.75); /* Black with 50% opacity */
     z-index: 1;
 }
 /* ---------------------------------------------------------------*/
@@ -167,17 +167,21 @@ img{
 ol, ul {
     line-height: 2;
     list-style-type: decimal;
+    z-index: 1000;
 }
 
 h1, h2, h3, h4, p, a {
     color: #4B4B4B;
     line-height: 1.5;
     font-family: Arial, Helvetica, sans-serif;
-    z-index: 1000000;
+    position: relative;
+    z-index: 2; /* Higher than the overlay */
 }
 
 h1{
     font-size: 2.5rem;
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
 }
 
 h2{
@@ -206,13 +210,14 @@ h1, h2, h3, h4 {
 }
 
 p, a {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     text-decoration: none;
 }
 
 li {
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
+    z-index: 10000;
 }
 
 /* -------------------End of Typography section-------------------*/
@@ -228,13 +233,12 @@ li {
     font-size: 1rem;
     text-align: center;
     border: none;           /* Removes default border */
-    font-family: open-sans-regular;
     cursor: pointer;        /* Keeps the hand cursor on hover */
     outline: none;    
     text-decoration: none;
     color: #FFFFFF;
     width: 100%;
-    display: block;
+    display: inline-block;
 }
 
 .white-btn-text{
@@ -337,7 +341,7 @@ button{
     flex-direction: column;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
     .half-page{
         display: flex;
         flex-direction: column; 
@@ -374,6 +378,8 @@ button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* border: #000 2px solid; */
+    width: 100%;
 }
 
 .middle-align img {
@@ -419,6 +425,16 @@ button{
     }
 }
 
+.hide-mob{
+    display:none;
+}
+
+@media(min-width: 700px){
+   .hide-mob{
+    display: flex;
+   }
+}
+
 @media (min-width: 1025px) {
 
 
@@ -434,6 +450,21 @@ button{
     }
 
     
+}
+
+
+
+.header-link{
+    /* border: #000 1px solid; */
+    padding: 1rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.header-link.active,.header-link:hover{
+    background-color: #616161;
+    color: white;
+    cursor: pointer;
 }
 
 
@@ -483,10 +514,11 @@ nav {
     min-height: 90px;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction:row;
     align-items: center;
     position: relative;
     width: 100%;
+    z-index: 10000000000000000000000;
 }
 
 .navbar img {
@@ -537,7 +569,7 @@ nav {
 }
 
 /* Header tablet */
-@media (max-width: 1025px) {
+@media (max-width: 1200px) {
     .hamburger {
         display: block;
         background-color: #F2F2F2;
@@ -582,13 +614,12 @@ nav {
     background-size:cover;
      /* Note: opacity values are between 0 (fully transparent) and 1 (fully opaque) */
     position:relative;  /* or absolute, fixed, or sticky, depending on your layout needs */
-    
 }
 
 
 
 
-.hero > h1{
+.hero h1, .hero p{
     color: white;
     
 }
@@ -627,7 +658,7 @@ nav {
 
 .logo-wrapper img {
     height: auto;
-    width: 15%;
+    width: 12%;
 }
 
   /* Input and textarea styles */
@@ -646,9 +677,7 @@ nav {
     flex-direction: column;
   }
 
-footer{
-    background-color: #616161;
-}
+
 
 .flex-row{
     display: flex;
@@ -661,15 +690,16 @@ footer{
 
 }
 
-footer p, footer a, footer h3 {
+footer p, footer a, footer h3, footer ul {
     color: white;
+    z-index: 10000;
 }
 
 
 footer p:hover,
 footer a:hover
 {
-    color: grey;
+    color: rgb(255, 255, 255);
     animation: fadeIn 2s ease-in-out ;
 }
 
@@ -839,6 +869,7 @@ img[src="Images/rightarrow.png"] {
 
 .contact h2, .contact p {
     color: white;
+    z-index: 100;
 }
 
 
@@ -864,7 +895,10 @@ form{
   }
 
 footer{
-    background-color: #616161;
+    background-image: url('Images/footer.jpg');
+    background-size: cover;
+    position: relative;  /* or absolute, fixed, or sticky, depending on your layout needs */
+    color: white;
 }
 
 
@@ -1101,7 +1135,10 @@ footer{
     background-color: white;
     padding: 1.5rem;
     width: 100%;
-    margin:  auto;
+    margin: 0 auto;
+    width: 100%;
+    /* border: #000 2px solid; */
+    text-align: center;
 }
 
 @media (min-width: 600px) {
@@ -1140,4 +1177,14 @@ footer{
 
 .imagegrid-container img{
     border: 2px black solid
+}
+
+.social-media{
+    text-align: center;
+}
+
+@media(min-width:600px){
+    .social-media{
+        text-align:start;
+    }
 }

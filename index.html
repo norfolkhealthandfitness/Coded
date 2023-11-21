@@ -18,12 +18,15 @@
 <!--    Start of beggining of header section      -->
 <nav class="top-nav">
     <div class="navbar containerHeader ">
-        <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
-        <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+        <div class="hide-mob">
+            <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
     
-        <p>07969494485</p>
-        <a href="">info@norfolkhealthandfitness.com</a>
-        <a class="button" href="">LOGIN/REGISTER</a>
+            <p>07969494485</p>
+            <a href="">info@norfolkhealthandfitness.com</a>
+        </div>
+
+        <a class="button red" href="https://nhfclassroom.com" target="_blank">LOGIN/REGISTER</a>
     
         <img src="Images/NHFGYM.webp" alt="NHF Gym logo">
     </div>
@@ -39,34 +42,27 @@
   
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="index.html" class="nav-link">HOME</a>
+                <a class="header-link active" href="index.html" class="nav-link">HOME</a>
             </li>
   
             <li class="nav-item">
-                <a href="about.html" class="nav-link">ABOUT</a>
+                <a class="header-link" href="about.html" class="nav-link">ABOUT</a>
             </li>
   
             <li class="nav-item">
-                <a href="courses.html" class="nav-link">COURSES</a>
+                <a class="header-link" href="courses.html" class="nav-link">COURSES</a>
             </li>
 
             <li class="nav-item">
-                <div class="dropdown">
-                    <button class="dropbtn">RESOURCES</button>
-                    <div class="dropdown-content">
-                        <a href="#blog">Blog</a>
-                        <a href="#store">Store</a>
-                        <a href="2023-2024-Prospectus.pdf" target="_blank">Prospectus</a>
-                    </div>
-                </div>
+                <a class="header-link" href="2023-2024-Prospectus.pdf" target="_blank">PROSPECTUS</a>
             </li>
 
             <li class="nav-item">
-                <a  href="FAQ.html" class="nav-link">FAQ's</a>
+                <a class="header-link" href="FAQ.html" class="nav-link">FAQ's</a>
             </li>
           
             <li class="nav-item">
-                <a href="contact.html">CONTACT</a>
+                <a class="header-link" href="contact.html">CONTACT</a>
               </li>
         </ul>
         <div class="hamburger">
@@ -95,7 +91,7 @@
                     <p>WELCOME TO NORFOLK HEALTH & FITNESS</p>
                     <h1>A Leading Provider For Online & In-Person Personal Training Courses In Norwich</h1>
                     <p>Our mission has always been to raise standards in the health and fitness industry. Let’s get you qualified..</p>
-                    <a class="button red" href="#contact-us">START YOUR CAREER</a>
+                    <a style="margin-bottom: 1rem;" class="button red" href="#contact-us">START YOUR CAREER</a>
                 </div>
             </section>
 <!-- ============================================ -->
@@ -151,9 +147,9 @@
     </div>
 </section>
   
-    <section class="middle-align container-none middle">
+    <section class="container" >
     
-        <div class="grid-container-two middle-align">
+        <div class="grid-container-two ">
     
             <div class="cell">
                 <p id="numberCounter" style="margin-bottom: -1px;" class="larger"></p>
@@ -245,7 +241,7 @@
 <!--     Start of social media section            -->
 <!-- ============================================ -->  
 <section style="height: 100%;" class="grey-bg">
-    <div class="parent-of-half-page container">
+    <div class="parent-of-half-page container social-media">
         <div class="half-page">
             <p>SOCIAL MEDIA</p>
             <h2>Follow Us Social Media</h2>
@@ -411,7 +407,8 @@
 <!--        Start of footer section               -->
 <!-- ============================================ --> 
 <footer>
-    <section class="container">
+    <section class="container footer">
+        <div class="overlay"></div>
         <div class="footer-nav" id="top-nav">
             <img style="width: 150px;" src="Images/NHFLOGO.png" alt="our logo">
             <div>
