@@ -610,6 +610,7 @@ nav {
 .hero{
    /* background-color: yellow; */
    background-image: url('Images/backdrop.webp');
+   position: relative;
 }
 .hero h1, .hero p{
     color: white;
