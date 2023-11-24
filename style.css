@@ -99,6 +99,7 @@ img{
 .container, .container-none, .container-top, .container-bottom {
     padding-left: 1rem;
     padding-right: 1rem;
+    margin: 0 auto;
 }
 
 @media (min-width:600px) {
