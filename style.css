@@ -1149,6 +1149,14 @@ footer{
     text-align: center;
 }
 
+@media (min-width: 800px){
+    .grid-container-two {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1fr);
+        margin: auto;
+    }
+}
+
 @media (min-width: 600px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
@@ -1160,12 +1168,6 @@ footer{
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(1fr);
-    }
-
-    .grid-container-two {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(1fr);
-        margin: auto;
     }
 }
 
