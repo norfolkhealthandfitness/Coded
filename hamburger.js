@@ -1,3 +1,4 @@
+
 // ======================================
 // Hamburger Menu Section
 // ======================================
@@ -13,9 +14,6 @@ document.querySelectorAll(".nav-link").forEach(m => m.addEventListener("click", 
   hamburger.classList.remove("active");
   navMenu.classList.remove("active");
 }));
-
-
-
 
 // ======================================
 // Hamburger Menu End
