@@ -189,7 +189,7 @@ function displayCoursesByLevel(level, containerSelector) {
                                 <a href="${course.ThreeMonthLink}" target="blank">3 Months</a>
                                 <a href="${course.SixMonthLink}" target="blank">6 Months</a>
                             </div>
-                        </div>
+                        </div> 
                     </div>
                     <div class="buttons-course-lower">
                         <a class="button red" href="${course.CourseGuideLink}">DOWNLOAD COURSE GUIDE</a>
