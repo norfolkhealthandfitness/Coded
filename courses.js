@@ -166,7 +166,6 @@ const allExtraCourses = [
         Level: 4,
     }
 ]
-
 function displayCoursesByLevel(level, containerSelector) {
     const injectExtraCourses = document.querySelector(containerSelector);
 
