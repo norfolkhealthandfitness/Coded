@@ -191,9 +191,7 @@ function displayCoursesByLevel(level, containerSelector) {
                             </div>
                         </div> 
                     </div>
-                    <div class="buttons-course-lower">
                         <a class="button red" href="${course.CourseGuideLink}">DOWNLOAD COURSE GUIDE</a>
-                    </div>
                 </div>
             </div>
         `;

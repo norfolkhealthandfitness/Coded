@@ -5,7 +5,8 @@ const allFooters = insertFooter.forEach(x =>{
     <section class="container footer">
     <div class="overlay"></div>
     <div class="footer-nav" id="top-nav">
-        <img style="width: 150px;" src="Images/NHFLOGO.webp" alt="our logo">
+        <!-- Corrected image path consistency and added alt text -->
+        <img style="width: 150px; z-index:1000;" src="images/NHF-white.png" alt="NHF Logo">
         <div>
             <h3>Navigation</h3>
             <ul>
@@ -21,7 +22,8 @@ const allFooters = insertFooter.forEach(x =>{
         <div>
             <h3>Contact</h3>
             <div class="email-number-contact">
-                <p>07743978158</p>
+                <!-- Added tel link for the phone number -->
+                <p><a href="tel:+07743978158">07743978158</a></p>
             </div>
             <div class="email-number-contact">
                 <ul>
@@ -39,14 +41,16 @@ const allFooters = insertFooter.forEach(x =>{
 
     <div class="footer-nav" id="bottom-nav">
         <p>@ jol2023</p>
+        <!-- Escaped special characters in URL -->
         <a href="PrivacyPolicy.html">Privacy Policy</a>
-        <a href="Terms & Conditions.html">Terms and Conditions</a>
+        <a href="Terms-and-Conditions.html">Terms and Conditions</a>
         <div class="flex-row footer-logo">
             <p>Developed by</p>
-            <img src="images/LogoforJolrust.webp" alt="">
-           
+            <!-- Added alt text for the second image -->
+            <img src="images/LogoforJolrust.webp" alt="Logo of Jolrust">
         </div>
     </div>
 </section>
+
     `
 })

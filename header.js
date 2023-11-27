@@ -15,8 +15,9 @@ const headers = insertHeader.forEach( x => {
                 <p class="hide-mob">07969494485</p>
                 <a class="hide-mob" href="">info@norfolkhealthandfitness.com</a>
             
-    
-            <a class="button red" href="https://nhfclassroom.com" target="_blank">LOGIN/REGISTER</a>
+            <div class="buttons-div">
+                <a class="button red" href="https://nhfclassroom.com" target="_blank">LOGIN/REGISTER</a>
+            </div>
         
             <img class="gym-logo" src="Images/NHFGYM.webp" alt="NHF Gym logo">
         </div>
