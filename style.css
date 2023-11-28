@@ -158,10 +158,23 @@ img{
 /* ---------------------------------------------------------------*/
 /* --------------------- Typography section ----------------------*/
 
+ul, li {
+    padding: 0;
+    margin: 0;
+}
+
 ol, ul {
     line-height: 2;
-    list-style-type: decimal;
+    list-style-type: none;
     z-index: 1000;
+    text-decoration: none;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    z-index: 10000;
+    list-style-type: none;
 }
 
 h1, h2, h3, h4, p, a {
@@ -180,6 +193,7 @@ h1{
 
 h2{
     font-size: 2rem;
+    font-weight: lighter;
 }
 
 h3{
@@ -191,7 +205,8 @@ h1{
 }
 
 h2{
-    font-size: 3rem;
+    font-size: 2.5rem;
+
 }
 
 h3{
@@ -208,11 +223,7 @@ p, a {
     text-decoration: none;
 }
 
-li {
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    z-index: 10000;
-}
+
 
 /* -------------------End of Typography section-------------------*/
 /* ---------------------------------------------------------------*/
@@ -1150,6 +1161,10 @@ footer{
 .cell{
     padding: 1.5rem;
     text-align: center;
+}
+
+.cell p{
+    font-weight: lighter;
 }
 
 @media (min-width: 800px){
