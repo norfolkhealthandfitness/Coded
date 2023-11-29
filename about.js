@@ -36,6 +36,20 @@ const tutorDatabase = [
              `
     },
     {
+        img: 'Images/Ian.jpg',
+        Name: 'Ian Rickett',
+        Role: 'TUTOR AND ASSESSOR',
+        Bio: `
+        <p>I started working as a personal trainer 2019 whilst completing my degree in sport fitness and coaching with the open university. I worked at Fitness @ The Street, a gym in my village where I live.</p>
+        <br> 
+        <p>In 2021 I decided to qualify as a strength and conditioning coach with Norfolk Health and Fitness as I have a keen interest in supporting athletes. I was fortunate to work with two players from Norwich United football club, and for the 2022-2023 season was appointed as the club’s strength and conditioning coach. I oversaw the club’s strength and conditioning programme. Through the preseason I supported the players in developing their fitness in preparation for the season ahead. </p>
+        <br> 
+        <p> In September 2022 I was offered the role of fitness and performance coach at Queen Mary University London. I am involved with gym floor services including gym classes, programming and inductions. I oversee the universities strength and conditioning programme which supports a variety of athletes from university club sport and the university talented athlete programme. 
+        <br> 
+        <p>I am currently completing a master’s degree in strength and conditioning with St Mary’s University Twickenham.</p>
+             `
+    },
+    {
         img: 'Images/Matt.jpg',
         Name: 'Matt Fever',
         Role: 'TUTOR AND ASSESSOR',
