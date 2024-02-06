@@ -47,10 +47,12 @@ const allFooters = insertFooter.forEach(x =>{
         <div class="flex-row footer-logo">
             <p>Developed by</p>
             <!-- Added alt text for the second image -->
-            <img src="images/LogoforJolrust.webp" alt="Logo of Jolrust">
+            
         </div>
     </div>
 </section>
 
     `
 })
+
+// <img src="images/LogoforJolrust.webp" alt="Logo of Jolrust">

@@ -250,12 +250,12 @@ p, a {
     color: #AE1320
 }
 
-.buttons-div { /* Correct the class name here */
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    flex-direction: row;
-}
+/* .buttons-div {  */
+    /* display: flex; */
+    /* gap: 1rem; */
+    /* margin-bottom: 2rem; */
+    /* flex-direction: row; */
+/* } */
 
 
 
@@ -434,6 +434,8 @@ button{
 
 .hide-mob{
     display:none;
+    font-weight: lighter;
+    font-size: 14px;
 }
 
 @media(min-width: 700px){
@@ -486,6 +488,7 @@ button{
    display: flex;
    flex-direction: row;
    justify-content: center;
+   align-items: center;
  } 
 
 
