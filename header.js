@@ -2,11 +2,34 @@
 // Header bar
 const insertHeader = document.querySelectorAll('.insert-header')
 
+// Assuming the header HTML is inserted correctly as you have it in your script
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Identify the current page URL
+    const currentPage = window.location.pathname;
+
+    // Select all navigation links
+    const navLinks = document.querySelectorAll('.nav-item .header-link');
+
+    // Loop through each link to find a match
+    navLinks.forEach(link => {
+        // Check if the link's href matches the current page URL
+        if (link.getAttribute('href') === currentPage || link.getAttribute('href') === (currentPage.split('/').pop())) {
+            // Remove active class from all (in case of any static assignments)
+            navLinks.forEach(l => l.classList.remove('active'));
+
+            // Add active class to the matching link
+            link.classList.add('active');
+        }
+    });
+});
+
+
 const headers = insertHeader.forEach( x => {
     return x.innerHTML = `
     <nav class="top-nav">
         <div class="navbar containerHeader">
-                <div class="hide-mob">
+                <div class="hide-mob social-icons">
                     <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
                     <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
                 </div>
@@ -33,7 +56,7 @@ const headers = insertHeader.forEach( x => {
       
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a class="header-link active" href="index.html" class="nav-link">HOME</a>
+                    <a class="header-link" href="index.html" class="nav-link">HOME</a>
                 </li>
       
                 <li class="nav-item">
