@@ -27,7 +27,7 @@ insertFooter.forEach(x => {
                 </div>
                 <div class="email-number-contact">
                     <ul>
-                        <li><a href="mailto:hello@jolillustrations.com">hello@jolillustrations.com</a></li>
+                        <li><a href="mailto:info@norfolkhealthandfitness.com">info@norfolkhealthandfitness.com</a></li>
                     </ul>
                 </div>
             </div>

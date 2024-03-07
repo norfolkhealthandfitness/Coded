@@ -1,8 +1,7 @@
 
-// Header bar
 const insertHeader = document.querySelectorAll('.insert-header')
 
-// Assuming the header HTML is inserted correctly as you have it in your script
+
 
 document.addEventListener('DOMContentLoaded', function () {
     // Identify the current page URL
@@ -38,9 +37,8 @@ const headers = insertHeader.forEach( x => {
                 <p class="hide-mob">07969494485</p>
                 <a class="hide-mob" href="">info@norfolkhealthandfitness.com</a>
             
-            <div class="buttons-div">
-                <a class="button red" href="https://nhfclassroom.com" target="_blank">LOGIN/REGISTER</a>
-            </div>
+           
+            <a class='button' href="https://nhfclassroom.com">LOGIN/REGISTER</a>
         
             <img class="gym-logo" src="Images/NHFGYM.webp" alt="NHF Gym logo">
         </div>
