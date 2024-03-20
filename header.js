@@ -58,6 +58,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 <li class="nav-item">
                     <a class="header-link" href="2023-2024-Prospectus.pdf" target="_blank">PROSPECTUS</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="header-link" href="blogs.html" >BLOG</a>
+                </li>
     
                 <li class="nav-item">
                     <a class="header-link" href="FAQ.html" class="nav-link">FAQ's</a>
