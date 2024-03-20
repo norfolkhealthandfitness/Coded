@@ -233,7 +233,7 @@ a {
 
 .button {
     padding: 0.75rem 1.5rem;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     border: none;          
     cursor: pointer;       
@@ -244,6 +244,7 @@ a {
     background-color: #AE1320;
     transition: background-color 0.3s ease, color 0.3s ease;
     position: relative;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -276,8 +277,7 @@ button{
     border-radius: 0;
     appearance: none;
     color: white;
-   
-   
+    font-size: 16px;
 }
 
 /* Dropdown Button */
@@ -1015,7 +1015,7 @@ footer {
 /*----------------------------------*/
 .single-course{
     text-align: center;
-   
+    padding: 1%;
 }
 
 .main-courses{

@@ -1,9 +1,8 @@
-const insertFooter = document.querySelectorAll('.insert-footer');
+const insertFooter = document.querySelector('.insert-footer');
 
 const currentYear = new Date().getFullYear(); // Get the current year
 
-insertFooter.forEach(x => {
-    x.innerHTML =`
+insertFooter.innerHTML =`
     <section class="container footer">
         <div class="overlay"></div>
         <div class="footer-nav" id="top-nav">
@@ -47,4 +46,4 @@ insertFooter.forEach(x => {
         </div>
     </section>
     `;
-});
+
