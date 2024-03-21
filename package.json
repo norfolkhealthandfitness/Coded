@@ -1,3 +1,8 @@
 {
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^16.3.5",
+    "contentful": "^10.8.4",
+    "contentful-html-rich-text-converter": "^1.0.11"
+  }
 }

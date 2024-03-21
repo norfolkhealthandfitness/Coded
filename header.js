@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </li>
 
                 <li class="nav-item">
-                    <a class="header-link" href="blogs.html" >BLOG</a>
+                    <a class="header-link" href="blogs.html" §>BLOG</a>
                 </li>
     
                 <li class="nav-item">

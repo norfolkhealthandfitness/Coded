@@ -1,3 +1,5 @@
+import { documentToHtmlString } from 'https://cdn.skypack.dev/@contentful/rich-text-html-renderer';
+
     // Step 1: Extract the Post ID from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const postId = urlParams.get('id');
@@ -11,12 +13,20 @@
 
         if (post) {
           // Step 3: Display the Post Title
-          const title = post.fields.title;
+
+        //   const content = documentToHtmlString(post.fields.content)
           document.getElementById('blog').innerHTML = `
-          <h1>${title}</h1>
+          <h1>${post.fields.title}</h1>
           <h1>${post.fields.category}</h1>
-          <div>${post.fields.content}</div>
+          <div>${documentToHtmlString(post.fields.content)}</div>
           `;
+          console.log(
+            `
+          <h1>${post.fields.title}</h1>
+          <h1>${post.fields.category}</h1>
+          <div>${documentToHtmlString(post.fields.content)}</div>
+          `
+          )
         } else {
           document.getElementById('blog').innerHTML = `<p>Post not found.</p>`;
         }
