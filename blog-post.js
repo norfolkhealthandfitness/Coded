@@ -1,43 +1,36 @@
 import { documentToHtmlString } from 'https://cdn.skypack.dev/@contentful/rich-text-html-renderer';
 
-    // Step 1: Extract the Post ID from the URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const postId = urlParams.get('id');
 
-    if (postId) {
-      // Step 2: Fetch the Specific Post by ID
-      fetch(`https://cdn.contentful.com/spaces/db551ij8p9al/environments/master/entries?access_token=T5PDBa4fQ95s0Lgl9T3KVY161OKFiR7WK-KFmIFtb6w&content_type=blogPage&sys.id=${postId}`)
-      .then(response => response.json())
-      .then(data => {
-        const post = data.items[0]; // Assuming the ID will directly match a single post
+// Step 1: Extract the Post ID from the URL
+const urlParams = new URLSearchParams(window.location.search);
+const postId = urlParams.get('id');
 
-        if (post) {
-          // Step 3: Display the Post Title
+if (postId) {
+  // Step 2: Fetch the Specific Post by ID, including linked assets
+  fetch(`https://cdn.contentful.com/spaces/2cvz2uqy0q73/environments/master/entries?access_token=BZQSUCVEKKIjSFYmKMs-0oPZCObhzLIa5xtsBEiQEmw&content_type=blog&sys.id=${postId}&include=1`)
+  .then(response => response.json())
+  .then(data => {
+    const post = data.items[0]; // Assuming the ID will directly match a single post
 
-        //   const content = documentToHtmlString(post.fields.content)
-          document.getElementById('blog').innerHTML = `
-          <h1>${post.fields.title}</h1>
-          <h1>${post.fields.category}</h1>
-          <div>${documentToHtmlString(post.fields.content)}</div>
-          `;
-          console.log(
-            `
-          <h1>${post.fields.title}</h1>
-          <h1>${post.fields.category}</h1>
-          <div>${documentToHtmlString(post.fields.content)}</div>
-          `
-          )
-        } else {
-          document.getElementById('blog').innerHTML = `<p>Post not found.</p>`;
-        }
-      })
-      .catch(err => {
-        console.log(err);
-        document.getElementById('blog').innerHTML = `<p>Error loading the post.</p>`;
-      });
+    // Check if there's a post and included assets
+    if (post && data.includes && data.includes.Asset) {
+      // Find the asset that matches the mainImage ID
+      const asset = data.includes.Asset.find(a => a.sys.id === post.fields.mainImage.sys.id);
+      const imageUrl = asset.fields.file.url;
+
+      // Now you can use imageUrl in your img tag
+      document.getElementById('blog').innerHTML = `
+        <img src="${imageUrl}" alt="Main Image"/>
+        <h1>${post.fields.headline}</h1>
+        <p>${post.fields.category}</p>
+        <div>${documentToHtmlString(post.fields.blogContent)}</div>
+      `;
     } else {
-      document.getElementById('blog').innerHTML = `<p>No post ID provided.</p>`;
+      document.getElementById('blog').innerHTML = `<p>Post not found.</p>`;
     }
-
-
-   
+  })
+  .catch(err => {
+    console.error(err);
+    document.getElementById('blog').innerHTML = `<p>Error loading the post.</p>`;
+  });
+}
