@@ -1278,3 +1278,48 @@ footer {
     z-index: 2;
 }
 
+/* Blogs */
+
+/* Styles for each blog post preview */
+.blog-post-preview {
+    background-color: #ffffff; /* Change to your preferred background color */
+    border-radius: 8px; /* Slightly rounded edges */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* A touch of drop shadow */
+    overflow: hidden; /* Ensures nothing spills outside the rounded borders */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+  }
+  
+  .blog-post-preview:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+  }
+  
+  .blog-post-preview a {
+    color: inherit; /* Ensures the link color matches the text color */
+    text-decoration: none; /* Removes underline from links */
+  }
+  
+  .blog-post-preview img {
+    width: 100%; /* Makes the image fill the container */
+    height: auto; /* Keeps the image aspect ratio */
+    border-top-left-radius: 8px; /* Rounds the top left corner */
+    border-top-right-radius: 8px; /* Rounds the top right corner */
+  }
+  
+  .blog-post-preview h2, .blog-post-preview p {
+    padding: 0 20px; /* Adds padding around the text */
+  }
+  
+  /* Grid layout applied to #inject-blog for displaying blog posts */
+  #inject-blog {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to 1 column for smaller screens */
+    gap: 20px; /* Adjusts the space between the posts */
+    padding: 20px; /* Adds some space around the grid */
+  }
+  
+  @media (min-width: 768px) {
+    #inject-blog {
+      grid-template-columns: repeat(2, 1fr); /* Explicitly sets 2 columns on larger screens */
+    }
+  }
+  
