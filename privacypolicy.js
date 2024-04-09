@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             // Check if data array is not empty
             if (data && data.items && data.items.length > 0) {
-                const firstDocument = data.items[2]; // Get the first document object
+                const firstDocument = data.items[0]; // Get the first document object
                 const title = firstDocument.fields.title; // Extract title field
                 const content = firstDocument.fields.content; // Extract content field
 
