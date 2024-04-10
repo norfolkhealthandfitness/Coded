@@ -6,11 +6,9 @@ insertFooter.innerHTML =`
     <section class="container footer">
         <div class="overlay"></div>
         <div class="footer-nav" id="top-nav">
-            <div style='display:flex; align-items: center; flex-direction:column'>
-                <img style="width: 150px; margin-top:50px; z-index:1000;" src="images/NHF-white.png" alt="NHF Logo">
-            </div>
+            <img style="width: 150px; z-index:1000;" src="images/NHF-white.png" alt="NHF Logo">
             <div>
-                <h4>Further Links</h4>
+                <h3>Further Links</h3>
                 <ul>
                     <li><a href="appeals.html">Appeals Procedure</a></li>
                     <li><a href="termsconditions.html">Terms & Conditions</a></li>
@@ -19,7 +17,7 @@ insertFooter.innerHTML =`
                 </ul>
             </div>
             <div>
-            <h4>Contact Us</h4>
+            <h3>Contact Us</h3>
             <ul>
                 <p>T: 07969494485</p>
                 <p>E: info@norfolkhealthandfitness.com</p>
@@ -29,22 +27,20 @@ insertFooter.innerHTML =`
             </ul>
         </div>
             <div>
-                <h4>Follow Us</h4>
+                <h3>Follow Us</h3>
                 <div class="hide-mob social-icons">
                     <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
                     <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
                 </div>
-                <p style='font-weight:bold; font-size:13px'>Payment plans available with</p>
-                <div style="display:flex; flex-direction: row; height:20px; gap:20px;">
-                    <img src='images/paylater.png'/>
-                    <img src='images/gocardless.png'/>
-                </div>
+                <p>Payment plans available with</p>
+                <img src='images/paylater.png'/>
+                <img src='images/gocardless.png'/>
             </div>
             <div class="buttons-div">
-                <a style=' margin-top:50px;' class="button green" href="contact.html">Contact</a>
+                <a class="button green" href="contact.html">Contact</a>
             </div>
         </div>
-        <span style='margin-top:25px; margin-bottom:25px;' class="footer-break"></span>
+        <span class="footer-break"></span>
         <div class="footer-nav" id="bottom-nav">
             <p>@ ${currentYear} Norfolk Health & Fitness Ltd</p>
             <a href="PrivacyPolicy.html">Privacy Policy</a>
