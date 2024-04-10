@@ -9,6 +9,8 @@
 li {
     list-style-type: none;
   }
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
   
 
 body{
@@ -213,7 +215,7 @@ h1, h2, h3, h4 {
 }
 
 p {
-    font-family: 'Open Sans',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans',system-ui,;
     text-decoration: none;
 }
 
@@ -233,7 +235,7 @@ a {
 
 .button {
     padding: 0.75rem 1.5rem;
-    font-size: 16px;
+    font-size: 12px;
     text-align: center;
     border: none;          
     cursor: pointer;       
@@ -639,12 +641,16 @@ nav {
 /* ------------------End of Header Section ----------------------*/
 /* ---------------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
-
-.hero{
-   /* background-color: yellow; */
-   background-image: url('Images/backdrop.webp');
-   position: relative;
+.hero {
+    /* background-color: yellow; Uncomment if you want a fallback color */
+    background-image: url('Images/backdrop.webp');
+    background-repeat: no-repeat;  /* Prevents the background image from repeating */
+    background-position: center;  /* Centers the background image */
+    background-size: cover;  /* Ensures the background image covers the entire element */
+    position: relative;
 }
+
+
 .hero h1, .hero p{
     color: white;
 }
@@ -721,11 +727,21 @@ nav {
 
 }
 
-footer p, footer a, footer h3, footer ul {
-    color: white;
+footer p, footer a, footer h4, footer ul {
+    color: #e1e1e1;
     z-index: 10000;
 }
 
+footer a, footer p, footer li{
+    font-size: 12px;
+}
+
+footer h4{
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
 
 footer p:hover,
 footer a:hover
@@ -733,6 +749,7 @@ footer a:hover
     color: rgb(255, 255, 255);
     animation: fadeIn 2s ease-in-out ;
 }
+
 
 .gallery-grid {
     display: grid;
@@ -777,7 +794,7 @@ footer a:hover
       }
   }
 
-  @media (min-width:600px){
+  @media (min-width:1250px){
     .footer-nav{
         display: flex;
         align-items: flex-start;
@@ -1329,7 +1346,7 @@ footer {
     text-decoration: none;
     display: block;
     padding: 20px;
-    width
+
   }
   
   .blog-post-preview h2, .blog-post-preview p {
@@ -1406,4 +1423,55 @@ footer {
       display: none;
     }
   }
+
+/* Swiper */
   
+.swiper {
+    width: 100%;  
+    height: 200px;  /* Adjust if necessary */
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+.swiper-button-prev, .swiper-button-next {
+    color: white;  /* This changes the color of text icons to white */
+}
+
+
+.swiper-slide {
+    width: auto;  /* This will respect the size of the images */
+    display: flex;  /* Flex isn't typically necessary here */
+    align-items: center;  /* This centers the slides vertically */
+    justify-content: center;  /* This centers the content horizontally within each slide */
+}
+
+.swiper img {
+    max-width: 100%;  /* Ensures images resize within their slides */
+    height: auto;  /* Maintains aspect ratio */
+}
+
+.swiper{
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+
+.swiper-pagination-bullet {
+    background-color: #CCCCCC 
+}
+
+.swiper-pagination-bullet-active {
+    background-color: white
+}
+
+.swiper-container {
+    position: relative;  /* Ensures that absolute positioning of children is relative to this container */
+    margin-bottom: 50px;  /* Add enough bottom margin to accommodate pagination */
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 30px;  /* Adjust this value to move the pagination down */
+    width: 100%;  /* Ensures the pagination bar spans the full width of the swiper container */
+    text-align: center;  /* Center the dots horizontally */
+}
+
