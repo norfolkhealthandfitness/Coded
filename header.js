@@ -22,10 +22,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
                     <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
                 </div>
-            
-        
-                <p class="hide-mob">07969494485</p>
-                <a class="hide-mob" href="">info@norfolkhealthandfitness.com</a>
+
+                <div class='headericon'>
+                    <i  class="fa-regular fa-envelope"></i>
+                    <p>07969494485</p>
+                </div>
+                
+                <div class='headericon'>
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="">info@norfolkhealthandfitness.com</a>
+                </div>
+                
             
            
             <a class='button' href="https://nhfclassroom.com">LOGIN/REGISTER</a>
@@ -71,6 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     <a class="header-link" href="contact.html">CONTACT</a>
                   </li>
             </ul>
+
+            
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>

@@ -6,7 +6,9 @@ insertFooter.innerHTML =`
     <section class="container footer">
         <div class="overlay"></div>
         <div class="footer-nav" id="top-nav">
-            <img style="width: 150px; z-index:1000;" src="images/NHF-white.png" alt="NHF Logo">
+            <div style='z-index:1'>
+                <img style="width: 150px; " src="images/NHF-white.png" alt="NHF Logo">
+            </div>
             <div>
                 <h3>Further Links</h3>
                 <ul>
@@ -17,15 +19,15 @@ insertFooter.innerHTML =`
                 </ul>
             </div>
             <div>
-            <h3>Contact Us</h3>
-            <ul>
-                <p>T: 07969494485</p>
-                <p>E: info@norfolkhealthandfitness.com</p>
-                <p>Gym: The Union Building, 51-59 Rose Lane, Norwich, Norfolk, NR1 1BY</p>
-                <p>Company Number: 10552056</p>
-                <p>Registered Address: 10a Castle Meadow, Norwich, United Kingdom, NR1 3DE</p>
-            </ul>
-        </div>
+                <h3>Contact Us</h3>
+                <ul>
+                    <p>T: 07969494485</p>
+                    <p>E: info@norfolkhealthandfitness.com</p>
+                    <p>Gym: The Union Building, 51-59 Rose Lane, Norwich, Norfolk, NR1 1BY</p>
+                    <p>Company Number: 10552056</p>
+                    <p>Registered Address: 10a Castle Meadow, Norwich, United Kingdom, NR1 3DE</p>
+                </ul>
+            </div>
             <div>
                 <h3>Follow Us</h3>
                 <div class="hide-mob social-icons">
@@ -33,13 +35,13 @@ insertFooter.innerHTML =`
                     <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
                 </div>
                 <p>Payment plans available with</p>
-                <img src='images/paylater.png'/>
-                <img src='images/gocardless.png'/>
-            </div>
-            <div class="buttons-div">
-                <a class="button green" href="contact.html">Contact</a>
+                <div class="payLater">
+                    <img src='images/paylater.png'/>
+                    <img src='images/gocardless.png'/>
+                </div>
             </div>
         </div>
+        
         <span class="footer-break"></span>
         <div class="footer-nav" id="bottom-nav">
             <p>@ ${currentYear} Norfolk Health & Fitness Ltd</p>

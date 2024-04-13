@@ -31,13 +31,13 @@ contact.innerHTML = `
 
                 <div class="form-group">
                     <label for="enquiry">Enquiry</label>
-                    <textarea id="enquiry" name="enquiry" placeholder="Enquiry" required></textarea>
+                    <textarea  id="enquiry" name="enquiry" placeholder="Enquiry" required></textarea>
                 </div>
 
                 <div data-netlify-recaptcha="true"></div>
 
 
-                <div class="buttons-div">
+                <div style='margin: 0 auto' class="buttons-div">
                     <button class="button red" type="submit">Contact</button>
                 </div>
             </form>

@@ -55,12 +55,12 @@ body{
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.75); /* Black with 50% opacity */
-    z-index: 1;
 }
 
 .fa-solid, .fa-regular{
-    color: #AE1320;
-    font-size: 40px;
+    color: #E93946;
+    font-size: 15px;
+    /* color: #AE1320 */
 }
 /* ---------------------------------------------------------------*/
 /*                      End of colours                            */
@@ -233,7 +233,7 @@ a {
 
 .button {
     padding: 0.75rem 1.5rem;
-    font-size: 16px;
+    font-size: 12px;
     text-align: center;
     border: none;          
     cursor: pointer;       
@@ -241,10 +241,12 @@ a {
     text-decoration: none;
     color: #FFFFFF;
     display: block;
-    background-color: #AE1320;
+    /* background-color: #AE1320; */
+    background-color: #E93946;
     transition: background-color 0.3s ease, color 0.3s ease;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
 }
 
 
@@ -264,6 +266,12 @@ a {
     margin-bottom: 2rem;
     flex-direction: row;
  }
+
+ @media (max-width: 700px){
+    .buttons-div {  
+        margin: 0 auto;
+    }
+}
 
 
 
@@ -446,15 +454,12 @@ button{
     }
 }
 
+
+
 .hide-mob {
     display:none;
     font-weight: lighter;
     font-size: 14px;
-}
-
-.social-icons i{
-    margin-right: 32px;
-    font-size: 14px; 
 }
 
 @media(min-width: 700px){
@@ -485,8 +490,9 @@ button{
 .header-link{
     /* border: #000 1px solid; */
     padding: 1rem 0.75rem;
-    font-size: 0.8rem;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: normal;
+    color: #121212;
 }
 
 .header-link.active,.header-link:hover{
@@ -598,6 +604,23 @@ nav {
     height: auto;
 }
 
+.headericon{
+    display: none;
+}
+
+@media(min-width: 700px){
+   .headericon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: lighter;
+    gap: 12px;
+   }
+}
+
+
 /* Header tablet */
 @media (max-width: 1200px) {
     .hamburger {
@@ -644,6 +667,10 @@ nav {
    /* background-color: yellow; */
    background-image: url('Images/backdrop.webp');
    position: relative;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 75vh;
+   display: flex;
 }
 .hero h1, .hero p{
     color: white;
@@ -692,15 +719,7 @@ nav {
 
     }
 }
-  /* Input and textarea styles */
-  input,
-  textarea {
-    width: 100%;
-    border-radius: 3px;
-    border: 1px solid #cccccc;
-    background: white;
-    height: 48px;
-  }
+
 
 .email-form{
     gap: 16px;
@@ -721,17 +740,54 @@ nav {
 
 }
 
-footer p, footer a, footer h3, footer ul {
+footer p, footer a, footer h3, footer h4, footer ul, footer img {
     color: white;
-    z-index: 10000;
 }
 
+footer img{
+    width: 100px;
+    z-index: 1000;
+    position: relative;
+}
+
+.payLater{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.social-icons{
+    z-index: 10;
+    position: relative;
+    display: flex;
+    gap: 16px;
+}
+
+
+footer p, footer a {
+    font-size: 14px;
+}
+
+footer h1, footer h2, footer h3, footer h4{
+    font-size: 16px;
+}
 
 footer p:hover,
 footer a:hover
 {
     color: rgb(255, 255, 255);
     animation: fadeIn 2s ease-in-out ;
+}
+
+.footer-nav > * {
+    flex: 1 1 25%; /* Grow and shrink setting with a basis of 25% */
+    
+}
+
+.footer-nav > img {
+    flex: 0 0 auto;   /* This prevents the image from growing or shrinking */
+    width: 150px;     /* Keeps the image at 150px as defined inline */
 }
 
 .gallery-grid {
@@ -777,7 +833,11 @@ footer a:hover
       }
   }
 
-  @media (min-width:600px){
+  .footer-nav{
+    justify-content: space-between;
+  }
+
+  @media (min-width:1200px){
     .footer-nav{
         display: flex;
         align-items: flex-start;
@@ -1018,6 +1078,13 @@ footer {
     padding: 1%;
 }
 
+.course-price{
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
 .main-courses{
     display: flex;
     flex-direction: column;
@@ -1195,14 +1262,10 @@ footer {
 
 
 
-.grid-container {
-    display: grid;
-    grid-template-rows: repeat(1fr);
-    width: 100%;
-}
+
 
 .grid-container-two {
-    display: grid;
+    display: none;
     grid-template-rows: repeat(1fr);
     width: 100%;
     margin: 0 auto;
@@ -1217,6 +1280,10 @@ footer {
     text-align: center;
 }
 
+.cell i{
+    font-size: 40px;
+}
+
 .cell p{
     font-weight: lighter;
 }
@@ -1226,20 +1293,27 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(1fr);
         margin: auto;
+        display: grid;
     }
+}
+.grid-container {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
 }
 
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(1fr);
+    
     }
-}
+} */
 
 @media (min-width: 1200px) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(1fr);
+        /* Assuming you want each cell to adjust its height automatically */
+        /* grid-template-rows is removed or set properly if needed */
     }
 }
 
@@ -1329,7 +1403,6 @@ footer {
     text-decoration: none;
     display: block;
     padding: 20px;
-    width
   }
   
   .blog-post-preview h2, .blog-post-preview p {
@@ -1407,3 +1480,84 @@ footer {
     }
   }
   
+
+
+
+
+.swiper {
+    position: relative; /* Ensure the position is relative for absolute children */
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.swiper-wrapper {
+    height: 100%; /* Make swiper-wrapper fill the height of swiper container */
+}
+
+.swiper-slide {
+    display: flex; /* Use flexbox for slide alignment */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100%; /* Make swiper-slide fill the height of swiper-wrapper */
+}
+
+.swiper-slide img {
+    max-width: 200px; /* Adjust width as necessary, could use max-width instead */
+    max-height: 100%; /* Ensure the image fits within the slide */
+}
+
+.swiper-wrapper :hover {
+    cursor: pointer;  /* Hand cursor when hovering */
+}
+
+.swiper-wrapper :active {
+    cursor: grabbing;  /* Grabbing cursor when clicking and holding */
+}
+
+.swiper3 .swiper-slide img {
+    max-width: 100%; /* Adjust width as necessary, could use max-width instead */
+    max-height: 100%; /* Ensure the image fits within the slide */
+}
+
+/* Navigation buttons should be positioned relative to the swiper container */
+.swiper-button-prev, .swiper-button-next {
+    color: #fff;
+    background: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-pagination-bullet {
+    background: white ; /* Forces the styling to take precedence */
+}
+
+.swiper-pagination-bullet-active {
+    background: white;
+    opacity: 1 ;
+}
+
+/* Styles for all bullets in swiper3 */
+.swiper3 .swiper-pagination-bullet {
+    background: #333; /* Dark grey for better visibility on light backgrounds */
+    opacity: 0.6; /* Slightly transparent when not active */
+}
+
+/* Styles for the active bullet in swiper3 */
+.swiper3 .swiper-pagination-bullet-active {
+    background: #000; /* Black for active bullet */
+    opacity: 1; /* Fully opaque when active */
+}

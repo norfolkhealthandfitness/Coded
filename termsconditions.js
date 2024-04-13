@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 // Render title and content
                 document.getElementById('legal-document').innerHTML = `
-                    <h1>${title}</h1>
                     <div>${documentToHtmlString(content)}</div>
                 `;
             } else {
