@@ -353,6 +353,7 @@ button{
 
 .credentials{
     font-size: 85px;
+    margin-top:-25px;
 }
 /* ---------------------------------------------------------------*/
 /*                     Three benefits end                    */
@@ -365,7 +366,6 @@ button{
 
 .half-page{
     display: flex;
-    gap: 1rem;
     flex-direction: column;
 }
 
@@ -380,7 +380,7 @@ button{
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 10%;
+        gap: 2rem;
     } 
 
     .parent-of-half-page img{
@@ -400,24 +400,39 @@ button{
 /*                     Start of Middle align                     */
 /* --------------------------------------------------------------*/
 
-.middle-align, .middle {
+.middle-align {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
     width: 100%;
     /* border: #000 2px solid; */
-   
+}
+
+.middle-align h2, .middle-align p{
+    width: 75%;
+    margin: 0 auto;
+    padding-bottom: 16px;
+}
+
+@media(max-width: 800px){
+    .middle-align{
+        padding-top: 16px;
+        width: 100%;
+    }
+    .middle-align h2{
+        font-size: 28px;
+    }
+    
 }
 
 .middle-align img {
     vertical-align: middle;
 }
 
-.middle {
-    width: 75%;
-}
+
 
 @media (min-width: 1025px) {
     .middle {
@@ -440,6 +455,53 @@ button{
 /* ---------------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
 /* ------------------Start of Header Section ----------------------*/
+
+.toggle-holder {
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    margin: 20px; /* Added some margin for visibility */
+    padding: 0; /* Remove default padding */
+    font-size: 12px;
+}
+
+.toggle-wrapper {
+    position: relative;
+    width: 60px; /* Adjusted width for a tighter toggle */
+    margin: 0 10px; /* Space between labels and the toggle */
+   
+}
+
+
+
+.custom-toggle-switch {
+    width: 60px;
+    height: 30px;
+    background-color: grey;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.switch-circle {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.3s;
+}
+
+.custom-toggle-switch.active {
+    background-color: black;
+}
+
+.custom-toggle-switch.active .switch-circle {
+    left: 30px; /* Move the circle to the right when active */
+}
 
 
 .containerHeader{
@@ -558,14 +620,14 @@ nav {
 }
 
 .navbar img {
-    max-width: 300px;
+    max-width: 200px;
 }
 
 .nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .nav-menu.active {
@@ -625,7 +687,7 @@ nav {
 @media (max-width: 1200px) {
     .hamburger {
         display: block;
-        background-color: #F2F2F2;
+    
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -643,14 +705,20 @@ nav {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 165px; /* Consolidated the repeated media query */
+        top: 190px; /* Consolidated the repeated media query */
         flex-direction: column;
         background-color: #F2F2F2;
         width: 100%;
         text-align: center;
         transition: 0.3s;
         z-index: 1000;
-        padding: 5% 0 ;
+        padding: 2% 0 ;
+        gap: 1rem;
+    }
+
+  
+    .nav-item :hover{
+        background-color: #646464;
     }
 }
 
@@ -669,12 +737,25 @@ nav {
    position: relative;
    background-repeat: no-repeat;
    background-size: cover;
-   height: 75vh;
+   /* height: 75vh; */
    display: flex;
 }
 .hero h1, .hero p{
     color: white;
 }
+
+@media (max-width: 600px) {
+    /* If you have specific styles for phones, place them here */
+    .hero h1{
+        font-size: 24px;
+    }
+
+    .qualifications h2{
+        font-size: 20px;
+    }
+}
+
+
 
 
 .black {
@@ -759,9 +840,10 @@ footer img{
 
 .social-icons{
     z-index: 10;
-    position: relative;
-    display: flex;
+    /* position: relative; */
+    /* display: flex; */
     gap: 16px;
+    color: white !important;
 }
 
 
@@ -1264,19 +1346,14 @@ footer {
 
 
 
-.grid-container-two {
-    display: none;
-    grid-template-rows: repeat(1fr);
-    width: 100%;
-    margin: 0 auto;
-}
 
 .grid-container div {
     height: 100%;  
 }
 
 .cell{
-    padding: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     text-align: center;
 }
 
@@ -1486,27 +1563,37 @@ footer {
 
 .swiper {
     position: relative; /* Ensure the position is relative for absolute children */
-    height: 300px;
     width: 100%;
     display: flex;
     align-items: center;
+    height: 200px;
+    margin-bottom: 16px ;
 }
 
 
-.swiper-wrapper {
-    height: 100%; /* Make swiper-wrapper fill the height of swiper container */
-}
+
 
 .swiper-slide {
     display: flex; /* Use flexbox for slide alignment */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
-    height: 100%; /* Make swiper-slide fill the height of swiper-wrapper */
+  
 }
 
 .swiper-slide img {
     max-width: 200px; /* Adjust width as necessary, could use max-width instead */
     max-height: 100%; /* Ensure the image fits within the slide */
+}
+
+@media(max-width:600px){
+    .swiper-slide img {
+        max-width: 75px; /* Adjust width as necessary, could use max-width instead */
+        max-height: 100%; /* Ensure the image fits within the slide */
+    }
+
+    .swiper {
+        height: 100px;
+    }
 }
 
 .swiper-wrapper :hover {

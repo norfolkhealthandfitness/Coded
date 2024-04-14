@@ -9,8 +9,8 @@ function initializeSwiper(selector, config) {
       navigation: config.navigation, // Custom navigation settings
       scrollbar: config.scrollbar, // Custom scrollbar settings
       breakpoints: {
-          640: { // Tailwind's 'sm'
-              slidesPerView: 1,
+          0: { // Tailwind's 'sm'
+              slidesPerView: 3,
               spaceBetween: 10
           },
           768: { // Tailwind's 'md'
