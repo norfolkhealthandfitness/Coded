@@ -4,7 +4,7 @@ contact.innerHTML = `
 <div class="contact">
         <div class="container">
             <div class="overlay"></div>
-            <div class=" middle-align">
+            <div style='margin-bottom: 24px; margin-top:24px' class="middle-align">
                 <h2>Get In Touch With Us Today...</h2>
             <p>If you would like any more information then please do not hesitate to contact us. Please feel free to call, email or send us a message and we will get back to you right away. We will process your data in accordance with our Privacy Notice. You may withdraw this consent at any time by unsubscribing.</p>
             </div>

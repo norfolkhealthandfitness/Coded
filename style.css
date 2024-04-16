@@ -171,12 +171,19 @@ li {
     list-style-type: none;
 }
 
+p{
+    font-weight: 100;
+    font-family: 'Open Sans',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+}
+
 h1, h2, h3, h4, p, a {
     color: #4B4B4B;
     line-height: 1.5;
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
-    z-index: 2; /* Higher than the overlay */
+    z-index: 2; 
 }
 
 h1{
@@ -212,10 +219,7 @@ h1, h2, h3, h4 {
     font-family: Arial, Helvetica, sans-serif
 }
 
-p {
-    font-family: 'Open Sans',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    text-decoration: none;
-}
+
 
 a {
     font-family: 'Roboto', sans-serif;
@@ -355,6 +359,10 @@ button{
 .credentials{
     font-size: 85px;
     margin-top:-25px;
+    color: #BFBFBF;
+    margin-bottom: -1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
 }
 /* ---------------------------------------------------------------*/
 /*                     Three benefits end                    */
@@ -425,7 +433,7 @@ button{
 .middle-align h2, .middle-align p{
     width: 75%;
     margin: 0 auto;
-    padding-bottom: 16px;
+
 }
 
 @media(max-width: 800px){
@@ -952,10 +960,7 @@ footer a:hover
 /* ------------------Start of about Section ----------------------*/
 /* ---------------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
-.larger{
-    font-size: 5.3125rem;
-    font-weight: thin;
-}
+
 
 .about-intro{
     padding-top: 24px;
@@ -977,12 +982,49 @@ footer a:hover
     z-index: 2;
 }
 
-.testimonial-reviews{
-    background-color: white;
-    padding: 1rem;
-    position: relative;
-    z-index: 2;
+.testimonialbox h3{
+    font-weight: 100;
 }
+
+.testimonialbox p{
+    color: #7A7A7A;
+    font-size: 16px;
+}
+
+.testimonial-reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Ensures the container takes full width */
+    margin: auto; /* Helps center the container if not full-width */
+  }
+
+.testimonial-reviews h4{
+    font-weight: lighter;
+    font-size: 24px;
+}
+  
+  .review-person {
+    display: flex;
+    justify-content: center; /* Center horizontally inside the review-person */
+    align-items: center; /* Center vertically */
+    gap: 10px; /* Space between the image and the text container */
+    width: 100%; /* Take full width to utilize flex properties effectively */
+  }
+
+  .review-content{
+    background-color: white;
+    padding: 2rem;
+    color: #7A7A7A;
+    font-size: 16px;
+  }
+  
+  .testimonial-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the child elements (name and date) */
+  }
 
 #rightarrow{
     position: absolute;
@@ -990,6 +1032,17 @@ footer a:hover
     top: 50%;
     padding-right: 2rem;
 }
+
+.testimonial-image {
+    width: 100px;           /* Set the width of the image */
+    height: 100px;          /* Set the height of the image */
+    border-radius: 50%;    /* Make the image round */
+    border: 2px solid #ccc; /* Slight grey border */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Small drop shadow */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
 
 
 #leftarrow{
@@ -1028,7 +1081,7 @@ footer a:hover
 
 .testimonial-content {
     padding: 1% ;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -1074,6 +1127,8 @@ form {
     position: relative;
     z-index: 2;
 }
+
+
 
 /* Label Styles */
 label {
@@ -1376,6 +1431,8 @@ footer {
 .cv{
     border: 1px solid white;
     width: 100%;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 
@@ -1384,15 +1441,24 @@ footer {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     text-align: center;
+    font-weight: 100;
+}
+
+.cell p{
+    color: #7A7A7A;
+    font-weight: 100;
 }
 
 .cell i{
     font-size: 40px;
 }
 
-.cell p{
-    font-weight: lighter;
+
+.credential{
+    color: black;
+    letter-spacing: 5px;
 }
+
 
 .grid-container-two {
     display: none;
@@ -1414,6 +1480,13 @@ footer {
     margin: 0 auto;
 }
 
+.grid-container h4{
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+}
+
 /* @media (min-width: 600px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
@@ -1426,6 +1499,9 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         /* Assuming you want each cell to adjust its height automatically */
         /* grid-template-rows is removed or set properly if needed */
+        gap: 60px;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 }
 
@@ -1449,6 +1525,15 @@ footer {
 
 .social-media{
     text-align: center;
+}
+
+.social-media p{
+    color: #7A7A7A;
+    line-height: 2;
+}
+
+.social-media h2{
+    color: #000;
 }
 
 @media(min-width:600px){
