@@ -177,7 +177,7 @@ function displayCoursesByLevel(level, containerSelector) {
         return `
             <div class="course-grid">
                 <img src="${course.Img}" alt="${course.Name}">
-                <div class="middle-align">
+                <div class="middle-align-course">
                     <h3>${course.Name}</h3>
                     <p>${course.Type}</p>
                     <p>${course.Description}</p>

@@ -314,12 +314,13 @@ button{
   
   /* Links inside the dropdown */
   .dropdown-content a {
-    color: black;
+    font-weight:100;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     white-space: nowrap; 
     width: 100%;
+    font-size: 18px;
 }
   
   .dropdown-content a:hover {background-color: #ddd;}
@@ -409,6 +410,16 @@ button{
     margin: 0 auto;
     width: 100%;
     /* border: #000 2px solid; */
+}
+
+.middle-align-course {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .middle-align h2, .middle-align p{
@@ -737,7 +748,7 @@ nav {
    position: relative;
    background-repeat: no-repeat;
    background-size: cover;
-   /* height: 75vh; */
+   height: 75vh;
    display: flex;
 }
 .hero h1, .hero p{
@@ -749,6 +760,8 @@ nav {
     .hero h1{
         font-size: 24px;
     }
+
+
 
     .qualifications h2{
         font-size: 20px;
@@ -944,7 +957,10 @@ footer a:hover
     font-weight: thin;
 }
 
-
+.about-intro{
+    padding-top: 24px;
+    padding-bottom:24px;
+}
 /* ------------------End of about Section ----------------------*/
 /* ---------------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
@@ -1160,10 +1176,13 @@ footer {
     padding: 1%;
 }
 
+
+
 .course-price{
     font-size: 60px;
     font-weight: 700;
-    margin: 0;
+    margin-top: -20px;
+    margin-bottom: 0px;
     padding: 0;
 }
 
@@ -1190,6 +1209,9 @@ footer {
     display: none;
 }
 
+.courses-list{
+    padding-bottom: 8px;
+}
 
 
 
@@ -1283,11 +1305,26 @@ footer {
     padding: 2rem;
 }
 
+.tutor-text{
+    font-size: 14px;
+    font-weight: 100;
+}
+
 .tutor-info{
     display: flex;
     align-items: center;
     gap: 2rem;
 }
+
+.tutor-info h3, h4{
+    font-weight: lighter;
+}
+
+.tutor-info h4{
+    letter-spacing: 5px;
+    margin-top: -20px;
+}
+
 
 .course-grid{
     display: flex;
@@ -1336,20 +1373,12 @@ footer {
 }
 
 
-#cv{
+.cv{
     border: 1px solid white;
     width: 100%;
 }
 
 
-
-
-
-
-
-.grid-container div {
-    height: 100%;  
-}
 
 .cell{
     padding-left: 1.5rem;
@@ -1365,12 +1394,18 @@ footer {
     font-weight: lighter;
 }
 
+.grid-container-two {
+    display: none;
+}
+
 @media (min-width: 800px){
     .grid-container-two {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(1fr);
+        grid-template-columns: repeat(3, 1fr); /* 3 columns each taking 1 fraction of the space */
+        grid-template-rows: auto; /* automatically adjusts the row height to fit the content */
         margin: auto;
         display: grid;
+        justify-content: space-between; /* adds space between grid items */
+        width: 100%; /* ensures the grid uses full width available */
     }
 }
 .grid-container {

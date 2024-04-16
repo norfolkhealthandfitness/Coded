@@ -9,7 +9,7 @@ contact.innerHTML = `
             <p>If you would like any more information then please do not hesitate to contact us. Please feel free to call, email or send us a message and we will get back to you right away. We will process your data in accordance with our Privacy Notice. You may withdraw this consent at any time by unsubscribing.</p>
             </div>
         
-            <form class="email-form" data-netlify="true" data-netlify-recaptcha="true">
+            <form class="email-form" method="POST" data-netlify="true" data-netlify-recaptcha="true">
                 <div class="name-group">
                     <div class="form-group name-box">
                         <label for="firstName">First Name</label>
