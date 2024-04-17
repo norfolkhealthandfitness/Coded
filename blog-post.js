@@ -1,5 +1,6 @@
 import { documentToHtmlString } from 'https://cdn.skypack.dev/@contentful/rich-text-html-renderer';
 
+document.getElementById('blog-content').innerHTML = 'Loading...'
 // Fetch and display the blog post
 const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get('id');
