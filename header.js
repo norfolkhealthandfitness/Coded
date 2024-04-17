@@ -76,12 +76,12 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="navbar containerHeader">
 
                 <div class="social-icons hide-mob">
-                    <i class="fa-brands fa-facebook-f"></i>
+                    <i style='margin-right:16px' class="fa-brands fa-facebook-f"></i>
                     <i class="fa-brands fa-instagram"></i>
                 </div>
 
                 <div class='headericon'>
-                    <i  class="fa-regular fa-envelope"></i>
+                    <i  class="fa-regular fa-phone"></i>
                     <p>07969494485</p>
                 </div>
                 

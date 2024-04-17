@@ -31,8 +31,8 @@ insertFooter.innerHTML =`
             <div>
                 <h3>Follow Us</h3>
                 <div class="hide-mob social-icons">
-                    <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
-                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                    <i style='margin-right:16px' class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
                 </div>
                 <p>Payment plans available with</p>
                 <div class="payLater">
