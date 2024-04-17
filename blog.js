@@ -1,7 +1,10 @@
+// Display loading message or spinner
+document.getElementById('inject-blog').innerHTML = '<p>Loading...</p>';
+
 fetch("https://cdn.contentful.com/spaces/2cvz2uqy0q73/environments/master/entries?access_token=BZQSUCVEKKIjSFYmKMs-0oPZCObhzLIa5xtsBEiQEmw&include=1")
     .then(response => response.json())
     .then(data => {
-        console.log(data); // Add this line to log the data to the console
+        console.log(data); // Log the data to the console
 
         const assetsMap = data.includes.Asset.reduce((acc, asset) => {
             acc[asset.sys.id] = asset;
@@ -33,6 +36,7 @@ fetch("https://cdn.contentful.com/spaces/2cvz2uqy0q73/environments/master/entrie
               return ''; // Return empty string for this blog post
           }
       }).join(''); // Make sure to join the array into a string
+        // Replace loading message or spinner with HTML content
         document.getElementById('inject-blog').innerHTML = htmlContent;
     })
     .catch(err => console.log(err));

@@ -248,9 +248,9 @@ a {
     /* background-color: #AE1320; */
     background-color: #E93946;
     transition: background-color 0.3s ease, color 0.3s ease;
-    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
+    position: relative;
 }
 
 
@@ -996,7 +996,6 @@ footer a:hover
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 100%; /* Ensures the container takes full width */
     margin: auto; /* Helps center the container if not full-width */
   }
 
@@ -1768,3 +1767,5 @@ footer {
     background: #000; /* Black for active bullet */
     opacity: 1; /* Fully opaque when active */
 }
+
+/*  */
