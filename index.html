@@ -245,10 +245,16 @@
 <!-- ============================================ -->
 <!--             Start of contact                 -->
 <!-- ============================================ -->  
+    <!-- Hidden static form for Netlify detection -->
+    <form name="contactForm" method="POST" data-netlify="true" data-netlify-recaptcha="true" style="display: none;">
+        <input type="text" name="firstName" placeholder="First Name">
+        <input type="text" name="lastName" placeholder="Last Name">
+        <input type="email" name="emailAddress" placeholder="Email Address">
+        <textarea name="enquiry"></textarea>
+        <div data-netlify-recaptcha="true"></div>
+    </form>
 
-    <section class="insert-contact">
-
-    </section>
+    <div class="insert-contact"></div>
 </main>
 <!-- ============================================ -->
 <!--               End of contact                 -->
@@ -268,6 +274,7 @@
 <!-- ============================================ -->
 <!--        Start of Javascript section           -->
 <!-- ============================================ --> 
+<script src="contact.js" type="module"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="swiper.js"></script>
 <script src="slider.js"></script>  
@@ -276,7 +283,6 @@
 <script src="testimonial.js"></script>  
 <script src="counter.js"></script>    
 <script src="footer.js"></script>  
-<script src="contact.js"></script>
 <!-- ============================================ -->
 <!--        End of Javascript section             -->
 <!-- ============================================ --> 
