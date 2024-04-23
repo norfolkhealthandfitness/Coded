@@ -25,16 +25,7 @@ body{
 /* ---------------------------------------------------------------*/
 /*                      Start of colours                       */
 /* ---------------------------------------------------------------*/
-.red {
-    background-color: #AE1320;
-    /* background-color:#E93947 ; This was the old colour, we have
-    gone darker as we want to ensure accessibility - Josh */
-    transition: background-color 0.3s; /* Optional: for a smooth color transition */
-}
 
-.red:hover {
-    background-color: #680108; /* Darker shade of red */
-}
 
 .white{
     background-color:#ffffff ;
@@ -186,7 +177,7 @@ p{
     font-size: 14px;
 }
 
-h1, h2, h3, h4, p, a {
+h1, h2, h3, h4, p {
     color: #4B4B4B;
     line-height: 1.5;
     font-family: Arial, Helvetica, sans-serif;
@@ -232,6 +223,9 @@ h1, h2, h3, h4 {
 a {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
+    z-index: 1;
+    position: relative;
+    color:#121212;
 }
 
 /* -------------------End of Typography section-------------------*/
@@ -261,15 +255,8 @@ a {
     position: relative;
 }
 
-
-.button-two{
-    color:#AE1320;
-    background-color: #FFFFFF;
-    cursor: pointer;
-}
-
-.white-btn-text{
-    color: #AE1320
+.button:hover{
+    background-color: #a70510;
 }
 
 .buttons-div {  
@@ -317,11 +304,12 @@ button{
     position: absolute;
     background-color: #f1f1f1;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 0999;
     min-width: 100%; /* You can set a minimum width or set width to 100% if you want it to match the dropdown button */
     left: 0;
     top: 100%; /* Positions the dropdown content right below the dropdown button */
     width: 100%;
+
   }
   
   /* Links inside the dropdown */
@@ -771,19 +759,44 @@ nav {
     color: white;
 }
 
+.hero a{
+    margin-top: 50px;
+}
+
+@media (max-width: 350px){
+    .hero{
+        height: 100vh
+       }
+}
+
 @media (max-width: 600px) {
     /* If you have specific styles for phones, place them here */
+
+
     .hero h1{
-        font-size: 24px;
+        font-size: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .hero .container p:first-of-type {
+        font-size: 10px; 
+        letter-spacing: 1pt; 
+        font-weight: 100; 
+        margin-bottom: -24px;
     }
 
+    .hero .container p:last-of-type {
+        margin-top: -24px;
+    }
 
+    .hero a{
+        margin-top: 24px;
+    }
 
     .qualifications h2{
         font-size: 20px;
     }
 }
-
 
 
 
@@ -1443,6 +1456,8 @@ footer {
     padding-right: 1.5rem;
     text-align: center;
     font-weight: 100;
+    padding-top: 40px ;
+    padding-bottom: 40px;
 }
 
 .cell p{
@@ -1504,6 +1519,15 @@ footer {
         padding-top: 100px;
         padding-bottom: 100px;
     }
+
+    .cell{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        text-align: center;
+        font-weight: 100;
+        padding-top: 0 ;
+        padding-bottom: 0;
+    }
 }
 
 .imagegrid-container {
@@ -1556,17 +1580,20 @@ footer {
 #inject-blog {
     display: grid;
     grid-template-columns: 1fr; /* Default to 1 column for smaller screens */
-    gap: 20px; /* Adjusts the space between the posts */
+    gap: 20px; /* Gap between grid items */
     padding: 20px; /* Adds some space around the grid */
-    justify-content: center; /* Centers the grid items if they don't fill the full width */
-  }
-  
-  @media (min-width: 768px) {
+    justify-content: space-between; /* Aligns items to the edges of the grid container */
+}
+
+@media (min-width: 768px) {
     #inject-blog {
-      grid-template-columns: repeat(2, 1fr); /* Explicitly sets 2 columns on larger screens */
+      grid-template-columns: 1fr 1fr; /* Explicitly sets 2 columns on larger screens */
+      justify-content: space-between; /* Ensures that the grid items are spread out as much as possible */
+      gap: 40px 20px; /* Increases the row gap and keeps column gap consistent */
     }
-  }
-  
+}
+
+
 
   
   /* Styles for each blog post preview */
@@ -1579,7 +1606,7 @@ footer {
     display: flex; /* Using flex to ensure the content aligns properly */
     flex-direction: column; /* Stack children vertically */
     justify-content: space-between; /* Space out the content */
-    width: 100%; /* Full width of the grid column */
+    max-width: 500px; /* Full width of the grid column */
   }
   
   /* Adjust the image container if needed */

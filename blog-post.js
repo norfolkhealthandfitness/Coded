@@ -15,8 +15,8 @@ if (postId) {
       const imageUrl = asset.fields.file.url;
 
       document.getElementById('blog-content').innerHTML = `
-        <img src="${imageUrl}" alt="Main Image"/>
-        <h1>${post.fields.headline}</h1>
+        <img src="${imageUrl}" alt="Main Image" style="min-width: 600px; height: auto;"/>
+        <h1 style='color:black; font-size:40px'>${post.fields.headline}</h1>
         <p>${post.fields.category}</p>
         <div>${documentToHtmlString(post.fields.blogContent)}</div>
       `;

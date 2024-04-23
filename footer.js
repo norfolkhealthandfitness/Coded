@@ -1,7 +1,6 @@
 const insertFooter = document.querySelector('.insert-footer');
 
-const currentYear = new Date().getFullYear(); // Get the current year
-
+const currentYear = new Date().getFullYear(); 
 insertFooter.innerHTML =`
     <section class="container footer">
         <div class="overlay"></div>
