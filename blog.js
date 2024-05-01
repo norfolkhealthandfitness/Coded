@@ -1,26 +1,22 @@
 
 document.getElementById('inject-blog').innerHTML = '<p>Loading...</p>';
 
-fetch("https://cdn.contentful.com/spaces/2cvz2uqy0q73/environments/master/entries?access_token=BZQSUCVEKKIjSFYmKMs-0oPZCObhzLIa5xtsBEiQEmw&include=1")
+fetch("https://cdn.contentful.com/spaces/2cvz2uqy0q73/environments/master/entries?access_token=BZQSUCVEKKIjSFYmKMs-0oPZCObhzLIa5xtsBEiQEmw&content_type=blog&include=1")
     .then(response => response.json())
     .then(data => {
-        console.log(data); // Log the data to the console
-
         const assetsMap = data.includes.Asset.reduce((acc, asset) => {
             acc[asset.sys.id] = asset;
             return acc;
         }, {});
 
         const htmlContent = data.items.map(item => {
-          // Check if all required fields exist before accessing them
-          if (item.fields && item.fields.mainImage && item.fields.headline && item.fields.dataAndTime && item.fields.category) {
+          if (item.fields && item.fields.slug && item.fields.mainImage && item.fields.headline && item.fields.dataAndTime && item.fields.category) {
               const imageId = item.fields.mainImage.sys.id;
               const imageUrl = assetsMap[imageId].fields.file.url;
       
-              // Build the HTML string for each blog post
               return `
                   <div class="blog-post-preview">
-                      <a href="blog-post.html?id=${item.sys.id}">
+                      <a href="blog-post.html?slug=${item.fields.slug}">
                           <div class="blog-post-image-wrapper">
                               <img src="${imageUrl}" alt="${item.fields.headline}" />
                           </div>
@@ -31,13 +27,10 @@ fetch("https://cdn.contentful.com/spaces/2cvz2uqy0q73/environments/master/entrie
                   </div>
               `;
           } else {
-              // Handle case where item is missing required fields
               console.error('Item is missing required fields:', item);
-              return ''; // Return empty string for this blog post
+              return '';
           }
-      }).join(''); // Make sure to join the array into a string
-        // Replace loading message or spinner with HTML content
+      }).join('');
         document.getElementById('inject-blog').innerHTML = htmlContent;
     })
     .catch(err => console.log(err));
-
