@@ -13,20 +13,20 @@ document.addEventListener('DOMContentLoaded', function () {
             <form class="contact-container email-form" method="POST" action="https://formspree.io/f/mqkrnoyw">
                 <div class="contact-info" style="display: flex; flex-direction: column; gap: 10px;">
                     <div class="form-group">
-                        <label for="fullName">Name</label>
+                        <label for="fullName">Name <span class="required">*</span></label>
                         <input type="text" id="fullName" name="fullName" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <label for="phoneNumber">Phone Number</label>
+                        <label for="phoneNumber">Phone Number <span class="required">*</span></label>
                         <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
                     </div>
                     <div class="form-group">
-                        <label for="emailAddress">Email Address</label>
+                        <label for="emailAddress">Email Address <span class="required">*</span></label>
                         <input type="email" id="emailAddress" name="emailAddress" placeholder="Email Address" required>
                     </div>
                     <div class="form-group">
-                        <label for="enquiry">Message</label>
-                        <textarea id="enquiry" name="enquiry" placeholder="Your Message" required></textarea>
+                        <label for="enquiry">Message <span class="required">*</span></label>
+                        <textarea style='padding-top:16px' id="enquiry" name="enquiry" placeholder="Your Message" required></textarea>
                     </div>
                     <div class="buttons-div" style="display: flex; justify-content: center; margin-top: 1rem;">
                         <button class="button red" type="submit">Contact</button>
@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </div>
     </div>
+    
     
     
         `;

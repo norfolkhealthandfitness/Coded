@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </li>
       
                 <li class="nav-item">
-                    <a class="header-link" href="courses.html" class="nav-link">COURSES</a>
+                    <a class="header-link" href="start-your-career.html" class="nav-link">COURSES</a>
                 </li>
     
                 <li class="nav-item">
