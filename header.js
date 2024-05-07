@@ -75,20 +75,23 @@ document.addEventListener('DOMContentLoaded', function () {
     <nav class=" top-nav">
         <div class="navbar containerHeader">
 
-                <div class="social-icons hide-mob">
+                <div class="hidemob social-icons">
                     <i style='margin-right:16px' class="fa-brands fa-facebook-f"></i>
                     <i class="fa-brands fa-instagram"></i>
                 </div>
 
+                <div class="hidemob">
                 <div class='headericon'>
-                    <i  class="fa-regular fa-phone"></i>
+                    <i class="fa-regular fa-phone"></i>
                     <p>07969494485</p>
                 </div>
-                
+            
                 <div class='headericon'>
                     <i class="fa-regular fa-envelope"></i>
                     <a href="mailto:info@norfolkhealthandfitness.com">info@norfolkhealthandfitness.com</a>
                 </div>
+            </div>
+            
 
                 <div class="toggle-holder">
                     <p>Default</p>
@@ -102,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             
            
-            <a class='button hide-mob' href="https://nhfclassroom.com">LOGIN/REGISTER</a>
+            <a class='button' href="https://nhfclassroom.com">LOGIN/REGISTER</a>
         
             <img class="gym-logo" src="Images/NHFGYM.webp" alt="NHF Gym logo">
         </div>

@@ -532,24 +532,26 @@ button{
 }
 
 
-
-.hide-mob {
-    display:none;
+/* Base state: all .hide-mob elements are hidden when the screen is less than 1200px */
+.hidemob {
+    display: none;
     font-weight: lighter;
     font-size: 14px;
+   
 }
 
-@media(min-width: 700px){
-   .hide-mob{
-    display: block;
-   }
+/* Above 1200px, .hide-mob elements are visible */
+@media (min-width: 1200px) {
+    .hidemob {
+        display: block;
+        gap: 32px;
+        display: flex;
+    }
 }
 
+
+/* Styles for .containerHeader at different screen widths */
 @media (min-width: 1025px) {
-
-
-    
-
     .containerHeader {
         display: flex;
         flex-direction: column;
@@ -558,10 +560,7 @@ button{
         margin: auto;
         max-width: 1440px;
     }
-
-    
 }
-
 
 
 .header-link{
@@ -1815,5 +1814,23 @@ footer {
         padding: 0 6rem; /* Aligns with other containers at this breakpoint */
         margin: auto; /* Ensures it remains centered */
         max-width: 1440px; /* Consistent maximum width */
+    }
+}
+
+/* Base styles */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Styles for larger screens */
+@media (min-width: 1024px) {
+    .contact-info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contact-info .form-group {
+        flex: 1; /* Ensures the inputs grow to fill the available space evenly */
     }
 }
