@@ -12,29 +12,26 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
 
                     <form class="email-form" method="POST" data-netlify="true" data-netlify-recaptcha="true" name="contactForm">
+                        <input type="hidden" name="form-name" value="contactForm">
                         <div class="name-group">
                             <div class="form-group name-box">
                                 <label for="firstName">First Name</label>
                                 <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
                             </div>
-                            
                             <div class="form-group name-box">
                                 <label for="lastName">Last Name</label>
                                 <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
                             </div>
                         </div>
-        
                         <div class="form-group">
                             <label for="emailAddress">Email Address</label>
                             <input type="email" id="emailAddress" name="emailAddress" placeholder="Email Address" required>
                         </div>
-        
                         <div class="form-group">
                             <label for="enquiry">Enquiry</label>
                             <textarea id="enquiry" name="enquiry" placeholder="Enquiry" required></textarea>
                         </div>
-        
-        
+                        <div data-netlify-recaptcha="true"></div>
                         <div style='margin: 0 auto' class="buttons-div">
                             <button class="button red" type="submit">Contact</button>
                         </div>
@@ -46,3 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error("The insert-contact class element was not found.");
     }
 });
+
+// Be sure to include this in your HTML to load reCAPTCHA:
+// <script src="https://

@@ -1,4 +1,3 @@
-
 document.getElementById('inject-blog').innerHTML = '<p>Loading...</p>';
 
 fetch("https://cdn.contentful.com/spaces/2cvz2uqy0q73/environments/master/entries?access_token=BZQSUCVEKKIjSFYmKMs-0oPZCObhzLIa5xtsBEiQEmw&content_type=blog&include=1")
@@ -9,7 +8,14 @@ fetch("https://cdn.contentful.com/spaces/2cvz2uqy0q73/environments/master/entrie
             return acc;
         }, {});
 
-        const htmlContent = data.items.map(item => {
+        // Sort items by date in descending order
+        const sortedItems = data.items.sort((a, b) => {
+          const dateA = new Date(a.fields.dataAndTime);
+          const dateB = new Date(b.fields.dataAndTime);
+          return dateB - dateA; // Use dateA - dateB to sort in ascending order
+        });
+
+        const htmlContent = sortedItems.map(item => {
           if (item.fields && item.fields.slug && item.fields.mainImage && item.fields.headline && item.fields.dataAndTime && item.fields.category) {
               const imageId = item.fields.mainImage.sys.id;
               const imageUrl = assetsMap[imageId].fields.file.url;
