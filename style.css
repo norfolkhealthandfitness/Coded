@@ -440,13 +440,18 @@ button{
 
 @media(max-width: 800px){
     .middle-align{
-        padding-top: 16px;
+        padding-top: 3rem;
         width: 100%;
     }
     .middle-align h2{
         font-size: 28px;
+        width: 100%;
     }
-    
+
+    .middle-align p{
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 .middle-align img {
@@ -1550,6 +1555,7 @@ footer {
 
 .social-media{
     text-align: center;
+    padding-top: 2rem;
 }
 
 .social-media p{
@@ -1706,9 +1712,6 @@ footer {
   }
   
 
-
-
-
 .swiper {
     position: relative; /* Ensure the position is relative for absolute children */
     width: 100%;
@@ -1717,8 +1720,6 @@ footer {
     height: 200px;
     margin-bottom: 16px ;
 }
-
-
 
 
 .swiper-slide {
@@ -1742,6 +1743,8 @@ footer {
     .swiper {
         height: 100px;
     }
+
+
 }
 
 .swiper-wrapper :hover {
