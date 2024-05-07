@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
                 <div class='headericon'>
                     <i class="fa-regular fa-envelope"></i>
-                    <a href="">info@norfolkhealthandfitness.com</a>
+                    <a href="mailto:info@norfolkhealthandfitness.com">info@norfolkhealthandfitness.com</a>
                 </div>
 
                 <div class="toggle-holder">
