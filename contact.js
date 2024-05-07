@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="contact">
         <div>
             <div class="overlay"></div>
-            <div style='margin-bottom: 24px; margin-top:24px; text-align: center'>
+            <div class='container' style='margin-bottom: 24px; margin-top:24px; text-align: center'>
                 <h2>I want to talk to someone</h2>
                 <p>If you have any queries about any of our courses or if you require any further information, please contact us by adding your details below and one of our team will get right back to you. We will process your data in accordance with our Privacy Notice. You may withdraw this consent at any time by unsubscribing.</p>
             </div>
