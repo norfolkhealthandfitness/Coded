@@ -44,12 +44,8 @@ insertFooter.innerHTML =`
         <span class="footer-break"></span>
         <div class="footer-nav" id="bottom-nav">
             <p>@ ${currentYear} Norfolk Health & Fitness Ltd</p>
-            <a href="PrivacyPolicy.html">Privacy Policy</a>
-            <a href="termsconditions.html">Terms and Conditions</a>
-            <div class="flex-row footer-logo">
-                <p>Developed by</p>
+            <p>Developed by</p>
                 <!-- Place for developer credit if needed -->
-            </div>
         </div>
     </section>
     `;

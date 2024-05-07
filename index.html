@@ -246,14 +246,6 @@
 <!--             Start of contact                 -->
 <!-- ============================================ -->  
     <!-- Hidden static form for Netlify detection -->
-    <form name="contactForm" method="POST" data-netlify="true" data-netlify-recaptcha="true" style="display: none;">
-        <input type="text" name="firstName" placeholder="First Name">
-        <input type="text" name="lastName" placeholder="Last Name">
-        <input type="email" name="emailAddress" placeholder="Email Address">
-        <textarea name="enquiry"></textarea>
-        <div data-netlify-recaptcha="true"></div>
-    </form>
-
     <div class="insert-contact"></div>
 </main>
 <!-- ============================================ -->
@@ -270,19 +262,11 @@
 <!--        End of footer section                 -->
 <!-- ============================================ --> 
 
-<form name="contactForm" method="POST" data-netlify="true" data-netlify-recaptcha="true" style="display: none;">
-    <input type="hidden" name="form-name" value="contactForm">
-    <input type="text" name="firstName" placeholder="First Name">
-    <input type="text" name="lastName" placeholder="Last Name">
-    <input type="email" name="emailAddress" placeholder="Email Address">
-    <textarea name="enquiry"></textarea>
-    <button type="submit">Submit</button>
-</form>
-
 <!-- ============================================ -->
 <!--        Start of Javascript section           -->
 <!-- ============================================ --> 
 <script src="contact.js" type="module"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="swiper.js"></script>
 <script src="slider.js"></script>  
