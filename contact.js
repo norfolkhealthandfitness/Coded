@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
     if (contact) {
         contact.innerHTML = `
         <div class="contact">
-        <div class="contact-container">
+        <div>
             <div class="overlay"></div>
             <div style='margin-bottom: 24px; margin-top:24px; text-align: center'>
                 <h2>I want to talk to someone</h2>
                 <p>If you have any queries about any of our courses or if you require any further information, please contact us by adding your details below and one of our team will get right back to you. We will process your data in accordance with our Privacy Notice. You may withdraw this consent at any time by unsubscribing.</p>
             </div>
-            <form class="email-form" method="POST" action="https://formspree.io/f/mqkrnoyw">
+            <form class="contact-container email-form" method="POST" action="https://formspree.io/f/mqkrnoyw">
                 <div class="contact-info" style="display: flex; flex-direction: column; gap: 10px;">
                     <div class="form-group">
                         <label for="fullName">Name</label>

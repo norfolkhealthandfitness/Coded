@@ -30,8 +30,8 @@ insertFooter.innerHTML =`
             <div>
                 <h3>Follow Us</h3>
                 <div class="hide-mob social-icons">
-                    <i style='margin-right:16px' class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-instagram"></i>
+                    <a href="https://www.instagram.com/norfolkhealthandfitness/"><i style='padding-right:16px' class="fa-brands fa-instagram"></i> </a>
+                    <a href="https://www.facebook.com/NorfolkHealthandFitness"><i class="fa-brands fa-facebook-f"></i> </a>   
                 </div>
                 <p>Payment plans available with</p>
                 <div class="payLater">

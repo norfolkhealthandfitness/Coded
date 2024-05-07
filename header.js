@@ -76,11 +76,11 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="navbar containerHeader">
 
                 <div class="hidemob social-icons">
-                    <i style='margin-right:16px' class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-instagram"></i>
+                    <a href="https://www.instagram.com/norfolkhealthandfitness/"><i class="fa-brands fa-instagram"></i> </a>
+                    <a href="https://www.facebook.com/NorfolkHealthandFitness"><i class="fa-brands fa-facebook-f"></i> </a>
                 </div>
 
-                <div class="hidemob">
+                <div style="gap: 32px;" class="hidemob">
                 <div class='headericon'>
                     <i class="fa-regular fa-phone"></i>
                     <p>07969494485</p>
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             
 
-                <div class="toggle-holder">
+                <div class="toggle-holder hidemob">
                     <p>Default</p>
                     <div class="toggle-wrapper">
                         <div class="custom-toggle-switch" onclick="toggleCustomSwitch()">
@@ -106,8 +106,9 @@ document.addEventListener('DOMContentLoaded', function () {
             
            
             <a class='button' href="https://nhfclassroom.com">LOGIN/REGISTER</a>
+            <a href="https://nhfgym.com"><img class="gym-logo" src="Images/NHFGYM.webp" alt="NHF Gym logo"></a>
         
-            <img class="gym-logo" src="Images/NHFGYM.webp" alt="NHF Gym logo">
+            
         </div>
     </nav>
     

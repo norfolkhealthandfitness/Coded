@@ -544,8 +544,8 @@ button{
 @media (min-width: 1200px) {
     .hidemob {
         display: block;
-        gap: 32px;
         display: flex;
+        gap: 32px;
     }
 }
 
@@ -1810,7 +1810,7 @@ footer {
 /* Media query for monitors (starting at 1025px) */
 @media (min-width: 1025px) {
     .contact-container {
-        width: 75%; /* Adjusts to 75% width on larger screens */
+        width: 50%; /* Adjusts to 75% width on larger screens */
         padding: 0 6rem; /* Aligns with other containers at this breakpoint */
         margin: auto; /* Ensures it remains centered */
         max-width: 1440px; /* Consistent maximum width */
