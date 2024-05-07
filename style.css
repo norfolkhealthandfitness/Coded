@@ -1798,3 +1798,30 @@ footer {
 }
 
 /*  */
+
+
+/* Default styles for mobile */
+.contact-container {
+    width: 100%;
+    padding-left: 1rem; /* Consistent with other containers */
+    padding-right: 1rem; /* Consistent with other containers */
+    margin: 0 auto; /* Centers the container */
+}
+
+/* Media query for tablets and above (starting at 600px) */
+@media (min-width: 600px) {
+    .contact-container {
+        padding-left: 3rem; /* Aligns with other containers */
+        padding-right: 3rem; /* Aligns with other containers */
+    }
+}
+
+/* Media query for monitors (starting at 1025px) */
+@media (min-width: 1025px) {
+    .contact-container {
+        width: 75%; /* Adjusts to 75% width on larger screens */
+        padding: 0 6rem; /* Aligns with other containers at this breakpoint */
+        margin: auto; /* Ensures it remains centered */
+        max-width: 1440px; /* Consistent maximum width */
+    }
+}
