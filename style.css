@@ -1051,12 +1051,7 @@ footer a:hover
     align-items: center; /* Center the child elements (name and date) */
   }
 
-#rightarrow{
-    position: absolute;
-    right: 0;
-    top: 50%;
-    padding-right: 2rem;
-}
+
 
 .testimonial-image {
     width: 100px;           /* Set the width of the image */
@@ -1068,18 +1063,30 @@ footer a:hover
     margin-bottom: 1rem;
   }
   
-
-
-#leftarrow{
-    position: absolute;
-    left: 0;
-    top: 50%;
-    padding-left: 2rem;
+  .arrow {
+    color: black; /* Ensures visibility against a lighter background */
+    position: absolute; /* Positions arrows relative to their nearest positioned ancestor */
+    top: 50%; /* Centers vertically */
+    transform: translateY(-50%); /* Aligns arrow perfectly centered to the height */
+    font-size: 24px; /* Increase size for better visibility on mobile */
+    cursor: pointer; /* Indicates they are clickable */
+    z-index: 3; /* Ensures they are above other elements */
 }
 
-.arrow{
-    cursor: pointer;
+#leftarrow {
+    left: 10px; /* Position from the left */
 }
+
+#rightarrow {
+    right: 10px; /* Position from the right */
+}
+
+@media (max-width: 768px) {
+    .arrow {
+        font-size: 18px; /* Slightly smaller arrows for smaller screens */
+    }
+}
+
 
 #fred {
     display: none;
