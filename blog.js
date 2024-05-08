@@ -24,16 +24,17 @@ fetch("https://cdn.contentful.com/spaces/2cvz2uqy0q73/environments/master/entrie
               const imageUrl = assetsMap[imageId].fields.file.url;
       
               return `
-                  <div class="blog-post-preview">
-                      <a href="blog-post.html?slug=${item.fields.slug}">
-                          <div class="blog-post-image-wrapper">
-                              <img src="${imageUrl}" alt="${item.fields.headline}" />
-                          </div>
-                          <h2>${item.fields.headline}</h2>
-                          <p>Date: ${new Date(item.fields.dataAndTime).toLocaleDateString()}</p>
-                          <p>Category: ${item.fields.category}</p>
-                      </a>
-                  </div>
+              <div class="blog-post-preview">
+                <a href="blog-post.html?slug=${item.fields.slug}">
+                    <div class="blog-post-image-wrapper">
+                        <img src="${imageUrl}" alt="${item.fields.headline}" />
+                    </div>
+                    <h2>${item.fields.headline}</h2>
+                    <p>${new Date(item.fields.dataAndTime).toLocaleDateString()}</p>
+                    <p class="category-label">${item.fields.category}</p>
+                </a>
+                </div>
+          
               `;
           } else {
               console.error('Item is missing required fields:', item);

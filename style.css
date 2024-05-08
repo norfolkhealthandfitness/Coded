@@ -1747,100 +1747,173 @@ footer {
 
 @media (min-width: 768px) {
     #inject-blog {
-      grid-template-columns: 1fr 1fr; /* Explicitly sets 2 columns on larger screens */
-      justify-content: space-between; /* Ensures that the grid items are spread out as much as possible */
-      gap: 40px 20px; /* Increases the row gap and keeps column gap consistent */
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Sets up two columns */
+        justify-content: space-between; /* Spreads the columns across the full width of the container */
+        gap: 40px 20px; /* Sets the gaps between rows and columns */
+        width: 100%; /* Ensures the container takes full width */
     }
 }
 
 
 
   
-  /* Styles for each blog post preview */
-  .blog-post-preview {
+/* Overall blog post preview container adjustments for shadow and border radius */
+.blog-post-preview {
     background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Shadow for 3D effect */
     overflow: hidden;
     transition: transform 0.2s;
-    display: flex; /* Using flex to ensure the content aligns properly */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: space-between; /* Space out the content */
-    max-width: 500px; /* Full width of the grid column */
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 80%; /* Adjust based on your grid or container size */
+    margin-bottom: 20px; /* Space between blog posts */
+    position: relative; /* Needed for absolute positioning of the category label */
+}
+
+/* Styling for the image container to ensure images are displayed properly */
+.blog-post-image-wrapper {
+    width: 100%;
+    height: 250px; /* Fixed height for uniformity */
+    overflow: hidden;
+    position: relative;
+}
+
+.blog-post-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area without stretching images */
+}
+
+
+
+.category-label {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background-color: #E93947; /* Deep red background color */
+    color: white !important;
+    padding: 8px 20px !important; /* Padding adjusted for a better oval look */
+    border-radius: 25px; /* Rounded corners for an oval shape */
+    font-size: 0.9rem; /* Consistent font size */
+    z-index: 100; /* Keeps the label above other elements */
+    white-space: nowrap; /* Prevents the text from wrapping onto multiple lines */
+    display: flex; /* Enables flexbox properties */
+    align-items: center !important; /* Centers the content vertically within the container */
+    justify-content: center !important; /* Centers the content horizontally within the container */
+}
+
+
   
-  /* Adjust the image container if needed */
-  .blog-post-preview img {
-    width: 100%; /* Ensures the image stretches to fill the width */
-    height: auto; /* Initially set to auto for aspect ratio */
-    min-height: 50%; /* Ensure a minimum height based on the container's width */
-    object-fit: cover; /* Cover the container without distorting the image */
-  }
-  
-  /* Adjusted to make all images stretch and fill their containers, disregarding aspect ratio */
-  .blog-post-preview img {
-    height: 100%; /* Stretch the image to fill the container's height */
-    object-fit: stretch; /* This will stretch the image to fill the container */
-  }
-  
-  .blog-post-preview a {
-    color: inherit;
-    text-decoration: none;
-    display: block;
-    padding: 20px;
-  }
-  
-  .blog-post-preview h2, .blog-post-preview p {
-    margin: 0;
-    padding: 0 0 10px;
-  }
-  
-  .blog-post-preview h2 {
-    font-size: 24px;
-  }
- 
-  
-  .blog-post-image-wrapper {
-    width: 100%; /* Ensures the wrapper fills the width of its container */
-    display: block; /* Ensures the wrapper is treated as a block-level element */
-    position: relative; /* Positions the pseudo-element or child absolutely within */
-    padding-top: 50%; /* This creates the aspect ratio */
-    overflow: hidden; /* Prevents content from overflowing the padded area */
-  }
-  
-  .blog-post-image-wrapper img {
+  /* Grid layout applied to #inject-blog for displaying blog posts */
+#inject-blog {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to 1 column for smaller screens */
+    gap: 20px; /* Gap between grid items */
+    padding: 20px; /* Adds some space around the grid */
+    justify-content: space-between; /* Aligns items to the edges of the grid container */
+}
+
+@media (min-width: 768px) {
+    #inject-blog {
+        grid-template-columns: 1fr 1fr; /* Sets up two columns */
+        gap: 40px 20px; /* Sets the gaps between rows and columns */
+    }
+}
+
+/* Overall blog post preview container adjustments for shadow and border radius */
+.blog-post-preview {
+    background-color: #ffffff;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Shadow for 3D effect */
+    overflow: hidden;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 80%; /* Adjust based on your grid or container size */
+    margin-bottom: 20px; /* Space between blog posts */
+    position: relative; /* Needed for absolute positioning of the category label */
+}
+
+/* Styling for the image container to ensure images are displayed properly */
+.blog-post-image-wrapper {
+    width: 100%;
+    height: 250px; /* Fixed height for uniformity */
+    overflow: hidden;
+    position: relative;
+}
+
+.blog-post-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area without stretching images */
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Makes the image fill the available width */
-    height: 100%; /* Matches the height to the padded container's height, maintaining aspect ratio */
-    object-fit: cover; /* Ensures the image covers the padded area, may crop if aspect ratios differ */
-  }
-  
-  #blog img {
-    width: 100%; /* Ensure the image covers the full width */
-    object-fit: stretch; /* This forces the image to fill the container, ignoring its natural aspect ratio */
-  }
+}
 
-  #blog{
+/* Category label styling */
+.category-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #E93947; /* Deep red background color */
+    color: white !important;
+    padding: 8px 20px !important; /* Padding adjusted for a better oval look */
+    border-radius: 25px; /* Rounded corners for an oval shape */
+    font-size: 0.9rem;
+    z-index: 100; /* Keeps the label above other elements */
+    white-space: nowrap; /* Prevents the text from wrapping onto multiple lines */
+    display: flex; /* Enables flexbox properties */
+    align-items: center !important; /* Centers the content vertically within the container */
+    justify-content: center !important; /* Centers the content horizontally within the container */
+}
+
+/* Text styling for headlines and paragraphs */
+.blog-post-preview h2, .blog-post-preview p {
+    margin: 0;
+    padding: 0 20px 10px; /* Padding around text */
+}
+
+.blog-post-preview h2 {
+    font-size: 1.5rem; /* Larger text for headings */
+    color: #333; /* Dark grey for text for better readability */
+}
+
+.blog-post-preview p {
+    font-size: 0.9rem; /* Smaller text for details */
+    color: #666; /* Lighter text color for meta details */
+}
+
+/* Link styling to remove underline and color inheriting */
+.blog-post-preview a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+/* Adjustments for specific sections within the blog layout */
+#blog {
     width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
-  }
+}
 
-  /* sidebar for blog */
-
-  /* Base layout styles */
-  .containerblog {
+/* Layout styles for the blog content and sidebar */
+.containerblog {
     display: flex;
     flex-direction: row;
     gap: 30px; /* Space between blog content and sidebar */
-  }
-  
-  #blog-content {
+}
+
+#blog-content {
     flex: 2; /* Blog content takes up 2/3 of the space */
-  }
+}
+
   
   #sidebar {
     flex: 1; /* Sidebar takes up 1/3 of the space */
