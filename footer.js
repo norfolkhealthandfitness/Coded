@@ -14,7 +14,7 @@ insertFooter.innerHTML =`
                     <li><a href="appeals.html">Appeals Procedure</a></li>
                     <li><a href="termsconditions.html">Terms & Conditions</a></li>
                     <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                    <li><a href="2023-2024-Prospectus.pdf" target="_blank">Prospectus</a></li>
+                    <li><a href="PDF files/Prospectus 2024.pdf" target="_blank">Prospectus</a></li>
                 </ul>
             </div>
             <div>

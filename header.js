@@ -134,11 +134,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 </li>
     
                 <li class="nav-item">
-                    <a class="header-link" href="2023-2024-Prospectus.pdf" target="_blank">PROSPECTUS</a>
+                    <a class="header-link" href="PDF files/Prospectus 2024.pdf" target="_blank">PROSPECTUS</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="header-link" href="blogs.html" §>BLOG</a>
+                    <a class="header-link" href="blogs.html">BLOG</a>
                 </li>
     
                 <li class="nav-item">
