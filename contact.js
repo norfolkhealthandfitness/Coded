@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <input type="text" id="fullName" name="fullName" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                        <label style= for="phoneNumber">Phone Number <span class="required">*</span></label>
                         <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
                     </div>
                     <div class="form-group">

@@ -514,6 +514,7 @@ button{
 
 
 
+
 .custom-toggle-switch {
     width: 60px;
     height: 30px;
@@ -902,6 +903,21 @@ footer img{
     position: relative;
 }
 
+.iceni-container {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Adjust the gap size as needed */
+    align-items: center; /* Centers the items vertically */
+}
+
+.iceni-container p {
+    margin: 0; /* Removes default margin from the paragraph if desired */
+}
+
+
+
+
 .payLater{
     display: flex;
     flex-direction: column;
@@ -1144,8 +1160,6 @@ img[src="Images/rightarrow.png"] {
     right: 1rem;
 }
 
-/* Contact*/
-
 /* Contact Section Styles */
 .contact {
     background-image: url('Images/home-contact-bg.jpg');
@@ -1153,43 +1167,96 @@ img[src="Images/rightarrow.png"] {
     position: relative;
 }
 
+/* Default styles for mobile */
+.contact-container {
+    width: 100%;
+    padding: 1rem; /* Adds padding to left and right, consistent with other containers */
+    margin: 0 auto; /* Centers the container */
+}
 
+/* Media query for tablets and above (starting at 600px) */
+@media (min-width: 600px) {
+    .contact-container {
+        padding: 1rem 3rem; /* Increases left and right padding */
+    }
+}
 
-.contactpadding{
+/* Media query for monitors (starting at 1025px) */
+@media (min-width: 1025px) {
+    .contact-container {
+        width: 50%; /* Adjusts width on larger screens */
+        padding: 1rem 6rem; /* Increases padding for alignment */
+        margin: auto; /* Centers the container */
+        max-width: 1440px; /* Limits the maximum width */
+    }
+}
+
+/* Base styles for contact info */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spacing between form elements */
+}
+
+/* Adjust layout on larger screens */
+@media (min-width: 1024px) {
+    .contact-info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contact-info .form-group {
+        flex: 1; /* Each form group takes up equal space */
+        margin-right: 10px; /* Adds spacing between form groups */
+    }
+    .contact-info .form-group:last-child {
+        margin-right: 0; /* Removes margin from the last form group */
+    }
+}
+
+/* Additional padding for the section */
+.contact-padding {
     padding-bottom: 50px;
 }
 
+/* Text color for headings and paragraphs */
 .contact h2, .contact p {
     color: white;
     z-index: 100;
 }
 
-/* Form Styles */
+/* Form styling */
 form {
     font-family: Arial, sans-serif;
     position: relative;
     z-index: 2;
 }
 
-
-
-/* Label Styles */
-label {
+/* Label styles with more specific selectors */
+.contact-info label {
     color: white;
-    margin-bottom: 1rem;
+    display: block; /* Makes labels block elements */
+    margin-bottom: 8px; /* Space below labels */
+    margin-top: 8px;
 }
 
-/* Input and Textarea Styles */
-input,
-textarea {
+/* Input and textarea styles */
+.contact-info input,
+.contact-info textarea {
     width: 100%;
     border-radius: 3px;
-    border: 1px solid white; /* White border */
-    background: transparent; /* Transparent background */
-    padding-left: 8px; /* Left padding for indentation */
-    color: white; /* White text for input */
-    height: 48px; /* Adjust height as needed */
+    border: 1px solid white;
+    background: transparent;
+    padding: 8px; /* Padding inside input fields */
+    color: white;
+    height: 48px; /* Standard height for inputs */
 }
+
+/* Specific styles for textarea */
+.contact-info textarea {
+    padding-top: 16px; /* Additional top padding */
+    height: auto; /* Height adjusts based on content */
+}
+
 
 /* Placeholder Styles */
 ::placeholder { /* Most modern browsers */
@@ -1231,13 +1298,14 @@ footer {
 }
 
 .footer-break {
-    border: white 0.1px solid;
+    border: #A2A2A1 0.1px dotted;
     position: relative;
     z-index: 2;
 }
 
+
 .payLater img {
-    margin: 0 auto; /* Centers images within the div */
+    
     display: block; /* Ensures images are treated as block elements, allowing margin auto to work */
 }
 
@@ -1351,6 +1419,8 @@ footer {
     justify-content: center; /* Horizontally center */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .toggle-container {
@@ -1887,46 +1957,3 @@ footer {
 /*  */
 
 
-/* Default styles for mobile */
-.contact-container {
-    width: 100%;
-    padding-left: 1rem; /* Consistent with other containers */
-    padding-right: 1rem; /* Consistent with other containers */
-    margin: 0 auto; /* Centers the container */
-}
-
-/* Media query for tablets and above (starting at 600px) */
-@media (min-width: 600px) {
-    .contact-container {
-        padding-left: 3rem; /* Aligns with other containers */
-        padding-right: 3rem; /* Aligns with other containers */
-    }
-}
-
-/* Media query for monitors (starting at 1025px) */
-@media (min-width: 1025px) {
-    .contact-container {
-        width: 50%; /* Adjusts to 75% width on larger screens */
-        padding: 0 6rem; /* Aligns with other containers at this breakpoint */
-        margin: auto; /* Ensures it remains centered */
-        max-width: 1440px; /* Consistent maximum width */
-    }
-}
-
-/* Base styles */
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* Styles for larger screens */
-@media (min-width: 1024px) {
-    .contact-info {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .contact-info .form-group {
-        flex: 1; /* Ensures the inputs grow to fill the available space evenly */
-    }
-}

@@ -1,4 +1,7 @@
+
+
 document.getElementById('inject-blog').innerHTML = '<p>Loading...</p>';
+
 
 fetch("https://cdn.contentful.com/spaces/2cvz2uqy0q73/environments/master/entries?access_token=BZQSUCVEKKIjSFYmKMs-0oPZCObhzLIa5xtsBEiQEmw&content_type=blog&include=1")
     .then(response => response.json())
