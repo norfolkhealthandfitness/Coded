@@ -443,8 +443,16 @@ button{
     margin: 0 auto;
 
 }
+.industry{
+    padding-top: 5rem;
+}
 
-@media(max-width: 800px){
+.industry p{
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+}
+
+@media(max-width: 900px){
     .middle-align{
         padding-top: 3rem;
         width: 100%;
@@ -1168,6 +1176,7 @@ form {
 /* Label Styles */
 label {
     color: white;
+    margin-bottom: 1rem;
 }
 
 /* Input and Textarea Styles */
