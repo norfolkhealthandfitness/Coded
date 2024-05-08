@@ -249,26 +249,25 @@ a {
 /* --------------------------------------------------------------*/
 
 .button {
-    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px; /* Adjust padding as needed */
+    height: auto; /* Lets the button size according to its content and padding */
+    background-color: #E93946; /* Red background */
+    color: white; /* White text */
+    text-decoration: none; /* No underline */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
     font-size: 12px;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    text-decoration: none;
-    color: #FFFFFF;
-    display: block;
-    background-color: #E93946;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    position: relative;
 }
 
 .button:hover {
-    background-color: white !important;
+    background-color: #ffffff !important; 
     color:  #E93946;
 }
+
 
 
 .buttons-div {  
@@ -1503,7 +1502,7 @@ footer {
         width: 100%; /* Full width for dropdown items */
     }
 
-    .button, .dropdown a {
+    .buttoncourse, .dropdown a {
         width: 100%; /* Full width for all button links */
     }
 }

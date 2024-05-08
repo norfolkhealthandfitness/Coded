@@ -186,14 +186,14 @@ function displayCoursesByLevel(level, containerSelector) {
                     <div class="buttons-course-upper">
                         <a class="button red" target="_blank" href="${course.BuyNowLink}">BUY NOW</a>
                         <div class="dropdown">
-                            <a class="button red" href="">PAYMENT PLAN</a>
-                            <div class="dropdown-content">
+                            <a class="button red" href="javascript:void(0);">PAYMENT PLAN</a>
+                            <div class="dropdown-content buttoncourse">
                                 <a href="${course.ThreeMonthLink}" target="blank">3 Months</a>
                                 <a href="${course.SixMonthLink}" target="blank">6 Months</a>
                             </div>
                         </div> 
                     </div>
-                        <a class="button red" href="${course.CourseGuideLink}">DOWNLOAD COURSE GUIDE</a>
+                        <a class="button buttoncourse red" href="${course.CourseGuideLink}">DOWNLOAD COURSE GUIDE</a>
                 </div>
             </div>
         `;
