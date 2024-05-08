@@ -6,7 +6,7 @@ insertFooter.innerHTML =`
         <div class="overlay"></div>
         <div class="footer-nav" id="top-nav">
             <div style='z-index:1'>
-                <img style="width: 150px; " src="images/NHF-white.png" alt="NHF Logo">
+                <img style="width: 200px; padding-top:2rem;padding-bottom:2rem;" src="images/NHF-white.png" alt="NHF Logo">
             </div>
             <div>
                 <h3>Further Links</h3>

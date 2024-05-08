@@ -95,6 +95,12 @@ img{
     margin: 0 auto;
 }
 
+.container{
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+
 @media (min-width:600px) {
     .container, .container-none, .container-top, .container-bottom {
         padding-left: 3rem;
@@ -733,7 +739,7 @@ nav {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 190px; /* Consolidated the repeated media query */
+        top: 180px; /* Consolidated the repeated media query */
         flex-direction: column;
         background-color: #F2F2F2;
         width: 100%;
@@ -1135,6 +1141,13 @@ img[src="Images/rightarrow.png"] {
     position: relative;
 }
 
+
+
+.contactpadding{
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
 .contact h2, .contact p {
     color: white;
     z-index: 100;
@@ -1202,7 +1215,29 @@ footer {
     z-index: 2;
 }
 
+.payLater img {
+    margin: 0 auto; /* Centers images within the div */
+    display: block; /* Ensures images are treated as block elements, allowing margin auto to work */
+}
 
+
+@media (max-width: 1199px) {
+    .footer {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-nav {
+        width: 100%; /* Ensures the footer-nav takes full width */
+    }
+    .footer-nav > div, .payLater {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
 
 /* FAQ page */
 .accordion-content {
@@ -1445,6 +1480,34 @@ footer {
     display: flex;
     width: 100%;
 }
+
+@media (max-width: 750px) {
+    .course-grid {
+        flex-direction: column; /* Stacks the grid elements vertically */
+    }
+    
+    .middle-align-course, .buttons-course, .buttons-course-upper {
+        width: 100%; /* Ensures full width */
+    }
+    
+    .buttons-course {
+        flex-direction: column; /* Stacks buttons vertically */
+    }
+
+    .buttons-course-upper {
+        flex-direction: column; /* Adjusts upper button group to stack vertically */
+    }
+    
+    .dropdown-content {
+        position: absolute; /* Keeps dropdown content positioned correctly */
+        width: 100%; /* Full width for dropdown items */
+    }
+
+    .button, .dropdown a {
+        width: 100%; /* Full width for all button links */
+    }
+}
+
 
 
 .cv{

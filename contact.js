@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const contact = document.querySelector('.insert-contact');
     if (contact) {
         contact.innerHTML = `
-        <div class="contact">
-        <div>
+        <div class="contact" style="margin-top: 24px;">
+        <div class='contactpadding'>
             <div class="overlay"></div>
             <div class='container' style='margin-bottom: 24px; margin-top:24px; text-align: center'>
                 <h2>I want to talk to someone</h2>
@@ -31,12 +31,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="buttons-div" style="display: flex; justify-content: center; margin-top: 1rem;">
                         <button class="button red" type="submit">Submit</button>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </div>
-    
-    
     
         `;
     } else {
