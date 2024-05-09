@@ -1768,7 +1768,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 80%; /* Adjust based on your grid or container size */
+    max-width: 100%; /* Adjust based on your grid or container size */
     margin-bottom: 20px; /* Space between blog posts */
     position: relative; /* Needed for absolute positioning of the category label */
 }
