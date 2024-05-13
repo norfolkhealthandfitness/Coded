@@ -1,22 +1,45 @@
+
+
+// import { documentToHtmlString } from 'https://cdn.skypack.dev/@contentful/rich-text-html-renderer';
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     fetch('http://localhost:8888/.netlify/functions/contentful?content_type=legal')
+//         .then(response => response.json())
+//         .then(data => {
+//             if (data && data.items && data.items.length > 0) {
+//                 const firstDocument = data.items[0];
+//                 const content = firstDocument.fields.content;
+
+//                 const renderedHtml = documentToHtmlString(content);
+//                 document.getElementById('legal-document').innerHTML = `<div>${renderedHtml}</div>`;
+//             } else {
+//                 document.getElementById('legal-document').innerHTML = `<p>No legal documents found.</p>`;
+//             }
+//         })
+//         .catch(error => console.error('Error fetching data:', error));
+// });
+
+
+
 import { documentToHtmlString } from 'https://cdn.skypack.dev/@contentful/rich-text-html-renderer';
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Fetch data from Contentful
-    fetch(`https://cdn.contentful.com/spaces/2cvz2uqy0q73/environments/master/entries?access_token=BZQSUCVEKKIjSFYmKMs-0oPZCObhzLIa5xtsBEiQEmw&content_type=legal`)
+    // Determine the base URL based on location.hostname
+    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    const baseURL = isLocalhost ? 'http://localhost:8888/.netlify/functions' : 'https://illustrious-twilight-d76498.netlify.app.netlify/functions';
+
+    const url = `${baseURL}/contentful?content_type=legal`;
+
+    fetch(url)
         .then(response => response.json())
         .then(data => {
-            // Check if data array is not empty
             if (data && data.items && data.items.length > 0) {
-                const firstDocument = data.items[0]; // Get the first document object
-                const title = firstDocument.fields.title; // Extract title field
-                const content = firstDocument.fields.content; // Extract content field
+                const firstDocument = data.items[0];
+                const content = firstDocument.fields.content;
 
-                // Render title and content
-                document.getElementById('legal-document').innerHTML = `
-                    <div>${documentToHtmlString(content)}</div>
-                `;
+                const renderedHtml = documentToHtmlString(content);
+                document.getElementById('legal-document').innerHTML = `<div>${renderedHtml}</div>`;
             } else {
-                // Handle case where data array is empty
                 document.getElementById('legal-document').innerHTML = `<p>No legal documents found.</p>`;
             }
         })
