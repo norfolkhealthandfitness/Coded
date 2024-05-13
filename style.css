@@ -1785,7 +1785,7 @@ footer {
 .category-label {
     position: absolute;
     top: 10px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed  */
     background-color: #E93947; /* Deep red background color */
     color: white !important;
     padding: 8px 20px ; /* Padding adjusted for a better oval look */
