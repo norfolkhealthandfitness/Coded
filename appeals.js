@@ -1,13 +1,16 @@
 import { documentToHtmlString } from 'https://cdn.skypack.dev/@contentful/rich-text-html-renderer';
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Fetch data from Contentful
-    fetch(`https://cdn.contentful.com/spaces/2cvz2uqy0q73/environments/master/entries?access_token=BZQSUCVEKKIjSFYmKMs-0oPZCObhzLIa5xtsBEiQEmw&content_type=legal`)
+    // Define the backend API URL
+    const backendApiUrl = 'https://illustrious-twilight-d76498.netlify.app/.netlify/functions/contentful?content_type=legal';
+
+    // Fetch data from the backend API
+    fetch(backendApiUrl)
         .then(response => response.json())
         .then(data => {
             // Check if data array is not empty
             if (data && data.items && data.items.length > 0) {
-                const firstDocument = data.items[1]; // Get the first document object
+                const firstDocument = data.items[1]; // Get the second document object
                 const title = firstDocument.fields.title; // Extract title field
                 const content = firstDocument.fields.content; // Extract content field
 

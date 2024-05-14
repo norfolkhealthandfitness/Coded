@@ -2,7 +2,7 @@ import { documentToHtmlString } from 'https://cdn.skypack.dev/@contentful/rich-t
 
 // Determine the base URL based on the environment
 const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-const baseURL = isLocalhost ? 'http://localhost:8888/.netlify/functions' : 'https://illustrious-twilight-d76498.netlify.app/.netlify/functions';
+const baseURL = 'https://illustrious-twilight-d76498.netlify.app/.netlify/functions';
 const url = `${baseURL}/contentful?content_type=tutorBio`;  // Correct endpoint
 
 // Fetch and render logic

@@ -1,35 +1,37 @@
 import { documentToHtmlString } from 'https://cdn.skypack.dev/@contentful/rich-text-html-renderer';
 
-document.getElementById('blog-content').innerHTML = 'Loading...'
+document.getElementById('blog-content').innerHTML = 'Loading...';
 // Fetch and display the blog post
 const urlParams = new URLSearchParams(window.location.search);
 const postSlug = urlParams.get('slug');
 
 if (postSlug) {
-  fetch(`https://cdn.contentful.com/spaces/2cvz2uqy0q73/environments/master/entries?access_token=BZQSUCVEKKIjSFYmKMs-0oPZCObhzLIa5xtsBEiQEmw&content_type=blog&fields.slug=${postSlug}&include=1`)
-  .then(response => response.json())
-  .then(data => {
-    const post = data.items.length > 0 ? data.items[0] : null;
-    if (post && data.includes && data.includes.Asset) {
-      const asset = data.includes.Asset.find(a => a.sys.id === post.fields.mainImage.sys.id);
-      const imageUrl = asset.fields.file.url;
+  // Define the backend API URL
+  const backendApiUrl = `https://illustrious-twilight-d76498.netlify.app/.netlify/functions/contentful?content_type=blog&fields.slug=${postSlug}&include=1`;
 
-      document.getElementById('blog-content').innerHTML = `
-        <img src="${imageUrl}" alt="Main Image" style="width: 100%; height: auto; max-width: none;"/>
-        <h1 style='color:black; font-size:40px'>${post.fields.headline}</h1>
-        <p>${post.fields.category}</p>
-        <div>${documentToHtmlString(post.fields.blogContent)}</div>
-      `;
-    } else {
-      document.getElementById('blog-content').innerHTML = `<p>Post not found.</p>`;
-    }
-  })
-  .catch(err => {
-    console.error(err);
-    document.getElementById('blog-content').innerHTML = `<p>Error loading the post.</p>`;
-  });
+  fetch(backendApiUrl)
+    .then(response => response.json())
+    .then(data => {
+      const post = data.items.length > 0 ? data.items[0] : null;
+      if (post && data.includes && data.includes.Asset) {
+        const asset = data.includes.Asset.find(a => a.sys.id === post.fields.mainImage.sys.id);
+        const imageUrl = asset.fields.file.url;
+
+        document.getElementById('blog-content').innerHTML = `
+          <img src="${imageUrl}" alt="Main Image" style="width: 100%; height: auto; max-width: none;"/>
+          <h1 style='color:black; font-size:40px'>${post.fields.headline}</h1>
+          <p>${post.fields.category}</p>
+          <div>${documentToHtmlString(post.fields.blogContent)}</div>
+        `;
+      } else {
+        document.getElementById('blog-content').innerHTML = `<p>Post not found.</p>`;
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById('blog-content').innerHTML = `<p>Error loading the post.</p>`;
+    });
 }
-
 
 // Dynamically update the sidebar
 function updateSidebar() {
