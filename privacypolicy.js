@@ -4,8 +4,8 @@ import { documentToHtmlString } from 'https://cdn.skypack.dev/@contentful/rich-t
 document.addEventListener("DOMContentLoaded", function() {
     // Determine the base URL based on location.hostname
     const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    // const baseURL = isLocalhost ? 'http://localhost:8888/.netlify/functions' : 'https://illustrious-twilight-d76498.netlify.app.netlify/functions';
     const baseURL = isLocalhost ? 'http://localhost:8888/.netlify/functions' : 'https://illustrious-twilight-d76498.netlify.app.netlify/functions';
-
     const url = `${baseURL}/contentful?content_type=legal`;
 
     fetch(url)
