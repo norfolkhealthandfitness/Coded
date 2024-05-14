@@ -1,6 +1,6 @@
-
+document.addEventListener("DOMContentLoaded", () => {
+    // Insert the header HTML first
     const insertHeader = document.querySelector('.insert-header');
-
     insertHeader.innerHTML = `
         <header>
             <nav class="top-nav">
@@ -74,6 +74,7 @@
         </header>
     `;
 
+    // Highlight the active navigation link based on the current page
     const currentPage = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-item .header-link');
     navLinks.forEach(link => {
@@ -83,6 +84,7 @@
         }
     });
 
+    // Handle the toggle switch functionality
     const toggle = document.querySelector('.custom-toggle-switch');
     const circle = document.querySelector('.switch-circle');
     const buttons = document.querySelectorAll('.button');
@@ -111,8 +113,10 @@
         updateUI(isResponsive);
     });
 
+    // Initialize UI state on page load
     updateUI(isResponsive);
 
+    // Handle the hamburger menu functionality
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
 
@@ -125,3 +129,4 @@
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
     }));
+});
