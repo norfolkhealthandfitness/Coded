@@ -749,7 +749,7 @@ nav {
 @media (max-width: 1200px) {
     .hamburger {
         display: block;
-    
+        padding-right: 32px;
     }
 
     .hamburger.active .bar:nth-child(2) {
