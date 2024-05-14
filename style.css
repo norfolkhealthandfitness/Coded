@@ -609,6 +609,8 @@ button{
     padding-top: 20px;
 }
 
+
+
 .top-nav{
    background-color: #000;
    display: flex;
@@ -680,6 +682,8 @@ nav {
 .nav-branding {
     font-size: 2rem;
 }
+
+
 
 .nav-link {
     transition: 0.7s ease;
