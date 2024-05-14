@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <textarea style='padding-top:16px' id="enquiry" name="enquiry" placeholder="Your Message" required></textarea>
                     </div>
                     <div class="buttons-div" style="display: flex; justify-content: center; margin-top: 1rem;">
-                        <button class="button red" type="submit">Submit</button>
+                        <button class=" bigger-button button red" type="submit">Submit</button>
                     </div>
                 </div>
             </form>

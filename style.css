@@ -259,15 +259,21 @@ a {
     text-decoration: none; /* No underline */
     border: none; /* No border */
     cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
-    font-size: 12px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    font-size: 12px; /* Default font size */
+    font-weight: normal; /* Default font weight */
 }
 
 .button:hover {
     background-color: #ffffff !important; 
-    color:  #E93946;
+    color: #E93946;
 }
 
+.bigger-button {
+    padding: 15px 45px; /* 15px top and bottom, 45px left and right */
+    font-size: 15px; /* Adjust font size */
+    font-weight: bold; /* Make font weight bold */
+}
 
 
 
@@ -488,6 +494,15 @@ button{
 /*                     End of Middle align                     */
 /* --------------------------------------------------------------*/
 
+.email-link {
+    color: #0070B9 !important;
+    text-decoration: none;
+    transition: color 0.1s;
+}
+
+.email-link:hover {
+    color: grey !important;
+}
 
 
 
