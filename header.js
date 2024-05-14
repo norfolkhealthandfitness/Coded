@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+
     const insertHeader = document.querySelector('.insert-header');
 
     insertHeader.innerHTML = `
@@ -125,4 +125,3 @@ document.addEventListener("DOMContentLoaded", () => {
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
     }));
-});
