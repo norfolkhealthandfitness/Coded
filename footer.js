@@ -35,8 +35,8 @@ insertFooter.innerHTML =`
                 </div>
                 <p>Payment plans available with</p>
                 <div class="payLater">
-                    <img src='images/paylater.png'/>
-                    <img src='images/gocardless.png'/>
+                    <img alt="paylater" src='images/paylater.png'/>
+                    <img alt="gocardless"src='images/gocardless.png'/>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@ insertFooter.innerHTML =`
             <p>@ ${currentYear} Norfolk Health & Fitness Ltd</p>
             <div class="iceni-container">
                 <p>Designed by</p>
-                <img src='images/iceni.png'/>
+                <img alt="desginer" src='images/iceni.png'/>
             </div>
 
     </section>
