@@ -259,21 +259,15 @@ a {
     text-decoration: none; /* No underline */
     border: none; /* No border */
     cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
-    font-size: 12px; /* Default font size */
-    font-weight: normal; /* Default font weight */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    font-size: 12px;
 }
 
 .button:hover {
     background-color: #ffffff !important; 
-    color: #E93946;
+    color:  #E93946;
 }
 
-.bigger-button {
-    padding: 15px 45px; /* 15px top and bottom, 45px left and right */
-    font-size: 15px; /* Adjust font size */
-    font-weight: bold; /* Make font weight bold */
-}
 
 
 
@@ -494,15 +488,6 @@ button{
 /*                     End of Middle align                     */
 /* --------------------------------------------------------------*/
 
-.email-link {
-    color: #0070B9 !important;
-    text-decoration: none;
-    transition: color 0.1s;
-}
-
-.email-link:hover {
-    color: grey !important;
-}
 
 
 
@@ -573,40 +558,21 @@ button{
 }
 
 
-/* Default state: hide the .hidemob elements */
+/* Base state: all .hide-mob elements are hidden when the screen is less than 1200px */
 .hidemob {
     display: none;
+    font-weight: lighter;
+    font-size: 14px;
+   
 }
 
-/* Show the .hidemob elements on screens wider than 1200px */
+/* Above 1200px, .hide-mob elements are visible */
 @media (min-width: 1200px) {
     .hidemob {
+        display: block;
         display: flex;
         gap: 32px;
     }
-}
-
-/* Grid container hidden by default */
-.grid-container-two {
-    display: none;
-}
-
-/* Show grid container and set grid properties on screens wider than 800px */
-@media (min-width: 800px) {
-    .grid-container-two {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 columns each taking 1 fraction of the space */
-        grid-template-rows: auto; /* automatically adjusts the row height to fit the content */
-        margin: auto;
-        justify-content: space-between; /* adds space between grid items */
-        width: 100%; /* ensures the grid uses full width available */
-    }
-}
-
-/* Ensure no gap or padding is added by the parent container */
-.container-none {
-    padding: 0;
-    margin: 0;
 }
 
 
@@ -642,8 +608,6 @@ button{
 .logo {
     padding-top: 20px;
 }
-
-
 
 .top-nav{
    background-color: #000;
@@ -717,8 +681,6 @@ nav {
     font-size: 2rem;
 }
 
-
-
 .nav-link {
     transition: 0.7s ease;
     cursor: pointer;
@@ -731,6 +693,7 @@ nav {
 .hamburger {
     display: none;
     z-index: 100;
+    padding-right: 32px;
 }
 
 .bar {
@@ -768,7 +731,7 @@ nav {
 @media (max-width: 1200px) {
     .hamburger {
         display: block;
-        padding-right: 32px;
+    
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -814,43 +777,15 @@ nav {
 /* ---------------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
 
-.hero {
-    background-image: url('Images/backdrop.webp');
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; /* Ensures the image is centered */
-    height: 75vh;
-    display: flex;
-    width: 100%; /* Ensure the width is 100% */
+.hero{
+   /* background-color: yellow; */
+   background-image: url('Images/backdrop.webp');
+   position: relative;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 75vh;
+   display: flex;
 }
-
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.75); /* Adjust the colour and transparency as needed */
-    z-index: 2;
-}
-
-/* Media query for mobile devices */
-@media (max-width: 600px) {
-    .hero {
-        background-image: none; /* Remove background image on mobile */
-        background-color: black; /* Set black background color */
-    }
-}
-
-
-.hero .container {
-    position: relative;
-    z-index: 2;
-}
-
-
-
 .hero h1, .hero p{
     color: white;
 }
@@ -1701,6 +1636,20 @@ footer {
 }
 
 
+.grid-container-two {
+    display: none;
+}
+
+@media (min-width: 800px){
+    .grid-container-two {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns each taking 1 fraction of the space */
+        grid-template-rows: auto; /* automatically adjusts the row height to fit the content */
+        margin: auto;
+        display: grid;
+        justify-content: space-between; /* adds space between grid items */
+        width: 100%; /* ensures the grid uses full width available */
+    }
+}
 .grid-container {
     display: grid;
     width: 100%;
@@ -1836,8 +1785,8 @@ footer {
 
 .category-label {
     position: absolute;
-    top: 10px; /* Adjust as ngeeded */
-    right: 10px; /* Adjust as needed  */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
     background-color: #E93947; /* Deep red background color */
     color: white !important;
     padding: 8px 20px ; /* Padding adjusted for a better oval look */
