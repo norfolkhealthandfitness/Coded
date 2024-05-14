@@ -34,29 +34,6 @@ window.onload = function() {
     updateUI(isResponsive, toggle, circle, buttons, fa); // Initialize UI on load
 };
 
-    
-
-
-    // function toggleCustomSwitch() {
-    //     const toggle = document.querySelector('.custom-toggle-switch');
-    //     const circle = document.querySelector('.switch-circle');
-    //     const buttons = document.querySelectorAll('.button');
-
-    //     isResponsive = !isResponsive; // Toggle the boolean state
-
-    //     if (isResponsive) {
-    //         toggle.style.backgroundColor = 'black';
-    //         circle.style.transform = 'translateX(30px)';
-    //         buttons.forEach(button => button.style.backgroundColor = '#AE1320');
-    //     } else {
-    //         toggle.style.backgroundColor = 'grey';
-    //         circle.style.transform = 'translateX(0)';
-    //         buttons.forEach(button => button.style.backgroundColor = '#E93946');
-    //     }
-    // }
-
-
-
 const insertHeader = document.querySelector('.insert-header')
 
 document.addEventListener('DOMContentLoaded', function () {
