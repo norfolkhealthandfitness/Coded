@@ -80,22 +80,11 @@ img{
 /* ---------------------------------------------------------------*/
 
 .reviewbg {
+    background-image: url('Images/Testimonioal-bg.webp');
     background-size: cover;
-    position: relative;
-    background-image: none;
+    position: relative; 
 }
 
-@media (min-width: 601px) {
-    .reviewbg {
-        background-image: url('Images/Testimonioal-bg.webp');
-    }
-}
-
-@media (max-width: 600px) {
-    .reviewbg {
-        display: none;
-    }
-}
 
 /* ---------------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
@@ -584,21 +573,40 @@ button{
 }
 
 
-/* Base state: all .hide-mob elements are hidden when the screen is less than 1200px */
+/* Default state: hide the .hidemob elements */
 .hidemob {
     display: none;
-    font-weight: lighter;
-    font-size: 14px;
-   
 }
 
-/* Above 1200px, .hide-mob elements are visible */
+/* Show the .hidemob elements on screens wider than 1200px */
 @media (min-width: 1200px) {
     .hidemob {
-        display: block;
         display: flex;
         gap: 32px;
     }
+}
+
+/* Grid container hidden by default */
+.grid-container-two {
+    display: none;
+}
+
+/* Show grid container and set grid properties on screens wider than 800px */
+@media (min-width: 800px) {
+    .grid-container-two {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns each taking 1 fraction of the space */
+        grid-template-rows: auto; /* automatically adjusts the row height to fit the content */
+        margin: auto;
+        justify-content: space-between; /* adds space between grid items */
+        width: 100%; /* ensures the grid uses full width available */
+    }
+}
+
+/* Ensure no gap or padding is added by the parent container */
+.container-none {
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -1693,20 +1701,6 @@ footer {
 }
 
 
-.grid-container-two {
-    display: none;
-}
-
-@media (min-width: 800px){
-    .grid-container-two {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns each taking 1 fraction of the space */
-        grid-template-rows: auto; /* automatically adjusts the row height to fit the content */
-        margin: auto;
-        display: grid;
-        justify-content: space-between; /* adds space between grid items */
-        width: 100%; /* ensures the grid uses full width available */
-    }
-}
 .grid-container {
     display: grid;
     width: 100%;
