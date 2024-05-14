@@ -6,7 +6,7 @@ insertFooter.innerHTML =`
         <div class="overlay"></div>
         <div class="footer-nav" id="top-nav">
             <div style='z-index:1'>
-                <img style="width: 200px; padding-top:2rem;padding-bottom:2rem;" src="images/NHF-white.png" alt="NHF Logo">
+                <img style="width: 200px; padding-top:2rem;padding-bottom:2rem;" src="images/NHF-white.webp" alt="NHF Logo">
             </div>
             <div>
                 <h3>Further Links</h3>
@@ -46,7 +46,7 @@ insertFooter.innerHTML =`
             <p>@ ${currentYear} Norfolk Health & Fitness Ltd</p>
             <div class="iceni-container">
                 <p>Designed by</p>
-                <img alt="desginer" src='images/iceni.png'/>
+                <img alt="desginer" src='images/iceni.webp'/>
             </div>
 
     </section>
