@@ -804,6 +804,7 @@ nav {
    height: 75vh;
    display: flex;
 }
+
 .hero h1, .hero p{
     color: white;
 }
