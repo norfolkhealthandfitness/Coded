@@ -802,7 +802,10 @@ nav {
 
 @media (max-width: 600px) {
     /* If you have specific styles for phones, place them here */
-
+.hero{
+    background-image: none;
+    background-color: #121212;
+}
 
     .hero h1{
         font-size: 30px;
