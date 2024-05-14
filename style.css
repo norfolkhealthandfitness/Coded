@@ -796,7 +796,6 @@ nav {
 /* ---------------------------------------------------------------*/
 
 .hero {
-    /* background-color: yellow; */
     background-image: url('Images/backdrop.webp');
     position: relative;
     background-repeat: no-repeat;
@@ -816,6 +815,15 @@ nav {
     background: rgba(0, 0, 0, 0.75); /* Adjust the colour and transparency as needed */
     z-index: 2;
 }
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    .hero {
+        background-image: none; /* Remove background image on mobile */
+        background-color: black; /* Set black background color */
+    }
+}
+
 
 .hero .container {
     position: relative;
