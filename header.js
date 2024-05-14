@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
      <div class="toggle-holder hidemob">
          <p>Default</p>
          <div class="toggle-wrapper">
-             <div class="custom-toggle-switch" onclick="toggleCustomSwitch()" role="switch" aria-checked="false" tabindex="0">
+             <div class="custom-toggle-switch" onclick="toggleCustomSwitch()" role="switch" aria-checked="false" aria-label="Accessibility toggle" tabindex="0">
                  <div class="switch-circle"></div>
              </div>
          </div>
