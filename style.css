@@ -821,7 +821,6 @@ nav {
     .hero {
         background-image: none; /* Remove background image on mobile */
         background-color: black; /* Set black background color */
-        height: auto;
     }
 }
 
