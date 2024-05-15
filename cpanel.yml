@@ -2,4 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/norfolkhealthand/public_html/
+    - echo "Starting deployment to $DEPLOYPATH"
+    - /bin/mkdir -p $DEPLOYPATH
     - /bin/cp -R * $DEPLOYPATH
+    - echo "Deployment completed successfully."
