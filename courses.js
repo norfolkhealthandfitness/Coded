@@ -59,7 +59,7 @@ const allExtraCourses = [
     {
         Name: 'Level 2 Award In Instructing Kettlebells',
         Img: 'Images/Level 2 Award In Instructing Kettlebells.png',
-        Type: 'Online Course: £180',
+        Type: 'Online & In-Person Course: £180',
         Description: 'This qualification aims to provide learners with the knowledge and skills to be able to plan, deliver, and supervise safe and effective exercise programmes within a gym or health club environment.',
         BuyNowButton: 'BUY NOW',
         BuyNowLink: 'https://buy.stripe.com/bIYaIx7Yc2BLgh2009',
@@ -72,7 +72,7 @@ const allExtraCourses = [
     {
         Name: 'Level 2 Award In Mental Health Awareness',
         Img: 'Images/Level 2 Award In Mental Health Awareness.png',
-        Type: 'Online & In-Person Course: £200',
+        Type: 'Online Course: £250',
         Description: 'This qualification aims to provide learners with the knowledge and skills to be able to plan, deliver, and supervise safe and effective exercise programmes within a gym or health club environment. In the blended package, you also have access to five workshop sessions and five 1-1 support sessions.',
         BuyNowButton: 'BUY NOW',
         BuyNowLink: 'https://buy.stripe.com/14k4k95Q4ccle8UaEO',
@@ -86,7 +86,7 @@ const allExtraCourses = [
     {
         Name: 'Level 3 Diploma In Personal Training (Distance)',
         Img: 'Images/Level 3 Diploma In Personal Training (Distance).png',
-        Type: 'Online & In-Person Course: £695',
+        Type: 'Online Course: £695',
         Description: 'This qualification aims to provide learners with the knowledge and skills to be able to plan, deliver, and supervise safe and effective exercise programmes within a gym or health club environment. In the blended package, you also have access to five workshop sessions and five 1-1 support sessions.',
         BuyNowButton: 'BUY NOW',
         BuyNowLink: 'https://buy.stripe.com/28o2c13HW5NX9SE3cn',
@@ -114,7 +114,7 @@ const allExtraCourses = [
     {
         Name: 'Level 3 Award In Supporting Pre And Postnatal Clients With Exercise And Nutrition',
         Img: 'Images/Level 3 Award In Supporting Pre And Postnatal Clients With Exercise And Nutrition.png',
-        Type: 'Online & In-Person Course: £350',
+        Type: 'Online Course: £350',
         Description: 'This qualification aims to provide learners with the knowledge and skills to be able to plan, deliver, and supervise safe and effective exercise programmes within a gym or health club environment. In the blended package, you also have access to five workshop sessions and five 1-1 support sessions.',
         BuyNowButton: 'BUY NOW',
         BuyNowLink: 'https://buy.stripe.com/6oEdUJ3HW6S17KwdR3',
@@ -127,7 +127,7 @@ const allExtraCourses = [
     {
         Name: 'Level 3 Online Diploma In Supporting Clients With Long-Term Conditions',
         Img: 'Images/Level 3 Online Diploma In Supporting Clients With Long-Term Conditions.png',
-        Type: 'Online & In-Person Course: £640',
+        Type: 'Online Course: £640',
         Description: 'This qualification aims to provide learners with the knowledge and skills to be able to plan, deliver, and supervise safe and effective exercise programmes within a gym or health club environment. In the blended package, you also have access to five workshop sessions and five 1-1 support sessions.',
         BuyNowButton: 'BUY NOW',
         BuyNowLink: 'https://buy.stripe.com/5kA5od5Q41xH3ug00e',
@@ -140,7 +140,7 @@ const allExtraCourses = [
     {
         Name: 'Level 4 Certificate In Advanced Personal Training',
         Img: 'Images/Level 4 Certificate In Advanced Personal Training.png',
-        Type: 'Online & In-Person Course: £795',
+        Type: 'Online Course: £795',
         Description: 'This qualification aims to provide learners with the knowledge and skills to be able to plan, deliver, and supervise safe and effective exercise programmes within a gym or health club environment. In the blended package, you also have access to five workshop sessions and five 1-1 support sessions.',
         BuyNowButton: 'BUY NOW',
         BuyNowLink: 'https://buy.stripe.com/aEU6sh3HWdgp8OAdR5',
@@ -179,7 +179,8 @@ function displayCoursesByLevel(level, containerSelector) {
                 <img src="${course.Img}" alt="${course.Name}">
                 <div class="middle-align-course">
                     <h3>${course.Name}</h3>
-                    <p>${course.Type}</p>
+                    <p style="font-weight: bold;">${course.Type}</p>
+
                     <p>${course.Description}</p>
                 </div>
                 <div class="buttons-course middle-align">
