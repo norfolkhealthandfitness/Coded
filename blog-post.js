@@ -24,7 +24,7 @@ if (postSlug) {
 
         document.getElementById('blog-content').innerHTML = `
         <img src="${imageUrl}" alt="Main Image" style="width: 100%; height: auto; max-width: none;"/>
-        <h1 style='color:black; font-size:32px; text-align:center; font-weight:400'>${post.fields.headline}</h1>
+        <h1 style='color:black; font-size:32px; font-weight:400'>${post.fields.headline}</h1>
         <div style="line-height: 2;">${documentToHtmlString(post.fields.blogContent)}</div>
         `;
       } else {

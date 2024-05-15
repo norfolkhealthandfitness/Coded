@@ -1731,7 +1731,6 @@ footer {
 }
 
 
-
 .blog-post-preview {
     background-color: #ffffff;
     border-radius: 8px; /* Rounded corners */
@@ -1743,8 +1742,33 @@ footer {
     justify-content: space-between;
     max-width: 100%; /* Adjust based on your grid or container size */
     margin-bottom: 20px; /* Space between blog posts */
-    position: relative; /* Needed for absolute positioning of the category label */
+    position: relative; 
 }
+
+.category-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #E93946;
+    color: white !important;
+    padding-top: 7px;
+    margin: 0;
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.category-label p {
+    margin: 0; /* Remove default paragraph margin */
+    color: white !important;
+    text-align: center; /* Ensure text is centered */
+    width: 100%; /* Ensure the p element takes full width */
+}
+
+
 
 .blog-post-preview h2, .blog-post-preview p, .blog-post-preview a {
     margin: 0;
@@ -1801,22 +1825,7 @@ footer {
     }
 }
 
-.category-label {
-    position: absolute;
-    top: 10px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
-    background-color: #E93947; /* Deep red background color */
-    color: white !important;
-    padding: 8px 20px; /* Padding adjusted for a better oval look */
-    border-radius: 25px; /* Rounded corners for an oval shape */
-    font-size: 0.9rem; /* Consistent font size */
-    z-index: 100; /* Keeps the label above other elements */
-    white-space: nowrap; /* Prevents the text from wrapping onto multiple lines */
-    display: flex !important; /* Enables flexbox properties */
-    align-items: center !important; /* Centers the content vertically */
-    justify-content: center !important; /* Centers the content horizontally */
-    text-align: center !important; /* Ensures text is centered */
-}
+
 
 
 .swiper {

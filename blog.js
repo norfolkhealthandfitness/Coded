@@ -27,13 +27,15 @@ fetch(backendApiUrl)
 
                 return `
                 <div class="blog-post-preview">
+                    <div class="category-label">
+                        <p>${item.fields.category}</p> 
+                    </div>
                     <div class="blog-post-image-wrapper">
                         <img src="${imageUrl}" alt="${item.fields.headline}" />
                     </div>
                     <h2 style="padding-bottom:1rem; padding-top:1rem" >${item.fields.headline}</h2>
                     <a style="padding-bottom:1rem; padding-top:1rem"  href="blog-post.html?slug=${item.fields.slug}">READ MORE >> </a>
                     <p style="padding-bottom:1rem; padding-top:1rem" class="date">${new Date(item.fields.dataAndTime).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-                    <p class="category-label">${item.fields.category}</p> 
                 </div>
             `;
             } else {
