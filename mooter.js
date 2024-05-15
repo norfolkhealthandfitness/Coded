@@ -2,10 +2,9 @@ const insertFooter = document.querySelector('.insert-footer');
 
 const currentYear = new Date().getFullYear(); 
 insertFooter.innerHTML = `
-<footer class="footer">
-        <div class='container'>
+    <footer class="container footer">
         <div class="overlay"></div>
-        <div class="footer-nav footer-center" aria-label="Footer navigation">
+        <nav class="footer-nav" id="top-nav" aria-label="Footer navigation">
             <div style="z-index:1">
                 <img style="width: 200px; padding-top:2rem;padding-bottom:2rem;" src="images/NHF-white.webp" alt="NHF Logo">
             </div>
@@ -44,15 +43,14 @@ insertFooter.innerHTML = `
                     <img alt="GoCardless logo" src="images/gocardless.png"/>
                 </div>
             </div>
-        </div>
+        </nav>
         <span class="footer-break"></span>
-        <div class="footer-nav footer-centre" id="bottom-nav">
+        <div class="footer-nav" id="bottom-nav">
             <p>&copy; ${currentYear} Norfolk Health & Fitness Ltd</p>
             <div class="iceni-container">
                 <p>Designed by</p>
                 <img alt="Iceni design logo" src="images/iceni.webp"/>
             </div>
         </div>
-        </div>
     </footer>
-`
+`;

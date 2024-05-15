@@ -394,9 +394,13 @@ button {
     margin: 0 auto;
 }
 
-.industry {
-    padding-top: 5rem;
+@media(max-width: 600px){
+    .industry {
+    margin-bottom: -5rem;
+
 }
+}
+
 
 .industry p {
     padding-bottom: 4rem;
@@ -528,8 +532,14 @@ button {
     color: #121212;
 }
 
-.header-link.active, .header-link:hover {
+.header-link.active{
     background-color: #F4F4F4;
+    cursor: pointer;
+}
+
+.header-link:hover{
+    background-color: #000;
+    color: white !important;
     cursor: pointer;
 }
 
@@ -650,6 +660,7 @@ nav {
 @media (max-width: 1200px) {
     .hamburger {
         display: block;
+        padding-right: 32px;
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -884,10 +895,23 @@ footer p:hover, footer a:hover {
     }
 }
 
+address{
+    font-style: normal;
+}
+
 .footer-nav {
     justify-content: space-between;
     width: 100%;
 }
+
+@media(max-width:600px){
+    .footer-center{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 
 @media (min-width: 1200px) {
     .footer-nav {
