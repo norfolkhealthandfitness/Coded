@@ -2,9 +2,10 @@ const insertFooter = document.querySelector('.insert-footer');
 
 const currentYear = new Date().getFullYear(); 
 insertFooter.innerHTML = `
-    <footer class="container footer">
+    <footer class="footer">
+        <div class='container'>
         <div class="overlay"></div>
-        <nav class="footer-nav" id="top-nav" aria-label="Footer navigation">
+        <nav class="footer-nav" aria-label="Footer navigation">
             <div style="z-index:1">
                 <img style="width: 200px; padding-top:2rem;padding-bottom:2rem;" src="images/NHF-white.webp" alt="NHF Logo">
             </div>
@@ -51,6 +52,7 @@ insertFooter.innerHTML = `
                 <p>Designed by</p>
                 <img alt="Iceni design logo" src="images/iceni.webp"/>
             </div>
+        </div>
         </div>
     </footer>
 `;

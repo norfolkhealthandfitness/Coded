@@ -1,6 +1,55 @@
+var isResponsive = localStorage.getItem('toggleState') === 'true'; // Get saved state from local storage
+
+function toggleCustomSwitch() {
+    const toggle = document.querySelector('.custom-toggle-switch');
+    const circle = document.querySelector('.switch-circle');
+    const buttons = document.querySelectorAll('.button');
+    const fa = document.querySelectorAll('.fa-solid, .fa-regular, .fa-brands');
+
+    isResponsive = !isResponsive; // Toggle the boolean state
+    localStorage.setItem('toggleState', isResponsive.toString()); // Save the new state to local storage correctly
+
+    updateUI(isResponsive, toggle, circle, buttons, fa); // Pass all needed elements to the function
+}
+
+function updateUI(isActive, toggle, circle, buttons, fa) { // Include 'fa' in the parameters
+    if (isActive) {
+        toggle.style.backgroundColor = 'white';
+        circle.style.transform = 'translateX(30px)';
+        buttons.forEach(button => button.style.backgroundColor = '#AE1320');
+        fa.forEach(icon => icon.style.color = '#AE1320'); // Now 'fa' is defined and should work
+    } else {
+        toggle.style.backgroundColor = 'grey';
+        circle.style.transform = 'translateX(0)';
+        buttons.forEach(button => button.style.backgroundColor = '#E93946');
+        fa.forEach(icon => icon.style.color = '#E93946'); // Apply color changes to icons correctly
+    }
+}
+
+window.onload = function() {
+    const toggle = document.querySelector('.custom-toggle-switch');
+    const circle = document.querySelector('.switch-circle');
+    const buttons = document.querySelectorAll('.button');
+    const fa = document.querySelectorAll('.fa-solid, .fa-regular, .fa-brands');
+    updateUI(isResponsive, toggle, circle, buttons, fa); // Initialize UI on load
+};
+
 
 const insertHeader = document.querySelector('.insert-header')
-insertHeader.innerHTML = `
+
+document.addEventListener('DOMContentLoaded', function () {
+    const currentPage = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-item .header-link');
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage || link.getAttribute('href') === (currentPage.split('/').pop())) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        }
+    });
+});
+
+
+ insertHeader.innerHTML = `
  <nav class="top-nav" role="navigation" aria-label="Main navigation">
  <div class="navbar containerHeader">
      <div class="hidemob social-icons">
@@ -88,58 +137,6 @@ insertHeader.innerHTML = `
 </nav>
     `
 
-var isResponsive = localStorage.getItem('toggleState') === 'true'; 
-
-function toggleCustomSwitch() {
-    const toggle = document.querySelector('.custom-toggle-switch');
-    const circle = document.querySelector('.switch-circle');
-    const buttons = document.querySelectorAll('.button');
-    const fa = document.querySelectorAll('.fa-solid, .fa-regular, .fa-brands');
-
-    isResponsive = !isResponsive; 
-    localStorage.setItem('toggleState', isResponsive.toString()); // Save the new state to local storage correctly
-
-    updateUI(isResponsive, toggle, circle, buttons, fa); // Pass all needed elements to the function
-}
-
-function updateUI(isActive, toggle, circle, buttons, fa) { // Include 'fa' in the parameters
-    if (isActive) {
-        toggle.style.backgroundColor = 'white';
-        circle.style.transform = 'translateX(30px)';
-        buttons.forEach(button => button.style.backgroundColor = '#AE1320');
-        fa.forEach(icon => icon.style.color = '#AE1320'); // Now 'fa' is defined and should work
-    } else {
-        toggle.style.backgroundColor = 'grey';
-        circle.style.transform = 'translateX(0)';
-        buttons.forEach(button => button.style.backgroundColor = '#E93946');
-        fa.forEach(icon => icon.style.color = '#E93946'); // Apply color changes to icons correctly
-    }
-}
-
-window.onload = function() {
-    const toggle = document.querySelector('.custom-toggle-switch');
-    const circle = document.querySelector('.switch-circle');
-    const buttons = document.querySelectorAll('.button');
-    const fa = document.querySelectorAll('.fa-solid, .fa-regular, .fa-brands');
-    updateUI(isResponsive, toggle, circle, buttons, fa); // Initialize UI on load
-};
-
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const currentPage = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-item .header-link');
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage || link.getAttribute('href') === (currentPage.split('/').pop())) {
-            navLinks.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-        }
-    });
-});
-
-
- 
 
 
 
