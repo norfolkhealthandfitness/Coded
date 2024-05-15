@@ -23,10 +23,9 @@ if (postSlug) {
         const imageUrl = asset.fields.file.url;
 
         document.getElementById('blog-content').innerHTML = `
-          <img src="${imageUrl}" alt="Main Image" style="width: 100%; height: auto; max-width: none;"/>
-          <h1 style='color:black; font-size:40px'>${post.fields.headline}</h1>
-         
-          <div>${documentToHtmlString(post.fields.blogContent)}</div>
+        <img src="${imageUrl}" alt="Main Image" style="width: 100%; height: auto; max-width: none;"/>
+        <h1 style='color:black; font-size:32px; text-align:center; font-weight:400'>${post.fields.headline}</h1>
+        <div style="line-height: 2;">${documentToHtmlString(post.fields.blogContent)}</div>
         `;
       } else {
         document.getElementById('blog-content').innerHTML = `<p>Post not found.</p>`;
@@ -43,8 +42,12 @@ if (postSlug) {
 // Dynamically update the sidebar
 function updateSidebar() {
   const sidebarContent = `
-    <h2>Sidebar Title</h2>
-    <p>Dynamic content goes here. Update me as needed.</p>
+  <div class='sidebar'>
+    <h2>Start Your Fitness Career In Norwich Today</h2>
+    <p>Are you passionate about fitness and ready to make a difference in people's lives? Begin your journey as a fitness professional right here in Norwich.</p>
+    <a class='button'href="start-your-career.html">Start Your Career</a>
+  </div>
+  
   `;
   document.getElementById('sidebar').innerHTML = sidebarContent;
 }
