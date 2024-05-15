@@ -1660,7 +1660,7 @@ footer {
 }
 
 
-@media(max-width:600px){
+@media(max-width:800px){
     .blog-container{
         padding-left: 0;
         padding-right: 0;
@@ -1705,21 +1705,7 @@ footer {
     left: 0;
 }
 
-.category-label {
-    position: absolute;
-    top: 10px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
-    background-color: #E93947; /* Deep red background color */
-    color: white !important;
-    padding: 8px 20px; /* Padding adjusted for a better oval look */
-    border-radius: 25px; /* Rounded corners for an oval shape */
-    font-size: 0.9rem; /* Consistent font size */
-    z-index: 100; /* Keeps the label above other elements */
-    white-space: nowrap; /* Prevents the text from wrapping onto multiple lines */
-    display: flex; /* Enables flexbox properties */
-    align-items: center !important; /* Centers the content vertically within the container */
-    justify-content: center; /* Centers the content horizontally within the container */
-}
+
 
 .blog-post-preview {
     background-color: #ffffff;
@@ -1735,26 +1721,31 @@ footer {
     position: relative; /* Needed for absolute positioning of the category label */
 }
 
-.blog-post-preview h2, .blog-post-preview p {
+.blog-post-preview h2, .blog-post-preview p, .blog-post-preview a {
     margin: 0;
     padding: 0 20px 10px; /* Padding around text */
 }
 
 .blog-post-preview h2 {
-    font-size: 1.5rem; /* Larger text for headings */
+    font-size: 1.25rem; /* Larger text for headings */
     color: #333; /* Dark grey for text for better readability */
 }
 
 .blog-post-preview p {
     font-size: 0.9rem; /* Smaller text for details */
-    color: #666; /* Lighter text color for meta details */
+    color: #ADADAD; /* Lighter text color for meta details */
 }
 
-.blog-post-preview a {
-    color: inherit;
-    text-decoration: none;
-    display: block;
+.blog-post-preview a{
+    color: #E93946;
+    font-size: 12px;
 }
+
+.date{
+    border-top: 1px solid #EAEAEA;
+
+}
+
 
 #blog {
     width: 100%;
@@ -1794,6 +1785,24 @@ footer {
         display: none;
     }
 }
+
+.category-label {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background-color: #E93947; /* Deep red background color */
+    color: white !important;
+    padding: 8px 20px; /* Padding adjusted for a better oval look */
+    border-radius: 25px; /* Rounded corners for an oval shape */
+    font-size: 0.9rem; /* Consistent font size */
+    z-index: 100; /* Keeps the label above other elements */
+    white-space: nowrap; /* Prevents the text from wrapping onto multiple lines */
+    display: flex !important; /* Enables flexbox properties */
+    align-items: center !important; /* Centers the content vertically */
+    justify-content: center !important; /* Centers the content horizontally */
+    text-align: center !important; /* Ensures text is centered */
+}
+
 
 .swiper {
     position: relative; /* Ensure the position is relative for absolute children */

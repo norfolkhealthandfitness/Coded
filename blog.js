@@ -27,16 +27,15 @@ fetch(backendApiUrl)
 
                 return `
                 <div class="blog-post-preview">
-                    <a href="blog-post.html?slug=${item.fields.slug}">
-                        <div class="blog-post-image-wrapper">
-                            <img src="${imageUrl}" alt="${item.fields.headline}" />
-                        </div>
-                        <h2>${item.fields.headline}</h2>
-                        <p>${new Date(item.fields.dataAndTime).toLocaleDateString()}</p>
-                        <p class="category-label">${item.fields.category}</p>
-                    </a>
+                    <div class="blog-post-image-wrapper">
+                        <img src="${imageUrl}" alt="${item.fields.headline}" />
+                    </div>
+                    <h2 style="padding-bottom:1rem; padding-top:1rem" >${item.fields.headline}</h2>
+                    <a style="padding-bottom:1rem; padding-top:1rem"  href="blog-post.html?slug=${item.fields.slug}">READ MORE >> </a>
+                    <p style="padding-bottom:1rem; padding-top:1rem" class="date">${new Date(item.fields.dataAndTime).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                    <p class="category-label">${item.fields.category}</p> 
                 </div>
-                `;
+            `;
             } else {
                 console.error('Item is missing required fields:', item);
                 return '';
