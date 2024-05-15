@@ -50,7 +50,7 @@ insertFooter.innerHTML = `
             </div>
         </div>
         <span class="footer-break"></span>
-        <div class="footer-nav footer-centre" id="bottom-nav">
+        <div class="footer-center" >
             <p>&copy; ${currentYear} Norfolk Health & Fitness Ltd</p>
             <div class="iceni-container">
                 <p>Designed by</p>
