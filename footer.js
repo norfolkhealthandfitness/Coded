@@ -6,19 +6,19 @@ insertFooter.innerHTML = `
         <div class='container'>
         <div class="overlay"></div>
         <div class="footer-nav footer-center" aria-label="Footer navigation">
-            <div style="z-index:1">
+            <div class='footer-mobile-partition' style="z-index:1">
                 <img style="width: 200px; padding-top:2rem;padding-bottom:2rem;" src="images/NHF-white.webp" alt="NHF Logo">
             </div>
-            <div>
+            <div class='footer-mobile-partition'>
                 <h3>Further Links</h3>
                 <ul>
                     <li><a href="appeals.html">Appeals Procedure</a></li>
                     <li><a href="termsconditions.html">Terms & Conditions</a></li>
                     <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                    <li><a href="PDF files/Prospectus 2024.pdf" target="_blank" rel="noopener noreferrer">Prospectus</a></li>
+                    <li><a href="PDF files/Prospectus 2024.pdf" target="_blank" rel="noopener noreferrer">Course Prospectus</a></li>
                 </ul>
             </div>
-            <div>
+            <div class='footer-mobile-partition'>
                 <h3>Contact Us</h3>
                 <address>
                     <li>
@@ -32,7 +32,7 @@ insertFooter.innerHTML = `
                     <p>Registered Address: 10a Castle Meadow, Norwich, United Kingdom, NR1 3DE</p>
                 </address>
             </div>
-            <div>
+            <div class='footer-mobile-partition'>
                 <h3>Follow Us</h3>
                 <div class="hide-mob social-icons">
                     <a href="https://www.instagram.com/norfolkhealthandfitness/" aria-label="Follow us on Instagram">
@@ -49,8 +49,8 @@ insertFooter.innerHTML = `
                 </div>
             </div>
         </div>
-        <span class="footer-break"></span>
-        <div class="footer-center" >
+
+        <div class="footer-bottom-desktop footer-center" >
             <p>&copy; ${currentYear} Norfolk Health & Fitness Ltd</p>
             <div class="iceni-container">
                 <p>Designed by</p>

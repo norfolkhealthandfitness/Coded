@@ -816,6 +816,16 @@ nav {
 footer p, footer a, footer h3, footer h4, footer ul, footer img {
     color: white;
 }
+.footer-bottom-desktop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer h3{
+    font-weight: 400;
+    font-size: 18px !important;
+}
 
 footer img {
     width: 100px;
@@ -844,10 +854,11 @@ footer img {
 
 footer p, footer a {
     font-size: 14px;
+    font-weight: lighter;
 }
 
 footer h1, footer h2, footer h3, footer h4 {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 footer p:hover, footer a:hover {
@@ -916,6 +927,10 @@ address{
 
     .footer-center img{
         margin: 0 auto;
+    }
+
+    .footer li{
+        line-height: 250%;
     }
 }
 
@@ -1193,8 +1208,27 @@ footer {
     background-image: url('Images/footer.jpg');
     background-size: cover;
     position: relative;
-    color: white;
+    border-top: 2px white solid;
 }
+
+
+
+@media(max-width: 1200px) {
+    .footer-mobile-partition {
+        width: 100%; /* Ensure it takes the full width of the container */
+        border-bottom: 1px dotted  #565656; /* Add the white border */
+        z-index: 10000;
+        box-sizing: border-box;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+/* Additional CSS for visibility */
+.footer-mobile-partition {
+    position: relative; /* Ensure it takes the z-index value */
+}
+
 
 .footer-break {
     border: #A2A2A1 0.1px dotted;
