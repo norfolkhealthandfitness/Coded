@@ -1647,12 +1647,35 @@ footer {
 
 /* Blogs */
 
+.blog-container{
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+@media(max-width:1200px){
+    .blog-container{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+
+@media(max-width:600px){
+    .blog-container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+
 #inject-blog {
     display: grid;
     grid-template-columns: 1fr; /* Default to 1 column for smaller screens */
     gap: 20px; /* Gap between grid items */
-    padding: 20px; /* Adds some space around the grid */
+
     justify-content: space-between; /* Aligns items to the edges of the grid container */
+    width: 100%;
 }
 
 @media (min-width: 768px) {
