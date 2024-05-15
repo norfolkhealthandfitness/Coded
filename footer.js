@@ -21,12 +21,14 @@ insertFooter.innerHTML = `
             <div class='footer-mobile-partition'>
                 <h3>Contact Us</h3>
                 <address>
-                    <li>
-                        <a href="tel:+447969494485">T: 07969 494485</a>
-                    </li>
-                    <li>
-                        <a href="mailto:info@norfolkhealthandfitness.com">E: info@norfolkhealthandfitness.com</a>
-                    </li>
+                    <ul>
+                        <li>
+                            <a href="tel:+447969494485">T: 07969 494485</a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@norfolkhealthandfitness.com">E: info@norfolkhealthandfitness.com</a>
+                        </li>
+                    </ul>
                     <p>Gym: The Union Building, 51-59 Rose Lane, Norwich, Norfolk, NR1 1BY</p>
                     <p>Company Number: 10552056</p>
                     <p>Registered Address: 10a Castle Meadow, Norwich, United Kingdom, NR1 3DE</p>
