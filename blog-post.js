@@ -1,9 +1,12 @@
 import { documentToHtmlString } from 'https://cdn.skypack.dev/@contentful/rich-text-html-renderer';
 
 document.getElementById('blog-content').innerHTML = 'Loading...';
+
 // Fetch and display the blog post
 const urlParams = new URLSearchParams(window.location.search);
 const postSlug = urlParams.get('slug');
+
+console.log(`Fetching post with slug: ${postSlug}`);
 
 if (postSlug) {
   // Define the backend API URL
@@ -12,6 +15,8 @@ if (postSlug) {
   fetch(backendApiUrl)
     .then(response => response.json())
     .then(data => {
+      console.log('Fetched data:', data);
+
       const post = data.items.length > 0 ? data.items[0] : null;
       if (post && data.includes && data.includes.Asset) {
         const asset = data.includes.Asset.find(a => a.sys.id === post.fields.mainImage.sys.id);
@@ -31,6 +36,8 @@ if (postSlug) {
       console.error(err);
       document.getElementById('blog-content').innerHTML = `<p>Error loading the post.</p>`;
     });
+} else {
+  document.getElementById('blog-content').innerHTML = `<p>No post specified.</p>`;
 }
 
 // Dynamically update the sidebar
