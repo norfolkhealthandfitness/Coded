@@ -5,17 +5,14 @@
     box-sizing: border-box;
 }
 
-
 li {
     list-style-type: none;
-  }
-  
+}
 
-body{
+body {
     background-color: #FFFFFF;
     margin: 0;
     padding: 0;
-    
 }
 
 /* ---------------------------------------------------------------*/
@@ -26,17 +23,16 @@ body{
 /*                      Start of colours                       */
 /* ---------------------------------------------------------------*/
 
-
-.white{
-    background-color:#ffffff ;
+.white {
+    background-color: #ffffff;
 }
 
-.black{
-    background-color:#000000 ;
+.black {
+    background-color: #000000;
 }
 
-.grey{
-    background-color:#F4F4F4 ;
+.grey {
+    background-color: #F4F4F4;
 }
 
 .overlay {
@@ -48,7 +44,7 @@ body{
     background: rgba(0, 0, 0, 0.75); /* Black with 50% opacity */
 }
 
-.fa-solid, .fa-regular{
+.fa-solid, .fa-regular {
     color: #E93946;
     font-size: 15px;
     /* color: #AE1320 */
@@ -60,33 +56,24 @@ body{
     position: relative;
 }
 
-
 /* ---------------------------------------------------------------*/
 /*                      End of colours                            */
 /* ---------------------------------------------------------------*/
 
-
-
-
-/* ---------------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
 /* ----------------- Start of image editing ----------------------*/
-img{
+img {
    max-width: 500px;
 }
-
 /* ----------------- End of image editing ----------------------*/
-/* ---------------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
 
 .reviewbg {
     background-image: url('Images/Testimonioal-bg.webp');
     background-size: cover;
-    position: relative; 
+    position: relative;
 }
 
-
-/* ---------------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
 /* ----------------- Start of containers ----------------------*/
 .container, .container-none, .container-top, .container-bottom {
@@ -95,13 +82,12 @@ img{
     margin: 0 auto;
 }
 
-.container{
+.container {
     padding-bottom: 1rem;
     padding-top: 1rem;
 }
 
-
-@media (min-width:600px) {
+@media (min-width: 600px) {
     .container, .container-none, .container-top, .container-bottom {
         padding-left: 3rem;
         padding-right: 3rem;
@@ -109,10 +95,7 @@ img{
 }
 
 @media (min-width: 1025px) {
-
-    
-
-    .container-none {
+    .container-none, .container-top, .container-bottom {
         display: flex;
         flex-direction: column;
         padding: 0 6rem;
@@ -121,49 +104,30 @@ img{
     }
 
     .container-top {
-        display: flex;
-        flex-direction: column;
-        padding: 0 6rem;
         padding-bottom: 3%;
-        margin: auto;
-        max-width: 1440px;
     }
 
     .container-bottom {
-        display: flex;
-        flex-direction: column;
-        padding: 0 6rem;
         padding-top: 3%;
-        margin: auto;
-        max-width: 1440px;
     }
 
     .container {
-        display: flex;
-        flex-direction: column;
         padding: 0 6rem;
         padding-bottom: 3%;
         padding-top: 3%;
         max-width: 1440px;
     }
-    
 }
 
 /* ------------------End of containers ----------------------*/
 /* ---------------------------------------------------------------*/
-/* ---------------------------------------------------------------*/
 
-/* ---------------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
 /* --------------------- Typography section ----------------------*/
 
-ul, li {
+ul, li, ol {
     padding: 0;
     margin: 0;
-}
-
-ol, ul {
-    line-height: 2;
     list-style-type: none;
     z-index: 1000;
     text-decoration: none;
@@ -171,14 +135,12 @@ ol, ul {
 
 li {
     font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
     z-index: 10000;
-    list-style-type: none;
 }
 
-p{
+p {
     font-weight: 100;
-    font-family: 'Open Sans',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     text-decoration: none;
     font-size: 14px;
 }
@@ -191,58 +153,50 @@ h1, h2, h3, h4, p {
     z-index: 2; 
 }
 
-h1{
+h1 {
     font-size: 2.5rem;
     font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: lighter;
 }
 
-h2{
+h2 {
     font-size: 2rem;
     font-weight: lighter;
 }
 
-h3{
+h3 {
     font-size: 1.5rem;
 }
-@media (min-width:1200px) {
 
-h1{
-    font-size: 3.5rem;
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
 }
-
-h2{
-    font-size: 2.5rem;
-}
-
-h3{
-    font-size: 2rem;
-}
-}
-
-h1, h2, h3, h4 {
-    font-family: Arial, Helvetica, sans-serif
-}
-
-
 
 a {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     z-index: 1;
     position: relative;
-    color:#121212;
+    color: #121212;
 }
 
 /* -------------------End of Typography section-------------------*/
 /* ---------------------------------------------------------------*/
-/* --------------------------------------------------------------*/
 
 .required {
     color: #E93946; /* Same red as your button color for consistency */
     font-size: 16px; /* Adjust size as needed */
 }
-
 
 /* ---------------------------------------------------------------*/
 /*                     Button section start                      */
@@ -263,30 +217,33 @@ a {
     font-size: 12px;
 }
 
-.button:hover {
-    background-color: #ffffff !important; 
-    color:  #E93946;
+.bigger-button{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 45px;
+    padding-right: 45px;
+    font-weight: bold;
 }
 
-
-
+.button:hover {
+    background-color: #ffffff !important; 
+    color: #E93946;
+}
 
 .buttons-div {  
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
     flex-direction: row;
- }
+}
 
- @media (max-width: 700px){
+@media (max-width: 700px) {
     .buttons-div {  
         margin: 0 auto;
     }
 }
 
-
-
-button{
+button {
     background-color: transparent;
     border: none;
     margin: 0;
@@ -300,33 +257,28 @@ button{
 }
 
 /* Dropdown Button */
-  
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative; /* This will be the anchor for the absolute positioned dropdown content */
     display: inline-block; /* Use inline-block for proper alignment with other inline or inline-block elements */
     z-index: 5;
     width: 100%;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 0999;
+    z-index: 999;
     min-width: 100%; /* You can set a minimum width or set width to 100% if you want it to match the dropdown button */
     left: 0;
     top: 100%; /* Positions the dropdown content right below the dropdown button */
     width: 100%;
+}
 
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    font-weight:100;
+.dropdown-content a {
+    font-weight: 100;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -334,16 +286,18 @@ button{
     width: 100%;
     font-size: 18px;
 }
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
 
-  .dropdown:hover .dropdown-content {display: block;}
-  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 /* ---------------------------------------------------------------*/
 /*                     Button section End                    */
 /* --------------------------------------------------------------*/
-
 
 /* ---------------------------------------------------------------*/
 /*                     Three benefits start                    */
@@ -355,7 +309,7 @@ button{
     gap: 12%;
 }
 
-.three-benefits img{
+.three-benefits img {
     max-height: 90px;
 }
 
@@ -364,9 +318,9 @@ button{
     max-height: 400px;
 }
 
-.credentials{
+.credentials {
     font-size: 85px;
-    margin-top:-25px;
+    margin-top: -25px;
     color: #BFBFBF;
     margin-bottom: -1px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -376,35 +330,32 @@ button{
 /*                     Three benefits end                    */
 /* --------------------------------------------------------------*/
 
-
 /* ---------------------------------------------------------------*/
 /*                     Start of Half page sections               */
 /* --------------------------------------------------------------*/
 
-.half-page{
+.half-page {
     display: flex;
     flex-direction: column;
 }
 
 @media (min-width: 700px) {
-    .half-page{
-        display: flex;
-        flex-direction: column; 
+    .half-page {
         width: 50%;
     }
 
-   .parent-of-half-page{
+    .parent-of-half-page {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 2rem;
     } 
 
-    .parent-of-half-page img{
+    .parent-of-half-page img {
         max-width: 500px;
     }
 
-    .reverse-parent{
+    .reverse-parent {
         display: flex;
         flex-direction: row-reverse;
     }
@@ -438,31 +389,32 @@ button{
     width: 100%;
 }
 
-.middle-align h2, .middle-align p{
+.middle-align h2, .middle-align p {
     width: 75%;
     margin: 0 auto;
-
 }
-.industry{
+
+.industry {
     padding-top: 5rem;
 }
 
-.industry p{
+.industry p {
     padding-bottom: 4rem;
     padding-top: 2rem;
 }
 
-@media(max-width: 900px){
-    .middle-align{
+@media(max-width: 900px) {
+    .middle-align {
         padding-top: 3rem;
         width: 100%;
     }
-    .middle-align h2{
+
+    .middle-align h2 {
         font-size: 28px;
         width: 100%;
     }
 
-    .middle-align p{
+    .middle-align p {
         width: 100%;
         margin: 0 auto;
     }
@@ -471,8 +423,6 @@ button{
 .middle-align img {
     vertical-align: middle;
 }
-
-
 
 @media (min-width: 1025px) {
     .middle {
@@ -488,11 +438,6 @@ button{
 /*                     End of Middle align                     */
 /* --------------------------------------------------------------*/
 
-
-
-
-
-/* ---------------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
 /* ------------------Start of Header Section ----------------------*/
 
@@ -509,11 +454,7 @@ button{
     position: relative;
     width: 60px; /* Adjusted width for a tighter toggle */
     margin: 0 10px; /* Space between labels and the toggle */
-   
 }
-
-
-
 
 .custom-toggle-switch {
     width: 60px;
@@ -544,39 +485,31 @@ button{
     left: 30px; /* Move the circle to the right when active */
 }
 
-
-.containerHeader{
+.containerHeader {
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-@media (min-width:600px) {
+@media (min-width: 600px) {
     .containerHeader {
         padding-left: 3rem;
         padding-right: 3rem;
     }
 }
 
-
-/* Base state: all .hide-mob elements are hidden when the screen is less than 1200px */
 .hidemob {
     display: none;
     font-weight: lighter;
     font-size: 14px;
-   
 }
 
-/* Above 1200px, .hide-mob elements are visible */
 @media (min-width: 1200px) {
     .hidemob {
-        display: block;
         display: flex;
         gap: 32px;
     }
 }
 
-
-/* Styles for .containerHeader at different screen widths */
 @media (min-width: 1025px) {
     .containerHeader {
         display: flex;
@@ -588,59 +521,47 @@ button{
     }
 }
 
-
-.header-link{
-    /* border: #000 1px solid; */
+.header-link {
     padding: 1rem 0.75rem;
     font-size: 12px;
     font-weight: normal;
     color: #121212;
 }
 
-.header-link.active,.header-link:hover{
+.header-link.active, .header-link:hover {
     background-color: #F4F4F4;
     cursor: pointer;
 }
-
-
-
 
 .logo {
     padding-top: 20px;
 }
 
-.top-nav{
-   background-color: #000;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
- } 
+.top-nav {
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} 
 
-
- .top-nav-two{
+.top-nav-two {
     display: flex;
     justify-content: space-between;
- }
-/* 
- .top-nav img{
-    
-    height: 20px;
- } */
+}
 
- .top-nav p, .top-nav a {
+.top-nav p, .top-nav a {
     color: white;
 }
 
-.whitetext p, .whitetext a, .whitetext h1,.whitetext h2, .whitetext h3, .whitetext h4 {
+.whitetext p, .whitetext a, .whitetext h1, .whitetext h2, .whitetext h3, .whitetext h4 {
     color: white;
 }
 
-.top-nav img{
+.top-nav img {
     height: auto;
     width: 80px;
 }
-
 
 .centre-img {
     display: flex;
@@ -656,7 +577,7 @@ nav {
     min-height: 90px;
     display: flex;
     justify-content: space-between;
-    flex-direction:row;
+    flex-direction: row;
     align-items: center;
     position: relative;
     width: 100%;
@@ -693,7 +614,6 @@ nav {
 .hamburger {
     display: none;
     z-index: 100;
-    padding-right: 32px;
 }
 
 .bar {
@@ -710,28 +630,26 @@ nav {
     height: auto;
 }
 
-.headericon{
+.headericon {
     display: none;
 }
 
-@media(min-width: 700px){
-   .headericon{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    font-weight: lighter;
-    gap: 12px;
-   }
+@media (min-width: 700px) {
+    .headericon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-weight: lighter;
+        gap: 12px;
+    }
 }
-
 
 /* Header tablet */
 @media (max-width: 1200px) {
     .hamburger {
         display: block;
-    
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -756,14 +674,11 @@ nav {
         text-align: center;
         transition: 0.3s;
         z-index: 1000;
-        padding: 2% 0 ;
+        padding: 2% 0;
         gap: 1rem;
     }
 
-
-
-  
-    .nav-item :hover{
+    .nav-item:hover {
         background-color: #646464;
     }
 }
@@ -775,43 +690,42 @@ nav {
 
 /* ------------------End of Header Section ----------------------*/
 /* ---------------------------------------------------------------*/
-/* ---------------------------------------------------------------*/
 
-.hero{
-   /* background-color: yellow; */
-   background-image: url('Images/backdrop.webp');
-   position: relative;
-   background-repeat: no-repeat;
-   background-size: cover;
-   height: 75vh;
-   display: flex;
+.hero {
+    background-image: url('Images/backdrop.webp');
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+    display: flex;
 }
-.hero h1, .hero p{
+
+.hero h1, .hero p {
     color: white;
 }
 
-.hero a{
+.hero a {
     margin-top: 50px;
 }
 
-@media (max-width: 350px){
-    .hero{
-        height: 100vh
-       }
+@media (max-width: 350px) {
+    .hero {
+        height: 100vh;
+    }
 }
 
 @media (max-width: 600px) {
-    /* If you have specific styles for phones, place them here */
-.hero{
-    background-image: none;
-    background-color: #121212;
-}
+    .hero {
+        background-image: none;
+        background-color: #121212;
+    }
 
-    .hero h1{
+    .hero h1 {
         font-size: 30px;
         margin-top: 50px;
         margin-bottom: 50px;
     }
+
     .hero .container p:first-of-type {
         font-size: 10px; 
         letter-spacing: 1pt; 
@@ -823,22 +737,20 @@ nav {
         margin-top: -24px;
     }
 
-    .hero a{
+    .hero a {
         margin-top: 24px;
     }
 
-    .qualifications h2{
+    .qualifications h2 {
         font-size: 20px;
     }
 }
-
-
 
 .black {
     overflow: hidden; /* Hide the overflowing part of inner content */
 }
 
-.blackbg{
+.blackbg {
     background-color: black;
 }
 
@@ -851,9 +763,6 @@ nav {
 .qualifications h6 {
     color: white;
 }
-
-
-
 
 .logo-wrapper {
     display: flex;
@@ -873,35 +782,30 @@ nav {
 @media (min-width: 650px) {
     .logo-section img {
         width: 100%;
-
     }
 }
 
-
-.email-form{
+.email-form {
     gap: 16px;
     display: flex;
     flex-direction: column;
-  }
+}
 
-
-
-.flex-row{
+.flex-row {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.flex-row img{
+.flex-row img {
     max-width: 150px;
-
 }
 
 footer p, footer a, footer h3, footer h4, footer ul, footer img {
     color: white;
 }
 
-footer img{
+footer img {
     width: 100px;
     z-index: 1000;
     position: relative;
@@ -919,39 +823,30 @@ footer img{
     margin: 0; /* Removes default margin from the paragraph if desired */
 }
 
-
-
-
-.payLater{
+.payLater {
     display: flex;
     flex-direction: column;
     gap: 16px;
     margin-bottom: 16px;
 }
 
-
-
-
 footer p, footer a {
     font-size: 14px;
 }
 
-footer h1, footer h2, footer h3, footer h4{
+footer h1, footer h2, footer h3, footer h4 {
     font-size: 16px;
 }
 
-footer p:hover,
-footer a:hover
-{
+footer p:hover, footer a:hover {
     color: rgb(255, 255, 255);
-    animation: fadeIn 2s ease-in-out ;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
-    
 }
 
 .gallery-grid .image-wrapper {
@@ -967,62 +862,54 @@ footer a:hover
 
 .gallery-grid img {
     height: 80%;
- 
     object-fit: cover; /* This ensures the image covers the entire space without distortion */
 }
 
-  @media (min-width:1025px){
-    .namebox{
+@media (min-width: 1025px) {
+    .namebox {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         gap: 16px;
-      }
-  
-      .name-box{
-        width: 48%;
-      }
+    }
 
-      .name-group{
-        display:flex;
+    .name-box {
+        width: 48%;
+    }
+
+    .name-group {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
-      }
-  }
+    }
+}
 
-  .footer-nav{
+.footer-nav {
     justify-content: space-between;
     width: 100%;
-  }
+}
 
-  @media (min-width:1200px){
-    .footer-nav{
+@media (min-width: 1200px) {
+    .footer-nav {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         width: 100%;
     }
+
     .gallery-grid {
         grid-template-columns: repeat(4, 1fr);
     }
-    
-  }
+}
 
 /* ------------------Start of about Section ----------------------*/
 /* ---------------------------------------------------------------*/
-/* ---------------------------------------------------------------*/
 
-
-.about-intro{
+.about-intro {
     padding-top: 24px;
-    padding-bottom:24px;
+    padding-bottom: 24px;
 }
 /* ------------------End of about Section ----------------------*/
-/* ---------------------------------------------------------------*/
-/* ---------------------------------------------------------------*/
-
-  /* Testimonial Box */
-
 
 .testimonialbox {
     margin: 5%;
@@ -1033,11 +920,11 @@ footer a:hover
     z-index: 2;
 }
 
-.testimonialbox h3{
+.testimonialbox h3 {
     font-weight: 100;
 }
 
-.testimonialbox p{
+.testimonialbox p {
     color: #7A7A7A;
     font-size: 16px;
 }
@@ -1048,35 +935,33 @@ footer a:hover
     align-items: center;
     text-align: center;
     margin: auto; /* Helps center the container if not full-width */
-  }
+}
 
-.testimonial-reviews h4{
+.testimonial-reviews h4 {
     font-weight: lighter;
     font-size: 24px;
 }
-  
-  .review-person {
+
+.review-person {
     display: flex;
     justify-content: center; /* Center horizontally inside the review-person */
     align-items: center; /* Center vertically */
     gap: 10px; /* Space between the image and the text container */
     width: 100%; /* Take full width to utilize flex properties effectively */
-  }
+}
 
-  .review-content{
+.review-content {
     background-color: white;
     padding: 2rem;
     color: #7A7A7A;
     font-size: 16px;
-  }
-  
-  .testimonial-name {
+}
+
+.testimonial-name {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center the child elements (name and date) */
-  }
-
-
+}
 
 .testimonial-image {
     width: 100px;           /* Set the width of the image */
@@ -1086,9 +971,9 @@ footer a:hover
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Small drop shadow */
     margin-top: 1rem;
     margin-bottom: 1rem;
-  }
-  
-  .arrow {
+}
+
+.arrow {
     color: black; /* Ensures visibility against a lighter background */
     position: absolute; /* Positions arrows relative to their nearest positioned ancestor */
     top: 50%; /* Centers vertically */
@@ -1112,37 +997,27 @@ footer a:hover
     }
 }
 
-
-#fred {
+#fred, #james, #ryan {
     display: none;
 }
-
-#james {
-    display: none;
-}
-
-#ryan {
-    display: none;
-}
-
 
 #why-me {
     padding: 10px 20px;
 }
 
-@media(min-width:600px){
+@media(min-width:600px) {
     #why-me {
         padding: 40px 75px;
     }
 }
 
 .testimonial-content {
-    padding: 1% ;
+    padding: 1%;
     width: 100%;
     margin: 0 auto;
 }
 
-@media(min-width:650px){
+@media(min-width:650px) {
     .testimonial-content {
         padding: 5% 0;
     }
@@ -1261,7 +1136,6 @@ form {
     height: auto; /* Height adjusts based on content */
 }
 
-
 /* Placeholder Styles */
 ::placeholder { /* Most modern browsers */
     color: white;
@@ -1284,16 +1158,6 @@ form {
 }
 
 /* Footer Styles */
-
-/* @media (min-width:700px) {
-    footer {
-        border-top: white 1px solid;
-        background-image: url('Images/footer.jpg');
-        background-size: cover;
-        position: relative;
-        color: white;
-    } */
-
 footer {
     background-image: url('Images/footer.jpg');
     background-size: cover;
@@ -1307,12 +1171,9 @@ footer {
     z-index: 2;
 }
 
-
 .payLater img {
-    
     display: block; /* Ensures images are treated as block elements, allowing margin auto to work */
 }
-
 
 @media (max-width: 1199px) {
     .footer {
@@ -1337,26 +1198,25 @@ footer {
     display: none;
 }
 
-
 .accordion-content p {
     color: #646464;
 }
 
-.accordion-item{
+.accordion-item {
     display: flex;
     align-items: center;      /* Vertically center */
     height: 50px;
     font-size: 18px;
 }
 
-.accordion-section{
+.accordion-section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 2.5% 0;
 }
 
-.accordion{
+.accordion {
     padding: 1em;
     background-color: white;
     border-radius: 18px;
@@ -1369,18 +1229,15 @@ footer {
     border: 2px solid #AE1320;
 }
 
-
 /*----------------------------------*/
 /*------------Courses---------------*/
 /*----------------------------------*/
-.single-course{
+.single-course {
     text-align: center;
     padding: 1%;
 }
 
-
-
-.course-price{
+.course-price {
     font-size: 60px;
     font-weight: 700;
     margin-top: -20px;
@@ -1388,43 +1245,37 @@ footer {
     padding: 0;
 }
 
-.main-courses{
+.main-courses {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 2rem;
 }
 
-@media (min-width: 1000px){
-.main-courses{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+@media (min-width: 1000px) {
+    .main-courses {
+        flex-direction: row;
+    }
 }
 
-#monthly{
+#monthly {
     display: flex;
 }
 
-#yearly{
+#yearly {
     display: none;
 }
 
-.courses-list{
+.courses-list {
     padding-bottom: 8px;
 }
 
-
-
-.holder{
+.holder {
     display: flex;
     align-items: center; /* Vertically center */
     justify-content: center; /* Horizontally center */
     margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0; /* Remove default padding */
 }
 
 .toggle-container {
@@ -1441,10 +1292,9 @@ footer {
     margin: 0 auto;
     cursor: pointer;
     transition: background-color 0.3s;
-    
 }
 
-.grey-bg{
+.grey-bg {
     background-color: #F2F3F5;
 }
 
@@ -1467,40 +1317,35 @@ footer {
     left: 30px;
 }
 
-
-.course{ 
+.course { 
     padding: 2rem;
 }
 
-
-
-.two-way-grid{
+.two-way-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
- 
 }
 
-@media (min-width:1000px){
-    .two-way-grid{
+@media (min-width: 1000px) {
+    .two-way-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
-.tutor-img{
+.tutor-img {
     width: 50%;
 }
 
-.tutor-img img{
+.tutor-img img {
     width: 100%;
 }
 
-.tutorinfotext{
+.tutorinfotext {
     width: 75%;
 }
 
-.tutor-grid{
+.tutor-grid {
     display: flex;
     border: 1px solid #ccc;
     background-color: rgb(0, 0, 0);
@@ -1509,28 +1354,27 @@ footer {
     padding: 2rem;
 }
 
-.tutor-text{
+.tutor-text {
     font-size: 14px;
     font-weight: 100;
 }
 
-.tutor-info{
+.tutor-info {
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
-.tutor-info h3, h4{
+.tutor-info h3, h4 {
     font-weight: lighter;
 }
 
-.tutor-info h4{
+.tutor-info h4 {
     letter-spacing: 5px;
     margin-top: -20px;
 }
 
-
-.course-grid{
+.course-grid {
     display: flex;
     border: 1px solid #ccc;
     background-color: rgb(0, 0, 0);
@@ -1540,20 +1384,21 @@ footer {
     align-items: center;
 }
 
-.course-grid img{
+.course-grid img {
     width: 100%;
 }
 
-
-.course-grid p, .course-grid h3 { color: white; }
+.course-grid p, .course-grid h3 {
+    color: white;
+}
 
 .levels {
     color: white;
-    padding: 1rem 0 1rem 0;
-    margin: 1rem 0 1rem 0;
+    padding: 1rem 0;
+    margin: 1rem 0;
 }
 
-.buttons-course{
+.buttons-course {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -1567,11 +1412,11 @@ footer {
     justify-content: space-between; 
 }
 
-.buttons-course-upper a{
+.buttons-course-upper a {
     width: 100%;
 }
 
-.paymentdropdown{
+.paymentdropdown {
     display: flex;
     width: 100%;
 }
@@ -1603,47 +1448,41 @@ footer {
     }
 }
 
-
-
-.cv{
+.cv {
     border: 1px solid white;
     width: 100%;
     padding-top: 24px;
     padding-bottom: 24px;
 }
 
-
-
-.cell{
+.cell {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     text-align: center;
     font-weight: 100;
-    padding-top: 40px ;
+    padding-top: 40px;
     padding-bottom: 40px;
 }
 
-.cell p{
+.cell p {
     color: #7A7A7A;
     font-weight: 100;
 }
 
-.cell i{
+.cell i {
     font-size: 40px;
 }
 
-
-.credential{
+.credential {
     color: black;
     letter-spacing: 5px;
 }
-
 
 .grid-container-two {
     display: none;
 }
 
-@media (min-width: 800px){
+@media (min-width: 800px) {
     .grid-container-two {
         grid-template-columns: repeat(3, 1fr); /* 3 columns each taking 1 fraction of the space */
         grid-template-rows: auto; /* automatically adjusts the row height to fit the content */
@@ -1653,86 +1492,73 @@ footer {
         width: 100%; /* ensures the grid uses full width available */
     }
 }
+
 .grid-container {
     display: grid;
     width: 100%;
     margin: 0 auto;
 }
 
-.grid-container h4{
+.grid-container h4 {
     color: #000;
     font-size: 24px;
     font-weight: bold;
     line-height: 1;
 }
 
-/* @media (min-width: 600px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    
-    }
-} */
-
 @media (min-width: 800px) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
-        /* Assuming you want each cell to adjust its height automatically */
-        /* grid-template-rows is removed or set properly if needed */
         gap: 60px;
         padding-top: 100px;
         padding-bottom: 100px;
     }
 
-    .cell{
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+    .cell {
+        padding: 0 1.5rem;
         text-align: center;
         font-weight: 100;
-        padding-top: 0 ;
-        padding-bottom: 0;
     }
 }
 
 .imagegrid-container {
     display: grid;
-    grid-template-rows: repeat(1fr);
+    grid-template-rows: repeat(1, 1fr);
     gap: 2rem;
 }
-
 
 @media (min-width: 1200px) {
     .imagegrid-container {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(1fr);
     }
 }
 
-.imagegrid-container img{
-    border: 2px black solid
+.imagegrid-container img {
+    border: 2px black solid;
 }
 
-.social-media{
+.social-media {
     text-align: center;
     padding-top: 2rem;
 }
 
-.social-media p{
+.social-media p {
     color: #7A7A7A;
     line-height: 2;
 }
 
-.social-media h2{
+.social-media h2 {
     color: #000;
 }
 
-@media(min-width:600px){
-    .social-media{
-        text-align:start;
+@media(min-width:600px) {
+    .social-media {
+        text-align: start;
     }
 }
 
-.footer-logo{
-    display: flex; 
+.footer-logo {
+    display: flex;
     flex-direction: row;
     position: relative;
     z-index: 2;
@@ -1740,7 +1566,6 @@ footer {
 
 /* Blogs */
 
-/* Grid layout applied to #inject-blog for displaying blog posts */
 #inject-blog {
     display: grid;
     grid-template-columns: 1fr; /* Default to 1 column for smaller screens */
@@ -1751,7 +1576,6 @@ footer {
 
 @media (min-width: 768px) {
     #inject-blog {
-        display: grid;
         grid-template-columns: 1fr 1fr; /* Sets up two columns */
         justify-content: space-between; /* Spreads the columns across the full width of the container */
         gap: 40px 60px; /* Sets the gaps between rows and columns */
@@ -1759,12 +1583,6 @@ footer {
     }
 }
 
-
-
-  
-/* Overall blog post preview container adjustments for shadow and border radius */
-
-/* Styling for the image container to ensure images are displayed properly */
 .blog-post-image-wrapper {
     width: 100%;
     height: 250px; /* or adjust based on your design */
@@ -1783,28 +1601,22 @@ footer {
     left: 0;
 }
 
-
-
-
 .category-label {
     position: absolute;
     top: 10px; /* Adjust as needed */
     right: 10px; /* Adjust as needed */
     background-color: #E93947; /* Deep red background color */
     color: white !important;
-    padding: 8px 20px ; /* Padding adjusted for a better oval look */
+    padding: 8px 20px; /* Padding adjusted for a better oval look */
     border-radius: 25px; /* Rounded corners for an oval shape */
     font-size: 0.9rem; /* Consistent font size */
     z-index: 100; /* Keeps the label above other elements */
     white-space: nowrap; /* Prevents the text from wrapping onto multiple lines */
     display: flex; /* Enables flexbox properties */
     align-items: center !important; /* Centers the content vertically within the container */
-    justify-content: center ; /* Centers the content horizontally within the container */
+    justify-content: center; /* Centers the content horizontally within the container */
 }
 
-
-  
-/* Overall blog post preview container adjustments for shadow and border radius */
 .blog-post-preview {
     background-color: #ffffff;
     border-radius: 8px; /* Rounded corners */
@@ -1819,10 +1631,6 @@ footer {
     position: relative; /* Needed for absolute positioning of the category label */
 }
 
-
-
-
-/* Text styling for headlines and paragraphs */
 .blog-post-preview h2, .blog-post-preview p {
     margin: 0;
     padding: 0 20px 10px; /* Padding around text */
@@ -1838,14 +1646,12 @@ footer {
     color: #666; /* Lighter text color for meta details */
 }
 
-/* Link styling to remove underline and color inheriting */
 .blog-post-preview a {
     color: inherit;
     text-decoration: none;
     display: block;
 }
 
-/* Adjustments for specific sections within the blog layout */
 #blog {
     width: 100%;
     display: flex;
@@ -1853,7 +1659,6 @@ footer {
     position: relative;
 }
 
-/* Layout styles for the blog content and sidebar */
 .containerblog {
     display: flex;
     flex-direction: row;
@@ -1864,30 +1669,27 @@ footer {
     flex: 2; /* Blog content takes up 2/3 of the space */
 }
 
-  
-  #sidebar {
+#sidebar {
     flex: 1; /* Sidebar takes up 1/3 of the space */
     position: sticky;
     height: 100%;
     top: 0; /* Adjust based on your header's height if there is one */
     overflow-y: auto; /* Allows scrolling within the sidebar if content exceeds viewport height */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle drop shadow */
-    /* Additional styling for better appearance */
     padding: 20px; /* Adds some padding inside the sidebar for content */
     margin-left: 20px; /* Ensures the shadow does not touch the main content */
     background-color: #fff; /* Optional: sets background color to white */
-  }
-  
-  @media (max-width: 1024px) {
+}
+
+@media (max-width: 1024px) {
     .containerblog {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     #sidebar {
-      display: none;
+        display: none;
     }
-  }
-  
+}
 
 .swiper {
     position: relative; /* Ensure the position is relative for absolute children */
@@ -1895,15 +1697,13 @@ footer {
     display: flex;
     align-items: center;
     height: 200px;
-    margin-bottom: 16px ;
+    margin-bottom: 16px;
 }
-
 
 .swiper-slide {
     display: flex; /* Use flexbox for slide alignment */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
-  
 }
 
 .swiper-slide img {
@@ -1911,7 +1711,7 @@ footer {
     max-height: 100%; /* Ensure the image fits within the slide */
 }
 
-@media(max-width:600px){
+@media(max-width:600px) {
     .swiper-slide img {
         max-width: 75px; /* Adjust width as necessary, could use max-width instead */
         max-height: 100%; /* Ensure the image fits within the slide */
@@ -1920,15 +1720,13 @@ footer {
     .swiper {
         height: 100px;
     }
-
-
 }
 
-.swiper-wrapper :hover {
+.swiper-wrapper:hover {
     cursor: pointer;  /* Hand cursor when hovering */
 }
 
-.swiper-wrapper :active {
+.swiper-wrapper:active {
     cursor: grabbing;  /* Grabbing cursor when clicking and holding */
 }
 
@@ -1937,7 +1735,6 @@ footer {
     max-height: 100%; /* Ensure the image fits within the slide */
 }
 
-/* Navigation buttons should be positioned relative to the swiper container */
 .swiper-button-prev, .swiper-button-next {
     color: #fff;
     background: none;
@@ -1957,12 +1754,12 @@ footer {
 }
 
 .swiper-pagination-bullet {
-    background: white ; /* Forces the styling to take precedence */
+    background: white; /* Forces the styling to take precedence */
 }
 
 .swiper-pagination-bullet-active {
     background: white;
-    opacity: 1 ;
+    opacity: 1;
 }
 
 /* Styles for all bullets in swiper3 */
@@ -1976,7 +1773,3 @@ footer {
     background: #000; /* Black for active bullet */
     opacity: 1; /* Fully opaque when active */
 }
-
-/*  */
-
-
