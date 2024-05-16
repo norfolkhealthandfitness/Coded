@@ -1908,6 +1908,6 @@ footer {
 /* Styles for the active bullet in swiper3 */
 .swiper3 .swiper-pagination-bullet-active {
     background: #000; /* Black for active bullet */
-    opacity: 1; /* Fully opaque when active */
+    opacity: 1; /* Fully opaque when ative */
 }
 
