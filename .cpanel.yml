@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/norfolkhealthand/public_html/
+    - echo "Starting deployment to $DEPLOYPATH"
+    - /bin/mkdir -p $DEPLOYPATH
+    - echo "Copying files to $DEPLOYPATH"
+    - /bin/rsync -av --exclude='.git' /home/norfolkhealthand/repositories/Norfolk-Health-Fitness/ $DEPLOYPATH || { echo "Rsync failed"; exit 1; }
+    - echo "Deployment completed successfully."
