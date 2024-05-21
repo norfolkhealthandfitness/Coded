@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <nav class="navbar containerHeader" role="navigation" aria-label="Secondary navigation">
  <a href="index.html" class="nav-branding">
-     <img class="logo" alt="NHFBrand" src="images/NHFBranding.webp">
+     <img class="logo" alt="NHFBrand" src="Images/NHFBranding.webp">
  </a>
 
  <ul class="nav-menu">
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
      </li>
 
      <li class="nav-item">
-         <a class="header-link nav-link" href="FAQ.html">FAQ's</a>
+         <a class="header-link nav-link" href="faq.html">FAQ's</a>
      </li>
 
      <li class="nav-item">
