@@ -732,6 +732,7 @@ nav {
     .hero {
         background-image: none;
         background-color: #121212;
+        height: 37vh;
     }
 
     .hero h1 {
