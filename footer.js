@@ -7,7 +7,7 @@ insertFooter.innerHTML = `
         <div class="overlay"></div>
         <div class="footer-nav footer-center" aria-label="Footer navigation">
             <div class='footer-mobile-partition' style="z-index:1">
-                <img style="width: 200px; padding-top:2rem;padding-bottom:2rem;" src="images/NHF-white.webp" alt="NHF Logo">
+                <img style="width: 200px; padding-top:2rem;padding-bottom:2rem;" src="images/NHF-branding.webp" alt="NHF Logo">
             </div>
             <div class='footer-mobile-partition'>
                 <h3>Further Links</h3>
