@@ -7,7 +7,7 @@ insertFooter.innerHTML = `
         <div class="overlay"></div>
         <div class="footer-nav footer-center" aria-label="Footer navigation">
             <div class='footer-mobile-partition' style="z-index:1">
-                <img style="width: 200px; padding-top:2rem;padding-bottom:2rem;" src="images/NHF-branding.webp" alt="NHF Logo">
+                <img style="width: 200px; padding-top:2rem;padding-bottom:2rem;" src="Images/NHF-branding.webp" alt="NHF Logo">
             </div>
             <div class='footer-mobile-partition'>
                 <h3>Further Links</h3>
@@ -46,8 +46,8 @@ insertFooter.innerHTML = `
                 </div>
                 <p>Payment plans available with</p>
                 <div class="payLater">
-                    <img alt="PayLater logo" src="images/paylater.png"/>
-                    <img alt="GoCardless logo" src="images/gocardless.png"/>
+                    <img alt="PayLater logo" src="Images/paylater.png"/>
+                    <img alt="GoCardless logo" src="Images/gocardless.png"/>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@ insertFooter.innerHTML = `
             <p>&copy; ${currentYear} Norfolk Health & Fitness Ltd</p>
             <div class="iceni-container">
                 <p>Designed by</p>
-                <img alt="Iceni design logo" src="images/iceni.webp"/>
+                <img alt="Iceni design logo" src="Images/iceni.webp"/>
             </div>
         </div>
         </div>
