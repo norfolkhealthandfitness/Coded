@@ -401,7 +401,6 @@ button {
 @media(max-width: 600px){
     .industry {
     margin-bottom: -5rem;
-
 }
 }
 
@@ -742,7 +741,7 @@ nav {
     .hero {
         background-image: none;
         background-color: #121212;
-        height: 70vh;
+        height: 60vh;
     }
 
     .hero h1 {
@@ -833,6 +832,7 @@ footer p, footer a, footer h3, footer h4, footer ul, footer img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 footer h3{
@@ -1927,6 +1927,10 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1000;
+}
+
+.level3 h1{
+    font-size: 45px;
 }
 
 .level3 p, .level3 h1 {
