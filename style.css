@@ -529,6 +529,11 @@ button {
     }
 }
 
+.header {
+    position: relative;
+    z-index: 1001; /* Higher than .level3 */
+}
+
 .header-link {
     padding: 1rem 0.75rem;
     font-size: 12px;
@@ -737,7 +742,7 @@ nav {
     .hero {
         background-image: none;
         background-color: #121212;
-        height: 50vh;
+        height: 70vh;
     }
 
     .hero h1 {
@@ -1917,17 +1922,17 @@ footer {
     opacity: 1; /* Fully opaque when ative */
 }
 
-.level3{
+.level3 {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1000;
 }
 
-.level3 p, h1{
+.level3 p, .level3 h1 {
     color: white;
 }
 
-.level3 p{
+.level3 p {
     font-size: 16px;
 }
