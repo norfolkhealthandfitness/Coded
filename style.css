@@ -1921,8 +1921,7 @@ footer {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 10000;
-    background-image: url('Images/gym.jpg');
+    z-index: 1000;
 }
 
 .level3 p, h1{
